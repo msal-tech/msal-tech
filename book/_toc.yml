@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/en/stable/structure/toc.html
+
+format: jb-book
+root: index
+parts:
+- caption: Общая информация
+  chapters:
+  - file: info/index
+    sections:
+    - file: info/typography
+  - file: genindex
+
