@@ -34,3 +34,8 @@ nav.bd-links .current > a {
     text-decoration: none;
     color:#48566b;
 }
+
+/* Скрыть ссылки "Вперед"/"Назад" */
+p.prev-next-subtitle {
+    display: none;
+}
