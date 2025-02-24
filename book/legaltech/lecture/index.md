@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(legaltech/lecture/index)=
 # Лекции
 
 :::{tableofcontents}

@@ -9,7 +9,8 @@ kernelspec:
   name: python3
 ---
 
-# Семинары
+(project_management/seminar/index)=
+# Практические занятия
 
 :::{tableofcontents}
 :::

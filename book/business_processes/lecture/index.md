@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(business_processes/lecture/index)=
 # Лекции
 
 :::{tableofcontents}

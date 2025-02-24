@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(algorithmics/index)=
 # Алгоритмика
 
 Материалы по курсу &laquo;Алгоритмика&raquo;

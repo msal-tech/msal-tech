@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(development_methodologies/index)=
 # Методологии разработки программного обеспечения
 
 Материалы по курсу &laquo;Методологии разработки программного обеспечения&raquo;

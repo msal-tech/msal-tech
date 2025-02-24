@@ -9,13 +9,13 @@ chapters:
   - file: info/index.md
     sections:
       - file: info/typography.md
+      - file: info/bibliography.md
       - file: genindex.md
   #
   # Автоматизация юридической работы (Legaltech)
   - file: legaltech/index.md
     sections:
-      - file: legaltech/about.md
-      - file: legaltech/assessment.md
+      - file: legaltech/annotation.md
       - file: legaltech/lecture/index.md
         sections:
           - file: legaltech/lecture/01.md
@@ -25,39 +25,13 @@ chapters:
           - file: legaltech/lecture/05.md
           - file: legaltech/lecture/06.md
           - file: legaltech/lecture/07.md
-          - file: legaltech/lecture/08.md
-          - file: legaltech/lecture/09.md
-          - file: legaltech/lecture/10.md
-      - file: legaltech/seminar/index.md
-        sections:
-          - file: legaltech/seminar/01.md
-          - file: legaltech/seminar/02.md
-          - file: legaltech/seminar/03.md
-          - file: legaltech/seminar/04.md
-          - file: legaltech/seminar/05.md
-          - file: legaltech/seminar/06.md
-          - file: legaltech/seminar/07.md
-          - file: legaltech/seminar/08.md
-          - file: legaltech/seminar/09.md
-          - file: legaltech/seminar/10.md
-      - file: legaltech/homework/index.md
-        sections:
-          - file: legaltech/homework/01.md
-          - file: legaltech/homework/02.md
-          - file: legaltech/homework/03.md
-          - file: legaltech/homework/04.md
-          - file: legaltech/homework/05.md
-          - file: legaltech/homework/06.md
-          - file: legaltech/homework/07.md
-          - file: legaltech/homework/08.md
-          - file: legaltech/homework/09.md
-          - file: legaltech/homework/10.md
+      - file: legaltech/assessment.md
+      - file: legaltech/credit.md
   #
   # Алгоритмика
   - file: algorithmics/index.md
     sections:
-      - file: algorithmics/about.md
-      - file: algorithmics/assessment.md
+      - file: algorithmics/annotation.md
       - file: algorithmics/lecture/index.md
         sections:
           - file: algorithmics/lecture/01.md
@@ -65,11 +39,6 @@ chapters:
           - file: algorithmics/lecture/03.md
           - file: algorithmics/lecture/04.md
           - file: algorithmics/lecture/05.md
-          - file: algorithmics/lecture/06.md
-          - file: algorithmics/lecture/07.md
-          - file: algorithmics/lecture/08.md
-          - file: algorithmics/lecture/09.md
-          - file: algorithmics/lecture/10.md
       - file: algorithmics/seminar/index.md
         sections:
           - file: algorithmics/seminar/01.md
@@ -81,7 +50,6 @@ chapters:
           - file: algorithmics/seminar/07.md
           - file: algorithmics/seminar/08.md
           - file: algorithmics/seminar/09.md
-          - file: algorithmics/seminar/10.md
       - file: algorithmics/homework/index.md
         sections:
           - file: algorithmics/homework/01.md
@@ -93,25 +61,20 @@ chapters:
           - file: algorithmics/homework/07.md
           - file: algorithmics/homework/08.md
           - file: algorithmics/homework/09.md
-          - file: algorithmics/homework/10.md
+      - file: algorithmics/assessment.md
+      - file: algorithmics/credit.md
+      - file: algorithmics/exam.md
   #
   # Анализ и моделирование бизнес-процессов
   - file: business_processes/index.md
     sections:
-      - file: business_processes/about.md
-      - file: business_processes/assessment.md
+      - file: business_processes/annotation.md
       - file: business_processes/lecture/index.md
         sections:
           - file: business_processes/lecture/01.md
           - file: business_processes/lecture/02.md
           - file: business_processes/lecture/03.md
           - file: business_processes/lecture/04.md
-          - file: business_processes/lecture/05.md
-          - file: business_processes/lecture/06.md
-          - file: business_processes/lecture/07.md
-          - file: business_processes/lecture/08.md
-          - file: business_processes/lecture/09.md
-          - file: business_processes/lecture/10.md
       - file: business_processes/seminar/index.md
         sections:
           - file: business_processes/seminar/01.md
@@ -121,9 +84,6 @@ chapters:
           - file: business_processes/seminar/05.md
           - file: business_processes/seminar/06.md
           - file: business_processes/seminar/07.md
-          - file: business_processes/seminar/08.md
-          - file: business_processes/seminar/09.md
-          - file: business_processes/seminar/10.md
       - file: business_processes/homework/index.md
         sections:
           - file: business_processes/homework/01.md
@@ -133,15 +93,14 @@ chapters:
           - file: business_processes/homework/05.md
           - file: business_processes/homework/06.md
           - file: business_processes/homework/07.md
-          - file: business_processes/homework/08.md
-          - file: business_processes/homework/09.md
-          - file: business_processes/homework/10.md
+      - file: business_processes/assessment.md
+      - file: business_processes/credit.md
+      - file: business_processes/exam.md
   #
   # Методологии разработки программного обеспечения
   - file: development_methodologies/index.md
     sections:
-      - file: development_methodologies/about.md
-      - file: development_methodologies/assessment.md
+      - file: development_methodologies/annotation.md
       - file: development_methodologies/lecture/index.md
         sections:
           - file: development_methodologies/lecture/01.md
@@ -149,53 +108,31 @@ chapters:
           - file: development_methodologies/lecture/03.md
           - file: development_methodologies/lecture/04.md
           - file: development_methodologies/lecture/05.md
-          - file: development_methodologies/lecture/06.md
-          - file: development_methodologies/lecture/07.md
-          - file: development_methodologies/lecture/08.md
-          - file: development_methodologies/lecture/09.md
-          - file: development_methodologies/lecture/10.md
       - file: development_methodologies/seminar/index.md
         sections:
           - file: development_methodologies/seminar/01.md
           - file: development_methodologies/seminar/02.md
           - file: development_methodologies/seminar/03.md
           - file: development_methodologies/seminar/04.md
-          - file: development_methodologies/seminar/05.md
-          - file: development_methodologies/seminar/06.md
-          - file: development_methodologies/seminar/07.md
-          - file: development_methodologies/seminar/08.md
-          - file: development_methodologies/seminar/09.md
-          - file: development_methodologies/seminar/10.md
       - file: development_methodologies/homework/index.md
         sections:
           - file: development_methodologies/homework/01.md
           - file: development_methodologies/homework/02.md
           - file: development_methodologies/homework/03.md
           - file: development_methodologies/homework/04.md
-          - file: development_methodologies/homework/05.md
-          - file: development_methodologies/homework/06.md
-          - file: development_methodologies/homework/07.md
-          - file: development_methodologies/homework/08.md
-          - file: development_methodologies/homework/09.md
-          - file: development_methodologies/homework/10.md
+      - file: development_methodologies/assessment.md
+      - file: development_methodologies/credit.md
   #
   # Управление ИТ-проектами
   - file: project_management/index.md
     sections:
-      - file: project_management/about.md
-      - file: project_management/assessment.md
+      - file: project_management/annotation.md
       - file: project_management/lecture/index.md
         sections:
           - file: project_management/lecture/01.md
           - file: project_management/lecture/02.md
           - file: project_management/lecture/03.md
           - file: project_management/lecture/04.md
-          - file: project_management/lecture/05.md
-          - file: project_management/lecture/06.md
-          - file: project_management/lecture/07.md
-          - file: project_management/lecture/08.md
-          - file: project_management/lecture/09.md
-          - file: project_management/lecture/10.md
       - file: project_management/seminar/index.md
         sections:
           - file: project_management/seminar/01.md
@@ -206,8 +143,6 @@ chapters:
           - file: project_management/seminar/06.md
           - file: project_management/seminar/07.md
           - file: project_management/seminar/08.md
-          - file: project_management/seminar/09.md
-          - file: project_management/seminar/10.md
       - file: project_management/homework/index.md
         sections:
           - file: project_management/homework/01.md
@@ -218,5 +153,22 @@ chapters:
           - file: project_management/homework/06.md
           - file: project_management/homework/07.md
           - file: project_management/homework/08.md
-          - file: project_management/homework/09.md
-          - file: project_management/homework/10.md
+      - file: project_management/assessment.md
+      - file: project_management/credit.md
+  #
+  # Стажировка
+  - file: traineeship/index.md
+    sections:
+      - file: traineeship/annotation.md
+      - file: traineeship/credit.md
+  #
+  # Практикум (итоговый проект)
+  - file: practicum/index.md
+    sections:
+      - file: practicum/annotation.md
+  #
+  # Итоговая аттестация (защита проекта)
+  - file: attestation/index.md
+    sections:
+      - file: attestation/annotation.md
+      - file: attestation/exam.md

@@ -10,6 +10,7 @@ kernelspec:
   name: python3
 ---
 
+(info/typography)=
 # Типографские соглашения
 
 ## Программный код
