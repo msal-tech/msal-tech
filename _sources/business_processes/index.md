@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(business_processes/index)=
 # Анализ и моделирование бизнес-процессов
 
 Материалы по курсу &laquo;Анализ и моделирование бизнес-процессов&raquo;

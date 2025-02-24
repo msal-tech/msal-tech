@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-(info_index)=
+(info/index)=
 # Общая информация
 
 :::{tableofcontents}

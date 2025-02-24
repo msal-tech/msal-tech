@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(legaltech/index)=
 # Автоматизация юридической работы (Legaltech)
 
 Материалы по курсу &laquo;Автоматизация юридической работы (Legaltech)&raquo;

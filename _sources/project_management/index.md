@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(project_management/index)=
 # Управление ИТ-проектами
 
 Материалы по курсу &laquo;Управление ИТ-проектами&raquo;

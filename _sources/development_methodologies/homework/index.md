@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(development_methodologies/homework/index)=
 # Домашние задания
 
 :::{tableofcontents}

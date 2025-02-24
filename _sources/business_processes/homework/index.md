@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(business_processes/homework/index)=
 # Домашние задания
 
 :::{tableofcontents}

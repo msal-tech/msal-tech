@@ -9,7 +9,8 @@ kernelspec:
   name: python3
 ---
 
-# Семинары
+(algorithmics/seminar/index)=
+# Практические занятия
 
 :::{tableofcontents}
 :::

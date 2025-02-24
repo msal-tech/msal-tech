@@ -9,4 +9,5 @@ kernelspec:
   name: python3
 ---
 
-# Ассесмент
+(development_methodologies/assessment)=
+# Подготовка к ассесменту

@@ -9,6 +9,7 @@ kernelspec:
   name: python3
 ---
 
+(development_methodologies/lecture/index)=
 # Лекции
 
 :::{tableofcontents}

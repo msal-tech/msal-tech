@@ -9,4 +9,5 @@ kernelspec:
   name: python3
 ---
 
-# Ассесмент
+(business_processes/assessment)=
+# Подготовка к ассесменту

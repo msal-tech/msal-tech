@@ -9,4 +9,5 @@ kernelspec:
   name: python3
 ---
 
-# Ассесмент
+(legaltech/assessment)=
+# Подготовка к ассесменту
