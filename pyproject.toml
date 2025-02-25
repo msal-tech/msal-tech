@@ -46,7 +46,9 @@ classifiers = [ # https://pypi.org/classifiers/
 #======================================================================================================================
 requires-python = ">=3.12,<4.0"
 dependencies = [ # Dependencies required for this books
-    "tqdm (>=4.67.1,<5.0.0)" # Fast, Extensible Progress Meter
+    "tqdm (>=4.67.1,<5.0.0)", # Fast, Extensible Progress Meter
+    #"flowchart-magic (>=0.1.6,<0.2.0)" # Un magic %%flowchart para generar diagramas de flujo en Google Colab
+    "nb-js-diagrammers (>=0.0.9,<0.0.10)" # Javascript diagrammers and magics for IPython and Jupyter notebooks
 ]
 
 [tool.poetry.group.jupyter.dependencies] # Dependencies required for JupyterBook
