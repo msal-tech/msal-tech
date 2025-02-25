@@ -44,7 +44,7 @@ classifiers = [ # https://pypi.org/classifiers/
 # Project's dependencies
 # https://pypi.org/
 #======================================================================================================================
-requires-python = ">=3.12,<4.0"
+requires-python = ">=3.10,<4.0"
 dependencies = [ # Dependencies required for this books
     "tqdm (>=4.67.1,<5.0.0)", # Fast, Extensible Progress Meter
     #"flowchart-magic (>=0.1.6,<0.2.0)" # Un magic %%flowchart para generar diagramas de flujo en Google Colab
@@ -294,7 +294,7 @@ formats = "ipynb,md:myst"
 # https://github.com/python/mypy
 #======================================================================================================================
 [tool.mypy]
-python_version = "3.12"
+python_version = "3.10"
 warn_return_any = true
 warn_unused_configs = true
 show_error_codes = true
