@@ -412,6 +412,24 @@
       
       
       
+      <li><a href="https://mybinder.org/v2/gh/bookseer/legaltech/main?urlpath=lab/tree/book/algorithmics/lecture/01.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
       <li>
 <button onclick="initThebeSBT()"
   class="btn btn-sm btn-launch-thebe dropdown-item"
@@ -689,12 +707,30 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">7. Поддержка и обновление</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">Тестирование алгоритмов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">Способы записи алгоритмов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id55">Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id56">Содержание:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">Задание для подготовки:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id58">Вопросы для самопроверки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">Тестирование алгоритмов</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">1. Цели тестирования алгоритмов</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id55">2. Подходы к тестированию</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id56">3. Тестовые случаи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">4. Автоматизация тестирования</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id58">5. Оценка производительности</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id59">6. Документация результатов тестирования</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id60">Способы записи алгоритмов</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id61">1. Псевдокод</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id62">2. Блок-схемы</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id63">3. Язык программирования</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id64">4. Таблицы</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id65">5. Формальные нотации</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id66">Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id67">Основные положения ГОСТ 19.701-90</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id68">Правила оформления схем алгоритма</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id69">Задание для подготовки:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id70">Вопросы для самопроверки</a></li>
 </ul>
 </li>
 </ul>
@@ -815,13 +851,13 @@ document.write(`
 Python</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">check_agreement</span><span class="p">(</span><span class="n">is_requirements</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_norms</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_legal</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Анализ договора на соответствие ГК РФ</span>
-<span class="sd">    </span>
+
 <span class="sd">    Args:</span>
-<span class="sd">      is_requirements: Наличие реквизитов  </span>
-<span class="sd">      is_norms: Соответствие нормам </span>
+<span class="sd">      is_requirements: Наличие реквизитов</span>
+<span class="sd">      is_norms: Соответствие нормам</span>
 <span class="sd">      is_legal: Дееспособность сторон</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="k">if</span> <span class="n">is_requirements</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_norms</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_legal</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Договор корректен&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -890,13 +926,13 @@ Python</label><div class="sd-tab-content docutils">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">check_agreement</span><span class="p">(</span><span class="n">is_requirements</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_norms</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_legal</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Анализ договора на соответствие ГК РФ</span>
-<span class="sd">    </span>
+
 <span class="sd">    Args:</span>
-<span class="sd">      is_requirements: Наличие реквизитов  </span>
-<span class="sd">      is_norms: Соответствие нормам </span>
+<span class="sd">      is_requirements: Наличие реквизитов</span>
+<span class="sd">      is_norms: Соответствие нормам</span>
 <span class="sd">      is_legal: Дееспособность сторон</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="k">if</span> <span class="n">is_requirements</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_norms</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_legal</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Договор корректен&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -1181,7 +1217,7 @@ Python</label><div class="sd-tab-content docutils">
             <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;Мировой суд&quot;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;Районный суд&quot;</span>
-        
+
     <span class="c1"># Вывод результата</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Подсудность: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1260,7 +1296,7 @@ Python</label><div class="sd-tab-content docutils">
             <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;Мировой суд&quot;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;Районный суд&quot;</span>
-        
+
     <span class="c1"># Вывод результата</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Подсудность: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
@@ -1488,34 +1524,197 @@ Python</label><div class="sd-tab-content docutils">
 </section>
 <section id="id53">
 <h2>Тестирование алгоритмов<a class="headerlink" href="#id53" title="Ссылка на этот заголовок">#</a></h2>
-</section>
+<p>Тестирование алгоритмов — это важный этап в процессе разработки, который позволяет убедиться в корректности и эффективности алгоритма.</p>
+<p>Оно включает в себя проверку работы алгоритма на различных входных данных, выявление ошибок и оценку его производительности.</p>
+<p>Следование систематическому подходу к тестированию, включая разработку тестовых случаев, автоматизацию и оценку производительности, позволяет разработчикам создавать надежные и высококачественные алгоритмы.</p>
+<p>Рассмотрим основные аспекты тестирования алгоритмов.</p>
 <section id="id54">
-<h2>Способы записи алгоритмов<a class="headerlink" href="#id54" title="Ссылка на этот заголовок">#</a></h2>
+<h3>1. Цели тестирования алгоритмов<a class="headerlink" href="#id54" title="Ссылка на этот заголовок">#</a></h3>
+<p>Основные цели тестирования алгоритмов включают:</p>
+<ul class="simple">
+<li><p><strong>Проверка корректности</strong>: Убедиться, что алгоритм возвращает правильные результаты для всех возможных входных данных.</p></li>
+<li><p><strong>Выявление ошибок</strong>: Найти и исправить ошибки, которые могут возникнуть в процессе выполнения алгоритма.</p></li>
+<li><p><strong>Оценка производительности</strong>: Измерить время выполнения и использование ресурсов, чтобы определить, насколько алгоритм эффективен.</p></li>
+</ul>
 </section>
 <section id="id55">
-<h2>Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90.<a class="headerlink" href="#id55" title="Ссылка на этот заголовок">#</a></h2>
+<h3>2. Подходы к тестированию<a class="headerlink" href="#id55" title="Ссылка на этот заголовок">#</a></h3>
+<p>Существует несколько подходов к тестированию алгоритмов:</p>
+<ul class="simple">
+<li><p><strong>Модульное тестирование</strong>: Проверка отдельных компонентов алгоритма на корректность. Это позволяет изолировать ошибки и упростить процесс отладки.</p></li>
+<li><p><strong>Интеграционное тестирование</strong>: Проверка взаимодействия различных компонентов алгоритма. Это важно для выявления проблем, которые могут возникнуть при совместной работе нескольких частей.</p></li>
+<li><p><strong>Системное тестирование</strong>: Полное тестирование алгоритма в контексте всей системы, чтобы убедиться, что он работает корректно в реальных условиях.</p></li>
+</ul>
 </section>
 <section id="id56">
-<h2>Содержание:<a class="headerlink" href="#id56" title="Ссылка на этот заголовок">#</a></h2>
-<ol class="arabic simple">
-<li><p>Понятие алгоритма. Числовые и логические алгоритмы.</p></li>
-<li><p>Алгоритмы в юридических процессах и правовых нормах.</p></li>
-<li><p>Свойства алгоритмов.</p></li>
-<li><p>Принципы разработки алгоритмов.</p></li>
-<li><p>Методы разработки алгоритмов.</p></li>
-<li><p>Основные этапы решения задачи. Тестирование алгоритма.</p></li>
-<li><p>Способы записи алгоритмов.</p></li>
-<li><p>Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90.</p></li>
-</ol>
+<h3>3. Тестовые случаи<a class="headerlink" href="#id56" title="Ссылка на этот заголовок">#</a></h3>
+<p>Для эффективного тестирования необходимо разработать тестовые случаи, которые охватывают различные сценарии использования алгоритма. Тестовые случаи могут включать:</p>
+<ul class="simple">
+<li><p><strong>Обычные случаи</strong>: Стандартные входные данные, для которых алгоритм должен работать корректно.</p></li>
+<li><p><strong>Граничные случаи</strong>: Входные данные, находящиеся на границах допустимых значений, чтобы проверить, как алгоритм справляется с крайними условиями.</p></li>
+<li><p><strong>Некорректные данные</strong>: Входные данные, которые не соответствуют ожидаемым требованиям, чтобы убедиться, что алгоритм обрабатывает ошибки корректно.</p></li>
+</ul>
 </section>
 <section id="id57">
-<h2>Задание для подготовки:<a class="headerlink" href="#id57" title="Ссылка на этот заголовок">#</a></h2>
+<h3>4. Автоматизация тестирования<a class="headerlink" href="#id57" title="Ссылка на этот заголовок">#</a></h3>
+<p>Автоматизация тестирования может значительно упростить процесс и повысить его эффективность.
+С помощью автоматизированных тестов можно быстро проверять алгоритм на различных входных данных и выявлять ошибки.
+Это особенно полезно при внесении изменений в алгоритм, так как позволяет быстро убедиться, что новые изменения не нарушили его работу.</p>
+</section>
+<section id="id58">
+<h3>5. Оценка производительности<a class="headerlink" href="#id58" title="Ссылка на этот заголовок">#</a></h3>
+<p>Помимо проверки корректности, важно также оценить производительность алгоритма. Это включает в себя:</p>
+<ul class="simple">
+<li><p><strong>Анализ временной сложности</strong>: Оценка времени выполнения алгоритма в зависимости от размера входных данных.</p></li>
+<li><p><strong>Анализ пространственной сложности</strong>: Оценка объема памяти, который использует алгоритм.</p></li>
+</ul>
+</section>
+<section id="id59">
+<h3>6. Документация результатов тестирования<a class="headerlink" href="#id59" title="Ссылка на этот заголовок">#</a></h3>
+<p>Документация результатов тестирования является важным аспектом, который помогает команде разработчиков понять, какие тесты были проведены, какие ошибки были выявлены и как они были исправлены.
+Это также может быть полезно для будущих разработок и улучшений алгоритма.</p>
+</section>
+</section>
+<section id="id60">
+<h2>Способы записи алгоритмов<a class="headerlink" href="#id60" title="Ссылка на этот заголовок">#</a></h2>
+<p>Запись алгоритмов — это важный аспект разработки, который позволяет четко и однозначно представить последовательность действий для решения задачи.</p>
+<p>Выбор способа записи алгоритма зависит от целей разработки, аудитории и сложности задачи.</p>
+<p>Понимание различных способов записи алгоритмов помогает разработчикам эффективно коммуницировать свои идеи и создавать качественные решения.</p>
+<p>Существует несколько способов записи алгоритмов, каждый из которых имеет свои преимущества и недостатки.</p>
+<p>Рассмотрим основные способы записи алгоритмов.</p>
+<section id="id61">
+<h3>1. Псевдокод<a class="headerlink" href="#id61" title="Ссылка на этот заголовок">#</a></h3>
+<p>Псевдокод — это способ записи алгоритма с использованием простого и понятного языка, который не привязан к конкретному языку программирования.
+Он позволяет описать логику алгоритма в виде последовательности шагов, используя обычные слова и конструкции. Преимущества псевдокода включают:</p>
+<ul class="simple">
+<li><p><strong>Легкость понимания:</strong> Псевдокод понятен даже тем, кто не знаком с конкретным языком программирования.</p></li>
+<li><p><strong>Гибкость:</strong> Можно использовать любые конструкции, которые помогают лучше объяснить алгоритм.</p></li>
+</ul>
+</section>
+<section id="id62">
+<h3>2. Блок-схемы<a class="headerlink" href="#id62" title="Ссылка на этот заголовок">#</a></h3>
+<p>Блок-схемы — это графическое представление алгоритма, где каждый шаг представлен в виде блока, а связи между шагами — стрелками.
+Блок-схемы позволяют визуально отобразить логику алгоритма и его структуру. Преимущества блок-схем включают:</p>
+<ul class="simple">
+<li><p><strong>Наглядность:</strong> Легко увидеть общую структуру алгоритма и его последовательность.</p></li>
+<li><p><strong>Удобство для презентации:</strong> Блок-схемы хорошо подходят для демонстрации алгоритма другим людям.</p></li>
+</ul>
+</section>
+<section id="id63">
+<h3>3. Язык программирования<a class="headerlink" href="#id63" title="Ссылка на этот заголовок">#</a></h3>
+<p>Алгоритм можно записать непосредственно на языке программирования, который будет использоваться для его реализации.
+Это позволяет сразу увидеть, как алгоритм будет работать в коде. Преимущества записи на языке программирования:</p>
+<ul class="simple">
+<li><p><strong>Точность:</strong> Код на языке программирования является точным и может быть сразу выполнен.</p></li>
+<li><p><strong>Возможность тестирования:</strong> Можно сразу протестировать алгоритм на практике.</p></li>
+</ul>
+</section>
+<section id="id64">
+<h3>4. Таблицы<a class="headerlink" href="#id64" title="Ссылка на этот заголовок">#</a></h3>
+<p>Таблицы могут использоваться для представления алгоритмов, особенно когда необходимо показать взаимосвязи между данными или состояниями.
+В таблицах можно описать входные данные, выходные данные и шаги алгоритма.</p>
+<p>Преимущества таблиц:</p>
+<ul class="simple">
+<li><p>Удобство для представления больших объемов данных.</p></li>
+<li><p>Легкость в сравнении различных вариантов алгоритма.</p></li>
+</ul>
+</section>
+<section id="id65">
+<h3>5. Формальные нотации<a class="headerlink" href="#id65" title="Ссылка на этот заголовок">#</a></h3>
+<p>Существуют формальные нотации, такие как нотация Бэкуса-Наура (BNF) или другие математические формализмы, которые используются для описания алгоритмов и языков программирования.</p>
+<p>Преимущества формальных нотаций:</p>
+<ul class="simple">
+<li><p>Точность: Формальные нотации обеспечивают строгую и однозначную запись.</p></li>
+<li><p>Подходят для теоретических исследований и анализа.</p></li>
+</ul>
+</section>
+</section>
+<section id="id66">
+<h2>Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90<a class="headerlink" href="#id66" title="Ссылка на этот заголовок">#</a></h2>
+<p>Оформление схем алгоритмов — это важный аспект документации в программировании, позволяющий четко и однозначно представить структуру и логику работы алгоритма.</p>
+<p>В России правила оформления документации для программного обеспечения и алгоритмов регламентированы стандартами, в частности, ГОСТ Р 19.701-90 «Единая система программной документации. Схемы алгоритмов».</p>
+<p>Соблюдение правил оформления схем алгоритмов в соответствии с ГОСТ 19.701-90 играет важную роль в создании программной документации.</p>
+<p>Оно обеспечивает универсальность, понятность и точность передачи информации о разработанных алгоритмах, что способствует эффективному взаимодействию между разработчиками, тестировщиками и другими заинтересованными сторонами.</p>
+<p>Рассмотрим основные положения и требования этого ГОСТа.</p>
+<section id="id67">
+<h3>Основные положения ГОСТ 19.701-90<a class="headerlink" href="#id67" title="Ссылка на этот заголовок">#</a></h3>
+<ul class="simple">
+<li><p><strong>Цель схемы алгоритма</strong>:</p>
+<ul>
+<li><p>Схемы предназначены для визуального представления алгоритмов, применяемых в программных системах. Они помогают разработчикам и другим заинтересованным сторонам понять логику работы алгоритма.</p></li>
+</ul>
+</li>
+<li><p><strong>Общие требования</strong>:</p>
+<ul>
+<li><p>Схемы должны быть четкими и легко читаемыми. Используемые символы и обозначения должны быть понятны и стандартны.</p></li>
+<li><p>Оформление схемы должно способствовать интуитивному пониманию алгоритма, избегая излишнего нагромождения элементов.</p></li>
+</ul>
+</li>
+<li><p><strong>Структура алгоритмической схемы</strong>:</p>
+<ul>
+<li><p><strong>Начало и конец</strong>: Используются овалы для обозначения начала и конца алгоритма.</p></li>
+<li><p><strong>Действия и операции</strong>: Прямоугольники представляют собой операции (например, присваивание, вычисление и т.д.).</p></li>
+<li><p><strong>Случаи и условия</strong>: Ромб фиксирует условия и ветвления алгоритма, позволяя обозначить различные потоки выполнения в зависимости от условия.</p></li>
+<li><p><strong>Соединения</strong>: Стрелки направляют поток управления между блоками и показывают последовательность выполнения.</p></li>
+</ul>
+</li>
+<li><p><strong>Унификация символов</strong>:</p>
+<ul>
+<li><p>В соответствии с ГОСТ, утверждена унифицированная система символов, которую необходимо использовать при оформлении схем. Это позволяет стандартизировать документацию, делая её более доступной для понимания.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id68">
+<h3>Правила оформления схем алгоритма<a class="headerlink" href="#id68" title="Ссылка на этот заголовок">#</a></h3>
+<ul class="simple">
+<li><p><strong>Указание заголовка</strong>:</p>
+<ul>
+<li><p>Каждая схема должна иметь заголовок, который четко указывает на содержание алгоритма. Это может быть название задачи или предназначение алгоритма.</p></li>
+</ul>
+</li>
+<li><p><strong>Нумерация блоков</strong>:</p>
+<ul>
+<li><p>Каждый блок на схеме должен быть пронумерован для удобства ссылок в дальнейшем описании алгоритма в тексте.</p></li>
+</ul>
+</li>
+<li><p><strong>Форматирование</strong>:</p>
+<ul>
+<li><p>Используйте однородный стиль оформления, включая размеры и шрифты для текста внутри блоков, чтобы обеспечить целостный вид.</p></li>
+<li><p>Ширина блоков должна быть достаточной для вписывания текста без переноса на новую строку.</p></li>
+</ul>
+</li>
+<li><p><strong>Чистота и аккуратность</strong>:</p>
+<ul>
+<li><p>Схемы должны быть четкими, без помарок и лишних линий. Использование графических редакторов поможет избежать неаккуратных линий.</p></li>
+</ul>
+</li>
+<li><p><strong>Краткость и ясность</strong>:</p>
+<ul>
+<li><p>Избегайте излишних деталей в блоках. Текст внутри блоков должен быть кратким, но информативным.</p></li>
+</ul>
+</li>
+<li><p><strong>Использование пояснений</strong>:</p>
+<ul>
+<li><p>При необходимости используйте дополнительные поясняющие блоки или стрелки для указания на специальные условия или исключения.</p></li>
+</ul>
+</li>
+<li><p><strong>Соответствие логики</strong>:</p>
+<ul>
+<li><p>Структура схемы должна соответствовать логике описываемого алгоритма. Каждый блок и действие должны быть логически связаны.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id69">
+<h2>Задание для подготовки:<a class="headerlink" href="#id69" title="Ссылка на этот заголовок">#</a></h2>
 <ol class="arabic simple">
 <li><p>В Налоговом Кодексе РФ найдите статью 333.19, устанавливающую размер государственная пошлина по делам, рассматриваемым Верховным Судом Российской Федерации. Можно положения этой статьи рассматривать как алгоритм?</p></li>
 <li><p>Подберите другие примеры последовательности действий из юридической практики, которые являются алгоритмами.</p></li>
 </ol>
-<section id="id58">
-<h3>Вопросы для самопроверки<a class="headerlink" href="#id58" title="Ссылка на этот заголовок">#</a></h3>
+<section id="id70">
+<h3>Вопросы для самопроверки<a class="headerlink" href="#id70" title="Ссылка на этот заголовок">#</a></h3>
 <ol class="arabic simple">
 <li><p>Зачем юристу понимать алгоритмы?</p></li>
 <li><p>Приведите пример алгоритма из юридической практики.</p></li>
@@ -1523,14 +1722,6 @@ Python</label><div class="sd-tab-content docutils">
 <li><p>Как модифицировать алгоритм подсудности для дел о наследстве?</p></li>
 <li><p>Почему в алгоритме проверки дееспособности используется логическое “И”?</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">income</span> <span class="o">=</span> <span class="mi">120000</span>
-<span class="n">children</span> <span class="o">=</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 </section>
@@ -1670,12 +1861,30 @@ Python</label><div class="sd-tab-content docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">7. Поддержка и обновление</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">Тестирование алгоритмов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">Способы записи алгоритмов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id55">Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id56">Содержание:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">Задание для подготовки:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id58">Вопросы для самопроверки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">Тестирование алгоритмов</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">1. Цели тестирования алгоритмов</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id55">2. Подходы к тестированию</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id56">3. Тестовые случаи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">4. Автоматизация тестирования</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id58">5. Оценка производительности</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id59">6. Документация результатов тестирования</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id60">Способы записи алгоритмов</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id61">1. Псевдокод</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id62">2. Блок-схемы</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id63">3. Язык программирования</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id64">4. Таблицы</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id65">5. Формальные нотации</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id66">Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id67">Основные положения ГОСТ 19.701-90</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id68">Правила оформления схем алгоритма</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id69">Задание для подготовки:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id70">Вопросы для самопроверки</a></li>
 </ul>
 </li>
 </ul>
