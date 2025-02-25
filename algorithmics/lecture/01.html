@@ -62,6 +62,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'algorithmics/lecture/01';</script>
     <script src="../../_static/scripts/scripts.js?v=8c6bb025"></script>
     <link rel="canonical" href="https://legaltech.bookseer.org/algorithmics/lecture/01.html" />
@@ -616,8 +618,43 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Содержание:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Задание для подготовки:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Цель лекции</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Содержание</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Понятие алгоритма</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Историческая справка</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Структура алгоритма</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Примеры юридических алгоритмов</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Пример 1. Алгоритм проверки законности договора</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Примеры работы:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Вопросы для самопроверки</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Пример 2. Алгоритм расчета алиментов</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Пример 3. Алгоритм определения подсудности дела</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Пример 4. Алгоритм проверки процессуальных сроков</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Практическое значение</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Числовые и логические алгоритмы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Алгоритмы в юридических процессах и правовых нормах.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Свойства алгоритмов.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Дискретность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Определённость (детерминированность)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Результативность (конечность)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Массовость</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Понятность</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Принципы разработки алгоритмов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Методы разработки алгоритмов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Основные этапы решения задачи. Тестирование алгоритма.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Способы записи алгоритмов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Содержание:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Задание для подготовки:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Вопросы для самопроверки</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -632,7 +669,11 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="algorithmics-lecture-1">
 <span id="id1"></span><h1>Лекция 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов.<a class="headerlink" href="#algorithmics-lecture-1" title="Ссылка на этот заголовок">#</a></h1>
 <section id="id2">
-<h2>Содержание:<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">#</a></h2>
+<h2>Цель лекции<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">#</a></h2>
+<p>Познакомить студентов с понятием алгоритмов и способами их построения через призму юридических задач.</p>
+</section>
+<section id="id3">
+<h2>Содержание<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">#</a></h2>
 <ol class="arabic simple">
 <li><p>Понятие алгоритма. Числовые и логические алгоритмы.</p></li>
 <li><p>Алгоритмы в юридических процессах и правовых нормах.</p></li>
@@ -644,12 +685,545 @@ document.write(`
 <li><p>Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90.</p></li>
 </ol>
 </section>
-<section id="id3">
-<h2>Задание для подготовки:<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">#</a></h2>
+<section id="id4">
+<h2>Понятие алгоритма<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">#</a></h2>
+<p><strong>Алгоритм</strong> — это последовательность чётко определённых, конечных и логически упорядоченных шагов, направленных на решение конкретной задачи или достижение определённой цели.</p>
+<p>Алгоритмы лежат в основе математики, информатики, программирования и многих других дисциплин. Они позволяют формализовать процесс преобразования входных данных в выходные, гарантируя корректный результат при соблюдении условий.</p>
+<section id="id5">
+<h3>Историческая справка<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">#</a></h3>
+<p>Термин «алгоритм» происходит от имени персидского учёного <strong>Мухаммада ибн Муса аль-Хорезми</strong> (IX век), который разработал правила арифметических операций с числами в десятичной системе.</p>
+<p>Позже идеи алгоритмизации стали основой для формальной логики и компьютерных наук.</p>
+</section>
+<section id="id6">
+<h3>Структура алгоритма<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Ввод данных</strong>
+Получение исходной информации (например, числа, текст, сигналы).</p></li>
+<li><p><strong>Обработка данных</strong>
+Выполнение операций: вычисления, сравнения, ветвления, циклы.</p></li>
+<li><p><strong>Вывод результата</strong>
+Предоставление итоговых данных (например, отсортированный список, решение уравнения).</p></li>
+</ol>
+</section>
+<section id="id7">
+<h3>Примеры юридических алгоритмов<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">#</a></h3>
+</section>
+<section id="id8">
+<h3>Пример 1. Алгоритм проверки законности договора<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">#</a></h3>
+<p><strong>Цель</strong>: Автоматизировать анализ договора на соответствие ГК РФ.</p>
+<p><strong>Правила</strong>:
+TODO</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Шаги алгоритма</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p>Проверить наличие обязательных реквизитов (стороны, предмет, дата).</p></li>
+<li><p>Проверить договор на соответствие нормам законодательства.</p></li>
+<li><p>Проверить дееспособность сторон договора.</p></li>
+<li><p>Если проверки прошли успешно, то договор корректен, иначе требуется доработка</p></li>
+</ol>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Псевдокод</label><div class="sd-tab-content docutils">
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="n">алг</span><span class="w"> </span><span class="n">ПроверкаДоговора</span>
+<span class="n">нач</span>
+<span class="w">  </span><span class="n">ввод</span><span class="w"> </span><span class="n">НаличиеРеквизитов</span><span class="p">,</span><span class="w"> </span><span class="n">СоответствиеНормам</span><span class="p">,</span><span class="w"> </span><span class="n">ДееспособностьСторон</span>
+<span class="w">  </span><span class="n">если</span><span class="w"> </span><span class="n">НаличиеРеквизитов</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Да&quot;</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">СоответствиеНормам</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Да&quot;</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">ДееспособностьСторон</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Да&quot;</span>
+<span class="w">    </span><span class="n">то</span><span class="w"> </span><span class="n">вывод</span><span class="w"> </span><span class="s">&quot;Договор корректен&quot;</span>
+<span class="w">    </span><span class="n">иначе</span><span class="w"> </span><span class="n">вывод</span><span class="w"> </span><span class="s">&quot;Требуется доработка&quot;</span>
+<span class="w">  </span><span class="n">все</span>
+<span class="n">кон</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">check_agreement</span><span class="p">(</span>
+    <span class="n">availability_of_requirements</span><span class="p">,</span>
+    <span class="n">compliance_with_norms</span><span class="p">,</span>
+    <span class="n">legal_capacity_of_the_parties</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Анализ договора на соответствие ГК РФ&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">availability_of_requirements</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span>
+        <span class="n">compliance_with_norms</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span>
+        <span class="n">legal_capacity_of_the_parties</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span>
+    <span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Договор корректен&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Требуется доработка&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Блок-схема</label><div class="sd-tab-content docutils">
+<a class="mb-1 reference internal image-reference" href="../../_images/01_01.flowchart.svg"><img alt="fishy" class="mb-1 align-center" src="../../_images/01_01.flowchart.svg" style="width: 600px;" /></a>
+</div>
+</div>
+<section id="id9">
+<h4>Примеры работы:<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Наличие реквизитов</p></th>
+<th class="head"><p>Соответствие нормам</p></th>
+<th class="head"><p>Дееспособность сторон</p></th>
+<th class="head"><p>Результат</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Да</p></td>
+<td><p>Нет</p></td>
+<td><p>Да</p></td>
+<td><p>Требуется доработка</p></td>
+</tr>
+<tr class="row-odd"><td><p>Да</p></td>
+<td><p>Да</p></td>
+<td><p>Да</p></td>
+<td><p>Договор корректен</p></td>
+</tr>
+<tr class="row-even"><td><p>Нет</p></td>
+<td><p>Да</p></td>
+<td><p>Нет</p></td>
+<td><p>Требуется доработка</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id10">
+<h4>Вопросы для самопроверки<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">#</a></h4>
+<p>Почему в алгоритме проверки дееспособности используется логическое “И”?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">check_agreement</span><span class="p">(</span>
+    <span class="n">is_requirements</span><span class="p">,</span> <span class="n">is_norms</span><span class="p">,</span> <span class="n">is_legal</span>  <span class="c1"># Наличие реквизитов  # Соответствие нормам  # Дееспособность сторон</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Анализ договора на соответствие ГК РФ&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">is_requirements</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_norms</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_legal</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Договор корректен&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Требуется доработка&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Пример работы</span>
+<span class="c1"># Ввод данных</span>
+<span class="n">is_requirements</span> <span class="o">=</span> <span class="s2">&quot;Да&quot;</span>
+<span class="n">is_norms</span> <span class="o">=</span> <span class="s2">&quot;Да&quot;</span>
+<span class="n">is_legal</span> <span class="o">=</span> <span class="s2">&quot;Нет&quot;</span>
+<span class="c1"># Запуск расчета</span>
+<span class="n">check_agreement</span><span class="p">(</span><span class="n">is_requirements</span><span class="p">,</span> <span class="n">is_norms</span><span class="p">,</span> <span class="n">is_legal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Требуется доработка
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id11">
+<h3>Пример 2. Алгоритм расчета алиментов<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">#</a></h3>
+<p><strong>Цель</strong>: Определить сумму алиментов на основе дохода и количества детей.</p>
+<p><strong>Правила</strong>:</p>
+<ul class="simple">
+<li><p>Алгоритм предполагает, что количество детей всегда ≥ 1.</p></li>
+<li><p>Проценты соответствуют стандартным нормам законодательства РФ (ст. 81 СК РФ):</p>
+<ul>
+<li><p>25% от дохода — 1 ребенок</p></li>
+<li><p>33% — 2 ребенка</p></li>
+<li><p>50% — 3 и более</p></li>
+</ul>
+</li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Шаги алгоритма</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p><strong>Ввод данных</strong>:</p>
+<ul class="simple">
+<li><p>Пользователь вводит два значения:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Доход</span></code> (число) — ежемесячный доход плательщика (например, 100 000 рублей).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">КоличествоДетей</span></code> (число) — количество несовершеннолетних детей (целое число ≥ 1).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Выбор процента для расчета</strong>:
+В зависимости от количества детей применяется соответствующая ставка:</p>
+<ul class="simple">
+<li><p><strong>1 ребенок</strong>: 25% от дохода (<code class="docutils literal notranslate"><span class="pre">Алименты</span> <span class="pre">=</span> <span class="pre">Доход</span> <span class="pre">×</span> <span class="pre">0.25</span></code>).</p></li>
+<li><p><strong>2 ребенка</strong>: 33% от дохода (<code class="docutils literal notranslate"><span class="pre">Алименты</span> <span class="pre">=</span> <span class="pre">Доход</span> <span class="pre">×</span> <span class="pre">0.33</span></code>).</p></li>
+<li><p><strong>3 и более детей</strong>: 50% от дохода (<code class="docutils literal notranslate"><span class="pre">Алименты</span> <span class="pre">=</span> <span class="pre">Доход</span> <span class="pre">×</span> <span class="pre">0.5</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Расчет алиментов</strong>:
+Сумма вычисляется по формуле:
+<span class="math notranslate nohighlight">\(
+\text{Алименты} = \text{Доход} \times \begin{cases}
+    0.25, &amp; \text{если 1 ребенок} \\
+    0.33, &amp; \text{если 2 ребенка} \\
+    0.5, &amp; \text{если 3 и более детей}
+\end{cases}
+\)</span></p></li>
+<li><p><strong>Вывод результата</strong>:
+На экран выводится сообщение с рассчитанной суммой, например:
+<code class="docutils literal notranslate"><span class="pre">&quot;Сумма</span> <span class="pre">алиментов:</span> <span class="pre">25000</span> <span class="pre">рублей&quot;</span></code>.</p></li>
+</ol>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+Псевдокод</label><div class="sd-tab-content docutils">
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="n">алг</span><span class="w"> </span><span class="n">РасчетАлиментов</span>
+<span class="n">нач</span>
+<span class="w">  </span><span class="n">ввод</span><span class="w"> </span><span class="n">Доход</span><span class="p">,</span><span class="w"> </span><span class="n">КоличествоДетей</span>
+<span class="w">  </span><span class="n">выбор</span>
+<span class="w">    </span><span class="n">при</span><span class="w"> </span><span class="n">КоличествоДетей</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">Алименты</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">Доход</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.25</span>
+<span class="w">    </span><span class="n">при</span><span class="w"> </span><span class="n">КоличествоДетей</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="n">Алименты</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">Доход</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.33</span>
+<span class="w">    </span><span class="n">при</span><span class="w"> </span><span class="n">КоличествоДетей</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w"> </span><span class="n">Алименты</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">Доход</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5</span>
+<span class="w">  </span><span class="n">кон_выбора</span>
+<span class="w">  </span><span class="n">вывод</span><span class="w"> </span><span class="s">&quot;Сумма алиментов: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Алименты</span>
+<span class="n">кон</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+Блок-схема</label><div class="sd-tab-content docutils">
+<a class="mb-1 reference internal image-reference" href="../../_images/01_02.flowchart.svg"><img alt="fishy" class="mb-1 align-center" src="../../_images/01_02.flowchart.svg" style="width: 600px;" /></a>
+</div>
+</div>
+<p><strong>Примеры работы:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Доход, руб</p></th>
+<th class="head"><p>Количество детей</p></th>
+<th class="head"><p>Результат</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>80 000</p></td>
+<td><p>1</p></td>
+<td><p>20 000 рублей</p></td>
+</tr>
+<tr class="row-odd"><td><p>120 000</p></td>
+<td><p>2</p></td>
+<td><p>39 600 рублей</p></td>
+</tr>
+<tr class="row-even"><td><p>200 000</p></td>
+<td><p>3</p></td>
+<td><p>100 000 рублей</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_alimony</span><span class="p">(</span><span class="n">income</span><span class="p">,</span> <span class="n">children</span><span class="p">):</span>  <span class="c1"># Ежемесячный доход плательщика (руб)  # Количество несовершеннолетних детей</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Определить сумму алиментов на основе дохода и количества детей&quot;&quot;&quot;</span>
+
+    <span class="c1"># Расчет алиментов</span>
+    <span class="k">if</span> <span class="n">children</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># нет детей</span>
+        <span class="n">alimony</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">children</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">alimony</span> <span class="o">=</span> <span class="n">income</span> <span class="o">*</span> <span class="mf">0.25</span>
+    <span class="k">elif</span> <span class="n">children</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">alimony</span> <span class="o">=</span> <span class="n">income</span> <span class="o">*</span> <span class="mf">0.33</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># 3 и более детей</span>
+        <span class="n">alimony</span> <span class="o">=</span> <span class="n">income</span> <span class="o">*</span> <span class="mf">0.5</span>
+
+    <span class="c1"># Вывод</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Сумма алиментов: </span><span class="si">{</span><span class="n">alimony</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> рублей&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Пример работы</span>
+<span class="c1"># Ввод данных</span>
+<span class="n">income</span> <span class="o">=</span> <span class="mi">120000</span>
+<span class="n">children</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="c1"># Запуск расчета</span>
+<span class="n">calculate_alimony</span><span class="p">(</span><span class="n">income</span><span class="p">,</span> <span class="n">children</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Сумма алиментов: 39600.00 рублей
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="id12">
+<h3>Пример 3. Алгоритм определения подсудности дела<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">#</a></h3>
+<p><strong>Цель</strong>: Установить, в какой суд подавать иск.</p>
+<p><strong>Правила</strong>:</p>
+<ol class="arabic simple">
+<li><p>Приоритет проверки типа спора и статуса сторон выше, чем цены иска.</p></li>
+<li><p>Для неэкономических споров или споров с участием физлиц используется общее правило подсудности по цене иска.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Мировой суд: споры с ценой иска до 100 000 ₽.</p></li>
+<li><p>Районный суд: споры с ценой иска свыше 100 000 ₽.</p></li>
+<li><p>Арбитраж: экономические споры между юрлицами.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Алгоритм соответствует статьям 22–24 ГПК РФ и 34–36 АПК РФ.</p></li>
+</ol>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
+Шаги алгоритма</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p><strong>Ввод данных</strong>:</p>
+<ul class="simple">
+<li><p>Пользователь вводит три значения:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ЦенаИска</span></code> (число) — сумма исковых требований в рублях.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ТипСпора</span></code> (строка) — категория спора (например, “Экономический”, “Семейный”, “Трудовой”).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Стороны</span></code> (строка) — статус участников спора (например, “Юрлица”, “Физлица”).</p></li>
+</ul>
+</li>
+<li><p><strong>Проверка условий</strong>:</p>
+<ul class="simple">
+<li><p><strong>Условие 1</strong>:
+Если <code class="docutils literal notranslate"><span class="pre">ТипСпора</span> <span class="pre">=</span> <span class="pre">&quot;Экономический&quot;</span></code> и <code class="docutils literal notranslate"><span class="pre">Стороны</span> <span class="pre">=</span> <span class="pre">&quot;Юрлица&quot;</span></code>, то: “Арбитражный суд”.</p></li>
+<li><p><strong>Условие 2</strong> (если Условие 1 не выполнено):
+Проверить цену иска:</p>
+<ul>
+<li><p>Если <code class="docutils literal notranslate"><span class="pre">ЦенаИска</span> <span class="pre">≤</span> <span class="pre">100</span> <span class="pre">000</span> <span class="pre">руб.</span></code>, то: “Мировой суд”.</p></li>
+<li><p>Если <code class="docutils literal notranslate"><span class="pre">ЦенаИска</span> <span class="pre">&gt;</span> <span class="pre">100</span> <span class="pre">000</span> <span class="pre">руб.</span></code>, то: “Районный суд”.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Вывод результата</strong>:
+На экран выводится сообщение с рассчитанной суммой, например:
+<code class="docutils literal notranslate"><span class="pre">&quot;Сумма</span> <span class="pre">алиментов:</span> <span class="pre">25000</span> <span class="pre">рублей&quot;</span></code>.</p></li>
+</ol>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-9">
+Псевдокод</label><div class="sd-tab-content docutils">
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="n">алг</span><span class="w"> </span><span class="n">ОпределитьПодсудность</span>
+<span class="n">нач</span>
+<span class="w">  </span><span class="n">ввод</span><span class="w"> </span><span class="n">ЦенаИска</span><span class="p">,</span><span class="w"> </span><span class="n">ТипСпора</span>
+<span class="w">  </span><span class="n">если</span><span class="w"> </span><span class="n">ТипСпора</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Экономический&quot;</span><span class="w"> </span><span class="n">и</span><span class="w"> </span><span class="n">Стороны</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Юрлица&quot;</span>
+<span class="w">    </span><span class="n">то</span><span class="w"> </span><span class="n">вывод</span><span class="w"> </span><span class="s">&quot;Арбитражный суд&quot;</span>
+<span class="w">    </span><span class="n">иначе</span>
+<span class="w">      </span><span class="n">если</span><span class="w"> </span><span class="n">ЦенаИска</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100000</span>
+<span class="w">        </span><span class="n">то</span><span class="w"> </span><span class="n">вывод</span><span class="w"> </span><span class="s">&quot;Мировой суд&quot;</span>
+<span class="w">        </span><span class="n">иначе</span><span class="w"> </span><span class="n">вывод</span><span class="w"> </span><span class="s">&quot;Районный суд&quot;</span>
+<span class="w">      </span><span class="n">все</span>
+<span class="w">  </span><span class="n">все</span>
+<span class="n">кон</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-10" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-10">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-11">
+Блок-схема</label><div class="sd-tab-content docutils">
+<a class="mb-1 reference internal image-reference" href="../../_images/01_03.flowchart.svg"><img alt="fishy" class="mb-1 align-center" src="../../_images/01_03.flowchart.svg" style="width: 600px;" /></a>
+</div>
+</div>
+<p><strong>Примеры работы:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Цена иска</p></th>
+<th class="head"><p>Тип спора</p></th>
+<th class="head"><p>Стороны</p></th>
+<th class="head"><p>Результат</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>150 000</p></td>
+<td><p>Экономический</p></td>
+<td><p>Юрлица</p></td>
+<td><p>Арбитражный суд</p></td>
+</tr>
+<tr class="row-odd"><td><p>80 000</p></td>
+<td><p>Семейный</p></td>
+<td><p>Физлица</p></td>
+<td><p>Мировой суд</p></td>
+</tr>
+<tr class="row-even"><td><p>200 000</p></td>
+<td><p>Трудовой</p></td>
+<td><p>Физлица</p></td>
+<td><p>Районный суд</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id13">
+<h3>Пример 4. Алгоритм проверки процессуальных сроков<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">#</a></h3>
+<p><strong>Цель</strong>: Определить, не пропущен ли срок подачи апелляции.
+<strong>Правило</strong>: Срок — 30 дней с даты вынесения решения.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-12">
+Шаги алгоритма</label><div class="sd-tab-content docutils">
+<p>TODO</p>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-13">
+Псевдокод</label><div class="sd-tab-content docutils">
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="n">алг</span><span class="w"> </span><span class="n">ПроверкаСрокаАпелляции</span>
+<span class="n">нач</span>
+<span class="w">  </span><span class="n">ввод</span><span class="w"> </span><span class="n">ДатаРешения</span><span class="p">,</span><span class="w"> </span><span class="n">ТекущаяДата</span>
+<span class="w">  </span><span class="n">ДнейПросрочки</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">ТекущаяДата</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ДатаРешения</span>
+<span class="w">  </span><span class="n">если</span><span class="w"> </span><span class="n">ДнейПросрочки</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">30</span>
+<span class="w">    </span><span class="n">то</span><span class="w"> </span><span class="n">вывод</span><span class="w"> </span><span class="s">&quot;Срок пропущен&quot;</span>
+<span class="w">    </span><span class="n">иначе</span><span class="w"> </span><span class="n">вывод</span><span class="w"> </span><span class="s">&quot;Срок соблюден&quot;</span>
+<span class="w">  </span><span class="n">все</span>
+<span class="n">кон</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-14" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-14">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-15" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-15">
+Блок-схема</label><div class="sd-tab-content docutils">
+<a class="mb-1 reference internal image-reference" href="../../_images/01_04.flowchart.svg"><img alt="fishy" class="mb-1 align-center" src="../../_images/01_04.flowchart.svg" style="width: 600px;" /></a>
+</div>
+</div>
+<p><strong>Примеры работы:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Дата Решения</p></th>
+<th class="head"><p>ДатаРешения</p></th>
+<th class="head"><p>Результат</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>9.01.2025</p></td>
+<td><p>15.04.2025</p></td>
+<td><p>Cрок пропущен</p></td>
+</tr>
+<tr class="row-odd"><td><p>12.02.2025</p></td>
+<td><p>12.03.2025</p></td>
+<td><p>Срок соблюден</p></td>
+</tr>
+<tr class="row-even"><td><p>31.10.2023</p></td>
+<td><p>3.02.2024</p></td>
+<td><p>Cрок пропущен</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id14">
+<h3>Практическое значение<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">#</a></h3>
+<p>Такие алгоритмы используются в юридических IT-системах:</p>
+<ul class="simple">
+<li><p>Конструкторы договоров (например, «КонсультантПлюс»).</p></li>
+<li><p>Автоматические калькуляторы судебных расходов.</p></li>
+<li><p>Экспертные системы для анализа судебной практики.</p></li>
+</ul>
+</section>
+</section>
+<section id="id15">
+<h2>Числовые и логические алгоритмы.<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id16">
+<h2>Алгоритмы в юридических процессах и правовых нормах.<a class="headerlink" href="#id16" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id17">
+<h2>Свойства алгоритмов.<a class="headerlink" href="#id17" title="Ссылка на этот заголовок">#</a></h2>
+<section id="id18">
+<h3>Дискретность<a class="headerlink" href="#id18" title="Ссылка на этот заголовок">#</a></h3>
+<p>Алгоритм разбивается на отдельные элементарные шаги, которые выполняются последовательно. Нет неоднозначности в переходе от одного шага к другому.</p>
+</section>
+<section id="id19">
+<h3>Определённость (детерминированность)<a class="headerlink" href="#id19" title="Ссылка на этот заголовок">#</a></h3>
+<p>Каждое действие и правило должны быть строго и однозначно сформулированы. При одних и тех же входных данных алгоритм всегда даёт одинаковый результат.</p>
+</section>
+<section id="id20">
+<h3>Результативность (конечность)<a class="headerlink" href="#id20" title="Ссылка на этот заголовок">#</a></h3>
+<p>Алгоритм должен завершаться за конечное число шагов и выдавать результат (или сообщение об отсутствии решения).</p>
+</section>
+</section>
+<section id="id21">
+<h2>Массовость<a class="headerlink" href="#id21" title="Ссылка на этот заголовок">#</a></h2>
+<p>Алгоритм применим к множеству однотипных задач, а не к одной конкретной. Например, алгоритм сортировки работает для любого набора чисел.</p>
+</section>
+<section id="id22">
+<h2>Понятность<a class="headerlink" href="#id22" title="Ссылка на этот заголовок">#</a></h2>
+<p>Шаги должны быть доступны для выполнения исполнителем (человеком, компьютером, роботом).</p>
+</section>
+<section id="id23">
+<h2>Принципы разработки алгоритмов.<a class="headerlink" href="#id23" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id24">
+<h2>Методы разработки алгоритмов.<a class="headerlink" href="#id24" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id25">
+<h2>Основные этапы решения задачи. Тестирование алгоритма.<a class="headerlink" href="#id25" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id26">
+<h2>Способы записи алгоритмов.<a class="headerlink" href="#id26" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id27">
+<h2>Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90.<a class="headerlink" href="#id27" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id28">
+<h2>Содержание:<a class="headerlink" href="#id28" title="Ссылка на этот заголовок">#</a></h2>
+<ol class="arabic simple">
+<li><p>Понятие алгоритма. Числовые и логические алгоритмы.</p></li>
+<li><p>Алгоритмы в юридических процессах и правовых нормах.</p></li>
+<li><p>Свойства алгоритмов.</p></li>
+<li><p>Принципы разработки алгоритмов.</p></li>
+<li><p>Методы разработки алгоритмов.</p></li>
+<li><p>Основные этапы решения задачи. Тестирование алгоритма.</p></li>
+<li><p>Способы записи алгоритмов.</p></li>
+<li><p>Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90.</p></li>
+</ol>
+</section>
+<section id="id29">
+<h2>Задание для подготовки:<a class="headerlink" href="#id29" title="Ссылка на этот заголовок">#</a></h2>
 <ol class="arabic simple">
 <li><p>В Налоговом Кодексе РФ найдите статью 333.19, устанавливающую размер государственная пошлина по делам, рассматриваемым Верховным Судом Российской Федерации. Можно положения этой статьи рассматривать как алгоритм?</p></li>
 <li><p>Подберите другие примеры последовательности действий из юридической практики, которые являются алгоритмами.</p></li>
 </ol>
+<section id="id30">
+<h3>Вопросы для самопроверки<a class="headerlink" href="#id30" title="Ссылка на этот заголовок">#</a></h3>
+<ol class="arabic simple">
+<li><p>Зачем юристу понимать алгоритмы?</p></li>
+<li><p>Приведите пример алгоритма из юридической практики.</p></li>
+<li><p>Какие данные нужны для алгоритма расчета неустойки по договору?</p></li>
+<li><p>Как модифицировать алгоритм подсудности для дел о наследстве?</p></li>
+<li><p>Почему в алгоритме проверки дееспособности используется логическое “И”?</p></li>
+</ol>
+</section>
 </section>
 </section>
 
@@ -717,8 +1291,43 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Содержание:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Задание для подготовки:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Цель лекции</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Содержание</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Понятие алгоритма</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Историческая справка</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Структура алгоритма</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Примеры юридических алгоритмов</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Пример 1. Алгоритм проверки законности договора</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Примеры работы:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Вопросы для самопроверки</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Пример 2. Алгоритм расчета алиментов</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Пример 3. Алгоритм определения подсудности дела</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Пример 4. Алгоритм проверки процессуальных сроков</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Практическое значение</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Числовые и логические алгоритмы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Алгоритмы в юридических процессах и правовых нормах.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Свойства алгоритмов.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Дискретность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Определённость (детерминированность)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Результативность (конечность)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Массовость</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Понятность</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Принципы разработки алгоритмов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Методы разработки алгоритмов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Основные этапы решения задачи. Тестирование алгоритма.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Способы записи алгоритмов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Правила оформления схем алгоритмов. Единая система программной документации в соответствии с ГОСТ 19.701-90.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Содержание:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Задание для подготовки:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Вопросы для самопроверки</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
