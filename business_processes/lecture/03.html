@@ -634,8 +634,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Содержание:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Задание для подготовки:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Цель</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Рассматриваемые вопросы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#business-process-management-bpm">Основные подходы концепции управления бизнес-процессами (Business Process Management, BPM) как основы приведения процессов организации в соответствие с ее целями</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bpm-3">Ключевые концепции свода знаний BPM СВОК 3 по управлению процессами</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Уровни процессов компании согласно СВОК 3.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Моделирование бизнес-процессов — один из методов улучшения качества и эффективности работы организации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Стадии моделирования бизнес-процессов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Виды моделирования бизнес-процессов организации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Основные принципы моделирования БП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sadt">Методология структурного анализа и проектирования SADT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aris-architecture-of-integrated-information-systems">Методология ARIS (Architecture of Integrated Information Systems)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uml-unified-model-language">Структурные модели унифицированного языка UML (Unified Model Language)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erm-entity-relationship-model-er">Назначение модели «сущность-связь» (ERM, Entity-Relationship Model или ER-модель) и нотации для ее визуализации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bpmn">Моделирование бизнес-процессов в нотации BPMN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bpmn-epc-sipoc">Нотации моделирования бизнес-процессов (BPMN, еEPC, SIPOC и другие)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Задание для подготовки к практическому занятию</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Вопросы для самопроверки</a></li>
 </ul>
             </nav>
         </div>
@@ -650,25 +665,70 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="business-processes-lecture-3">
 <span id="id1"></span><h1>Лекция 3. Моделирование деятельности организации.<a class="headerlink" href="#business-processes-lecture-3" title="Ссылка на этот заголовок">#</a></h1>
 <section id="id2">
-<h2>Содержание:<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">#</a></h2>
+<h2>Цель<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id3">
+<h2>Рассматриваемые вопросы<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">#</a></h2>
 <ol class="arabic simple">
 <li><p>Основные подходы концепции управления бизнес-процессами (Business Process Management, BPM) как основы приведения процессов организации в соответствие с ее целями.</p></li>
 <li><p>Ключевые концепции свода знаний BPM СВОК 3 по управлению процессами.</p></li>
 <li><p>Уровни процессов компании согласно СВОК 3.0.</p></li>
-<li><p>Моделирование бизнес-процессов – один из методов улучшения качества и эффективности работы организации.</p></li>
+<li><p>Моделирование бизнес-процессов — один из методов улучшения качества и эффективности работы организации.</p></li>
 <li><p>Стадии моделирования бизнес-процессов.</p></li>
 <li><p>Виды моделирования бизнес-процессов организации.</p></li>
 <li><p>Основные принципы моделирования БП.</p></li>
 <li><p>Методология структурного анализа и проектирования SADT.</p></li>
-<li><p>Методология ARIS (Architecture of 	Integrated Information Systems).</p></li>
+<li><p>Методология ARIS (Architecture of Integrated Information Systems).</p></li>
 <li><p>Структурные модели унифицированного языка UML (Unified Model Language).</p></li>
 <li><p>Назначение модели «сущность-связь» (ERM, Entity-Relationship Model или ER-модель) и нотации для ее визуализации.</p></li>
 <li><p>Моделирование бизнес-процессов в нотации BPMN.</p></li>
 <li><p>Нотации моделирования бизнес-процессов (BPMN, еEPC, SIPOC и другие).</p></li>
 </ol>
 </section>
-<section id="id3">
-<h2>Задание для подготовки:<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">#</a></h2>
+<section id="business-process-management-bpm">
+<h2>Основные подходы концепции управления бизнес-процессами (Business Process Management, BPM) как основы приведения процессов организации в соответствие с ее целями<a class="headerlink" href="#business-process-management-bpm" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="bpm-3">
+<h2>Ключевые концепции свода знаний BPM СВОК 3 по управлению процессами<a class="headerlink" href="#bpm-3" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id4">
+<h2>Уровни процессов компании согласно СВОК 3.0<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id5">
+<h2>Моделирование бизнес-процессов — один из методов улучшения качества и эффективности работы организации<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id6">
+<h2>Стадии моделирования бизнес-процессов<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id7">
+<h2>Виды моделирования бизнес-процессов организации<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id8">
+<h2>Основные принципы моделирования БП<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="sadt">
+<h2>Методология структурного анализа и проектирования SADT<a class="headerlink" href="#sadt" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="aris-architecture-of-integrated-information-systems">
+<h2>Методология ARIS (Architecture of Integrated Information Systems)<a class="headerlink" href="#aris-architecture-of-integrated-information-systems" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="uml-unified-model-language">
+<h2>Структурные модели унифицированного языка UML (Unified Model Language)<a class="headerlink" href="#uml-unified-model-language" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="erm-entity-relationship-model-er">
+<h2>Назначение модели «сущность-связь» (ERM, Entity-Relationship Model или ER-модель) и нотации для ее визуализации<a class="headerlink" href="#erm-entity-relationship-model-er" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="bpmn">
+<h2>Моделирование бизнес-процессов в нотации BPMN<a class="headerlink" href="#bpmn" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="bpmn-epc-sipoc">
+<h2>Нотации моделирования бизнес-процессов (BPMN, еEPC, SIPOC и другие)<a class="headerlink" href="#bpmn-epc-sipoc" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id9">
+<h2>Задание для подготовки к практическому занятию<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id10">
+<h2>Вопросы для самопроверки<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">#</a></h2>
 <ol class="arabic simple">
 <li><p>Используя различные источники, в том числе информационные ресурсы сети Интернет, выполнить сравнительный анализ нотаций UML/ BPMN 2.0 и IDEF для моделирования БП в зависимости от типов бизнес-процессов и потребностей бизнеса.</p></li>
 <li><p>Сравнить нотации ARIS eEPC  и  IDEF для моделирования БП в зависимости от типов бизнес-процессов и потребностей бизнеса.</p></li>
@@ -743,8 +803,23 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Содержание:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Задание для подготовки:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Цель</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Рассматриваемые вопросы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#business-process-management-bpm">Основные подходы концепции управления бизнес-процессами (Business Process Management, BPM) как основы приведения процессов организации в соответствие с ее целями</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bpm-3">Ключевые концепции свода знаний BPM СВОК 3 по управлению процессами</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Уровни процессов компании согласно СВОК 3.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Моделирование бизнес-процессов — один из методов улучшения качества и эффективности работы организации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Стадии моделирования бизнес-процессов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Виды моделирования бизнес-процессов организации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Основные принципы моделирования БП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sadt">Методология структурного анализа и проектирования SADT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aris-architecture-of-integrated-information-systems">Методология ARIS (Architecture of Integrated Information Systems)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uml-unified-model-language">Структурные модели унифицированного языка UML (Unified Model Language)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erm-entity-relationship-model-er">Назначение модели «сущность-связь» (ERM, Entity-Relationship Model или ER-модель) и нотации для ее визуализации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bpmn">Моделирование бизнес-процессов в нотации BPMN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bpmn-epc-sipoc">Нотации моделирования бизнес-процессов (BPMN, еEPC, SIPOC и другие)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Задание для подготовки к практическому занятию</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Вопросы для самопроверки</a></li>
 </ul>
   </nav></div>
 

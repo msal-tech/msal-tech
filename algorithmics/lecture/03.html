@@ -634,8 +634,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Содержание:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Задания для подготовки:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Цель</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Рассматриваемые вопросы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Разветвляющиеся алгоритмы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Полное и неполное ветвление</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Особенности записи алгоритмов ветвления</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if">Условный оператор IF, особенности выполнения</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Циклические алгоритмические конструкции</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Цикл с известным числом повторений: арифметический цикл или цикл с параметром</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Цикл с неизвестным числом повторений: цикл с предусловием, цикл с постусловием</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Задание для подготовки к практическому занятию</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Вопросы для самопроверки</a></li>
 </ul>
             </nav>
         </div>
@@ -650,9 +659,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="algorithmics-lecture-3">
 <span id="id1"></span><h1>Лекция 3. Основные управляющие алгоритмические конструкции. Разветвляющиеся и циклические алгоритмические конструкции.<a class="headerlink" href="#algorithmics-lecture-3" title="Ссылка на этот заголовок">#</a></h1>
 <section id="id2">
-<h2>Содержание:<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">#</a></h2>
+<h2>Цель<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id3">
+<h2>Рассматриваемые вопросы<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">#</a></h2>
 <ol class="arabic simple">
-<li><p>Разветвляющиеся алгоритмы. Полное и неполное ветвление.</p></li>
+<li><p>Разветвляющиеся алгоритмы.</p></li>
+<li><p>Полное и неполное ветвление.</p></li>
 <li><p>Особенности записи алгоритмов ветвления.</p></li>
 <li><p>Условный оператор IF, особенности выполнения.</p></li>
 <li><p>Циклические алгоритмические конструкции.</p></li>
@@ -660,8 +673,32 @@ document.write(`
 <li><p>Цикл с неизвестным числом повторений: цикл с предусловием, цикл с постусловием.</p></li>
 </ol>
 </section>
-<section id="id3">
-<h2>Задания для подготовки:<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">#</a></h2>
+<section id="id4">
+<h2>Разветвляющиеся алгоритмы<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id5">
+<h2>Полное и неполное ветвление<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id6">
+<h2>Особенности записи алгоритмов ветвления<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="if">
+<h2>Условный оператор IF, особенности выполнения<a class="headerlink" href="#if" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id7">
+<h2>Циклические алгоритмические конструкции<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id8">
+<h2>Цикл с известным числом повторений: арифметический цикл или цикл с параметром<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id9">
+<h2>Цикл с неизвестным числом повторений: цикл с предусловием, цикл с постусловием<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id10">
+<h2>Задание для подготовки к практическому занятию<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">#</a></h2>
+</section>
+<section id="id11">
+<h2>Вопросы для самопроверки<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">#</a></h2>
 <p>1. Подберите примеры из юридической практики алгоритмов с ветвлением и циклических алгоритмов (с параметром, с предусловием, с постусловием).</p>
 </section>
 </section>
@@ -730,8 +767,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Содержание:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Задания для подготовки:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Цель</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Рассматриваемые вопросы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Разветвляющиеся алгоритмы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Полное и неполное ветвление</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Особенности записи алгоритмов ветвления</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if">Условный оператор IF, особенности выполнения</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Циклические алгоритмические конструкции</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Цикл с известным числом повторений: арифметический цикл или цикл с параметром</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Цикл с неизвестным числом повторений: цикл с предусловием, цикл с постусловием</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Задание для подготовки к практическому занятию</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Вопросы для самопроверки</a></li>
 </ul>
   </nav></div>
 
