@@ -412,24 +412,6 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/bookseer/legaltech/main?urlpath=lab/tree/book/algorithmics/lecture/01.md" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Binder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
       <li>
 <button onclick="initThebeSBT()"
   class="btn btn-sm btn-launch-thebe dropdown-item"
@@ -654,19 +636,19 @@ document.write(`
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Рекомендации по доработке договора</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Пример 2. Алгоритм расчета алиментов</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Постановка задачи</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Особенности алгоритма</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Реализация алгоритма</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Пример 2. Алгоритм расчета алиментов</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Постановка задачи</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Особенности алгоритма</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Реализация алгоритма</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Примеры входных и выходных данных</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Вопросы для самопроверки</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Рекомендации по доработке договора:</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Пример 3. Алгоритм определения подсудности дела</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Постановка задачи</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Особенности алгоритма</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Реализация алгоритма</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Пример 3. Алгоритм определения подсудности дела</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Постановка задачи</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Особенности алгоритма</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Реализация алгоритма</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Примеры входных и выходных данных</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Вопросы для самопроверки</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Рекомендации по доработке договора:</a></li>
@@ -990,13 +972,12 @@ Python</label><div class="sd-tab-content docutils">
 </section>
 <section id="id16">
 <h4>Пример 2. Алгоритм расчета алиментов<a class="headerlink" href="#id16" title="Ссылка на этот заголовок">#</a></h4>
-</section>
 <section id="id17">
-<h4>Постановка задачи<a class="headerlink" href="#id17" title="Ссылка на этот заголовок">#</a></h4>
+<h5>Постановка задачи<a class="headerlink" href="#id17" title="Ссылка на этот заголовок">#</a></h5>
 <p>Определить сумму алиментов на основе дохода и количества детей.</p>
 </section>
 <section id="id18">
-<h4>Особенности алгоритма<a class="headerlink" href="#id18" title="Ссылка на этот заголовок">#</a></h4>
+<h5>Особенности алгоритма<a class="headerlink" href="#id18" title="Ссылка на этот заголовок">#</a></h5>
 <ul class="simple">
 <li><p>Алгоритм предполагает, что количество детей всегда ≥ 1.</p></li>
 <li><p>Проценты соответствуют стандартным нормам законодательства РФ (ст. 81 СК РФ):</p>
@@ -1009,7 +990,7 @@ Python</label><div class="sd-tab-content docutils">
 </ul>
 </section>
 <section id="id19">
-<h4>Реализация алгоритма<a class="headerlink" href="#id19" title="Ссылка на этот заголовок">#</a></h4>
+<h5>Реализация алгоритма<a class="headerlink" href="#id19" title="Ссылка на этот заголовок">#</a></h5>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-4">
@@ -1094,6 +1075,7 @@ Python</label><div class="sd-tab-content docutils">
 </a>
 </div>
 </div>
+</section>
 <section id="id20">
 <h5>Примеры входных и выходных данных<a class="headerlink" href="#id20" title="Ссылка на этот заголовок">#</a></h5>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -1178,13 +1160,12 @@ Python</label><div class="sd-tab-content docutils">
 </section>
 <section id="id23">
 <h4>Пример 3. Алгоритм определения подсудности дела<a class="headerlink" href="#id23" title="Ссылка на этот заголовок">#</a></h4>
-</section>
 <section id="id24">
-<h4>Постановка задачи<a class="headerlink" href="#id24" title="Ссылка на этот заголовок">#</a></h4>
+<h5>Постановка задачи<a class="headerlink" href="#id24" title="Ссылка на этот заголовок">#</a></h5>
 <p>Установить, в какой суд подавать иск.</p>
 </section>
 <section id="id25">
-<h4>Особенности алгоритма<a class="headerlink" href="#id25" title="Ссылка на этот заголовок">#</a></h4>
+<h5>Особенности алгоритма<a class="headerlink" href="#id25" title="Ссылка на этот заголовок">#</a></h5>
 <ul class="simple">
 <li><p>Приоритет проверки типа спора и статуса сторон выше, чем цены иска.</p></li>
 <li><p>Для неэкономических споров или споров с участием физлиц используется общее правило подсудности по цене иска.</p></li>
@@ -1195,7 +1176,7 @@ Python</label><div class="sd-tab-content docutils">
 </ul>
 </section>
 <section id="id26">
-<h4>Реализация алгоритма<a class="headerlink" href="#id26" title="Ссылка на этот заголовок">#</a></h4>
+<h5>Реализация алгоритма<a class="headerlink" href="#id26" title="Ссылка на этот заголовок">#</a></h5>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-8" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-8">
@@ -1278,6 +1259,7 @@ Python</label><div class="sd-tab-content docutils">
 </a>
 </div>
 </div>
+</section>
 <section id="id27">
 <h5>Примеры входных и выходных данных<a class="headerlink" href="#id27" title="Ссылка на этот заголовок">#</a></h5>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -1871,19 +1853,19 @@ Python</label><div class="sd-tab-content docutils">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Рекомендации по доработке договора</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Пример 2. Алгоритм расчета алиментов</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Постановка задачи</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Особенности алгоритма</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Реализация алгоритма</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Пример 2. Алгоритм расчета алиментов</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Постановка задачи</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Особенности алгоритма</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Реализация алгоритма</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Примеры входных и выходных данных</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Вопросы для самопроверки</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Рекомендации по доработке договора:</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Пример 3. Алгоритм определения подсудности дела</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Постановка задачи</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Особенности алгоритма</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Реализация алгоритма</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Пример 3. Алгоритм определения подсудности дела</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Постановка задачи</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Особенности алгоритма</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Реализация алгоритма</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Примеры входных и выходных данных</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Вопросы для самопроверки</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Рекомендации по доработке договора:</a></li>
