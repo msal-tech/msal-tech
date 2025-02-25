@@ -412,7 +412,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/bookseer/legaltech/main?urlpath=lab/tree/book/algorithmics/lecture/01.md" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/bookseer/legaltech/main?urlpath=lab/tree/book/algorithmics/lecture/01.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -478,7 +478,7 @@
       
       
       
-      <li><a href="https://github.com/bookseer/legaltech/edit/main/book/algorithmics/lecture/01.md" target="_blank"
+      <li><a href="https://github.com/bookseer/legaltech/edit/main/book/algorithmics/lecture/01.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -526,23 +526,6 @@
       
       
       <li><a href="../../_sources/algorithmics/lecture/01.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Скачать файл записной книжки"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="../../_sources/algorithmics/lecture/01.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Скачать исходный файл"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -552,7 +535,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -673,18 +656,18 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Дискретность</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Определённость (детерминированность)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Результативность (конечность)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Массовость</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Понятность</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Массовость</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Понятность</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Принципы разработки алгоритмов</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">1. Четкость и однозначность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">2. Конечность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">3. Эффективность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">4. Общность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">5. Модульность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">6. Проверяемость</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">7. Адаптивность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Четкость и однозначность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Конечность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Эффективность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Общность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Модульность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Проверяемость</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">Адаптивность</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Методы разработки алгоритмов</a><ul class="nav section-nav flex-column">
@@ -851,13 +834,13 @@ document.write(`
 Python</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">check_agreement</span><span class="p">(</span><span class="n">is_requirements</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_norms</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_legal</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Анализ договора на соответствие ГК РФ</span>
-
+<span class="sd">    </span>
 <span class="sd">    Args:</span>
-<span class="sd">      is_requirements: Наличие реквизитов</span>
-<span class="sd">      is_norms: Соответствие нормам</span>
+<span class="sd">      is_requirements: Наличие реквизитов  </span>
+<span class="sd">      is_norms: Соответствие нормам </span>
 <span class="sd">      is_legal: Дееспособность сторон</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
+    
     <span class="k">if</span> <span class="n">is_requirements</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_norms</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_legal</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Договор корректен&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -926,13 +909,13 @@ Python</label><div class="sd-tab-content docutils">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">check_agreement</span><span class="p">(</span><span class="n">is_requirements</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_norms</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_legal</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Анализ договора на соответствие ГК РФ</span>
-
+<span class="sd">    </span>
 <span class="sd">    Args:</span>
-<span class="sd">      is_requirements: Наличие реквизитов</span>
-<span class="sd">      is_norms: Соответствие нормам</span>
+<span class="sd">      is_requirements: Наличие реквизитов  </span>
+<span class="sd">      is_norms: Соответствие нормам </span>
 <span class="sd">      is_legal: Дееспособность сторон</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
+    
     <span class="k">if</span> <span class="n">is_requirements</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_norms</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span> <span class="ow">and</span> <span class="n">is_legal</span> <span class="o">==</span> <span class="s2">&quot;Да&quot;</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Договор корректен&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -1217,7 +1200,7 @@ Python</label><div class="sd-tab-content docutils">
             <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;Мировой суд&quot;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;Районный суд&quot;</span>
-
+        
     <span class="c1"># Вывод результата</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Подсудность: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1296,7 +1279,7 @@ Python</label><div class="sd-tab-content docutils">
             <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;Мировой суд&quot;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;Районный суд&quot;</span>
-
+        
     <span class="c1"># Вывод результата</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Подсудность: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
@@ -1390,14 +1373,14 @@ Python</label><div class="sd-tab-content docutils">
 <h3>Результативность (конечность)<a class="headerlink" href="#id26" title="Ссылка на этот заголовок">#</a></h3>
 <p>Алгоритм должен завершаться за конечное число шагов и выдавать результат (или сообщение об отсутствии решения).</p>
 </section>
-</section>
 <section id="id27">
-<h2>Массовость<a class="headerlink" href="#id27" title="Ссылка на этот заголовок">#</a></h2>
+<h3>Массовость<a class="headerlink" href="#id27" title="Ссылка на этот заголовок">#</a></h3>
 <p>Алгоритм применим к множеству однотипных задач, а не к одной конкретной. Например, алгоритм сортировки работает для любого набора чисел.</p>
 </section>
 <section id="id28">
-<h2>Понятность<a class="headerlink" href="#id28" title="Ссылка на этот заголовок">#</a></h2>
+<h3>Понятность<a class="headerlink" href="#id28" title="Ссылка на этот заголовок">#</a></h3>
 <p>Шаги должны быть доступны для выполнения исполнителем (человеком, компьютером, роботом).</p>
+</section>
 </section>
 <section id="id29">
 <h2>Принципы разработки алгоритмов<a class="headerlink" href="#id29" title="Ссылка на этот заголовок">#</a></h2>
@@ -1406,37 +1389,37 @@ Python</label><div class="sd-tab-content docutils">
 <p>Понимание и применение этих принципов в практике программирования и разработки программного обеспечения способствует улучшению качества и надежности конечных продуктов.</p>
 <p>Рассмотрим основные принципы разработки алгоритмов.</p>
 <section id="id30">
-<h3>1. Четкость и однозначность<a class="headerlink" href="#id30" title="Ссылка на этот заголовок">#</a></h3>
+<h3>Четкость и однозначность<a class="headerlink" href="#id30" title="Ссылка на этот заголовок">#</a></h3>
 <p>Алгоритм должен быть четким и однозначным, чтобы каждый шаг был понятен и не вызывал сомнений.
 Это включает в себя использование ясных и понятных терминов, а также четкое определение входных и выходных данных.</p>
 </section>
 <section id="id31">
-<h3>2. Конечность<a class="headerlink" href="#id31" title="Ссылка на этот заголовок">#</a></h3>
+<h3>Конечность<a class="headerlink" href="#id31" title="Ссылка на этот заголовок">#</a></h3>
 <p>Алгоритм должен завершаться за конечное количество шагов.
 Это означает, что он не должен зацикливаться и должен иметь четко определенные условия завершения.</p>
 </section>
 <section id="id32">
-<h3>3. Эффективность<a class="headerlink" href="#id32" title="Ссылка на этот заголовок">#</a></h3>
+<h3>Эффективность<a class="headerlink" href="#id32" title="Ссылка на этот заголовок">#</a></h3>
 <p>Алгоритм должен быть эффективным как по времени, так и по использованию ресурсов.
 Это означает минимизацию количества операций и использование оптимальных структур данных.</p>
 </section>
 <section id="id33">
-<h3>4. Общность<a class="headerlink" href="#id33" title="Ссылка на этот заголовок">#</a></h3>
+<h3>Общность<a class="headerlink" href="#id33" title="Ссылка на этот заголовок">#</a></h3>
 <p>Алгоритм должен быть универсальным и применимым к широкому классу задач.
 Это позволяет использовать один и тот же алгоритм в различных контекстах и адаптировать под конкретные условия.</p>
 </section>
 <section id="id34">
-<h3>5. Модульность<a class="headerlink" href="#id34" title="Ссылка на этот заголовок">#</a></h3>
+<h3>Модульность<a class="headerlink" href="#id34" title="Ссылка на этот заголовок">#</a></h3>
 <p>Разработка алгоритмов должна основываться на принципе модульности, что позволяет разбивать сложные задачи на более простые подзадачи.
 Модульность облегчает понимание, тестирование и отладку алгоритма.</p>
 </section>
 <section id="id35">
-<h3>6. Проверяемость<a class="headerlink" href="#id35" title="Ссылка на этот заголовок">#</a></h3>
+<h3>Проверяемость<a class="headerlink" href="#id35" title="Ссылка на этот заголовок">#</a></h3>
 <p>Алгоритм должен быть проверяемым, что означает возможность тестирования его корректности и эффективности.
 Это может включать в себя создание тестовых случаев и использование методов верификации.</p>
 </section>
 <section id="id36">
-<h3>7. Адаптивность<a class="headerlink" href="#id36" title="Ссылка на этот заголовок">#</a></h3>
+<h3>Адаптивность<a class="headerlink" href="#id36" title="Ссылка на этот заголовок">#</a></h3>
 <p>Алгоритм должен быть адаптивным, что позволяет ему изменяться в зависимости от условий задачи или входных данных.
 Это особенно важно в динамических системах, где условия могут меняться.</p>
 </section>
@@ -1827,18 +1810,18 @@ Python</label><div class="sd-tab-content docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Дискретность</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Определённость (детерминированность)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Результативность (конечность)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Массовость</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Понятность</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Массовость</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Понятность</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Принципы разработки алгоритмов</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">1. Четкость и однозначность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">2. Конечность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">3. Эффективность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">4. Общность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">5. Модульность</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">6. Проверяемость</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">7. Адаптивность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Четкость и однозначность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Конечность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Эффективность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Общность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Модульность</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Проверяемость</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">Адаптивность</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Методы разработки алгоритмов</a><ul class="nav section-nav flex-column">
