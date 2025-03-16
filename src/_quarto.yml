@@ -1,0 +1,178 @@
+project:
+  type: website
+  output-dir: ../build
+  resources:
+    - "/_redirects"
+
+metadata-files:
+  - algorithmics/_sidebar.yml
+  - traineeship/_sidebar.yml
+  - project/_sidebar.yml
+  - attestation/_sidebar.yml
+  - business-process-modeling/_sidebar.yml
+  - it-project-management/_sidebar.yml
+  - legaltech/_sidebar.yml
+  - software-development-methodology/_sidebar.yml
+
+
+website:
+  announcement:
+    icon: info-circle
+    dismissable: true
+    content: "Контент находится в разработке"
+    type: primary
+    position: above-navbar
+
+  title: "Автоматизация юридических процессов"
+  image: "_static/images/logo.svg"
+  description: "Каталог учебных материалов по программе профессиональной переподготовки"
+  open-graph:
+    locale: ru_RU
+  page-navigation: true
+  bread-crumbs: true
+  reader-mode: true
+
+  repo-url: https://github.com/msal-tech/msal-tech
+  repo-actions: [edit, source, issue]
+
+  # ---------------------------------------------------------------------------
+  navbar:
+    title: false
+    #logo: "_static/images/logo.png"
+    #logo-alt: "LegalTech"
+    #collapse-below: lg
+
+    left:
+      - text: "Главная"
+        href: index.qmd
+      - text: "О программе"
+        href: annotation.qmd
+      - text: Учебные модули
+        menu:
+          - text: "Алгоритмика"
+            icon: "diagram-2"
+            href: algorithmics/index.qmd
+            #
+          - text: "Анализ и моделирование бизнес-процессов"
+            icon: "file-bar-graph"
+            href: business-process-modeling/index.qmd
+            #
+          - text: "Управление ИТ-проектами"
+            icon: "dpad"
+            href: it-project-management/index.qmd
+            #
+          - text: "Методологии разработки программного обеспечения"
+            icon: "file-code"
+            href: software-development-methodology/index.qmd
+            #
+          - text: "Автоматизация юридической работы (Legaltech)"
+            icon: "file-earmark-richtext"
+            href: legaltech/index.qmd
+      - traineeship/index.qmd
+      - project/index.qmd
+      - attestation/index.qmd
+    right:
+      - about.qmd
+      - authors.qmd
+    search: true
+
+
+  # ---------------------------------------------------------------------------
+  sidebar:
+
+    - style: "floating" # "docked" #
+      collapse-level: 1
+      align: left
+      search: true
+      pinned: true
+      contents:
+        - text: "О программе"
+          href: annotation.qmd
+        #- text: "---"
+        - section: "Учебные модули"
+          href: subjects.qmd
+          contents:
+            - text: "Алгоритмика"
+              icon: "diagram-2"
+              href: algorithmics/index.qmd
+              #
+            - text: "Анализ и моделирование бизнес-процессов"
+              icon: "file-bar-graph"
+              href: business-process-modeling/index.qmd
+              #
+            - text: "Управление ИТ-проектами"
+              icon: "dpad"
+              href: it-project-management/index.qmd
+              #
+            - text: "Методологии разработки программного обеспечения"
+              icon: "file-code"
+              href: software-development-methodology/index.qmd
+              #
+            - text: "Автоматизация юридической работы"
+              icon: "file-earmark-richtext"
+              href: legaltech/index.qmd
+
+        - traineeship/index.qmd
+        - project/index.qmd
+        - attestation/index.qmd
+
+  # ---------------------------------------------------------------------------
+  page-footer:
+    left: |
+      [Цифровая кафедра МГЮА](https://msal.ru/content/prioritet-2030/tsifrovaya-kafedra/){.external target="_blank"}
+    center:
+      - text: "Главная"
+        href: about.qmd
+      - text: "Учебные  модули"
+        href: subjects.qmd
+    right:
+      - icon: github
+        href: https://github.com/msal-tech/msal-tech
+        target: _blank
+        aria-label: GitHub
+
+execute:
+
+    echo: false
+
+jupyter: python3
+
+
+format:
+  #---------------------------------------------
+  html:
+    lang: ru
+    toc: true
+    theme:
+      light: [cosmo, theme.scss]
+    code-copy: true
+    code-overflow: wrap
+    css: ./_static/styles/styles.css
+    #include-after-body: js.html
+    link-external-newwindow: true
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
+
+  #----------------------------------------------
+  pdf:
+    lang: ru
+    toc: true
+    number-sections: true
+    colorlinks: true
+    keep-tex: false
+    mainfont: "Times New Roman"
+    monofont: "Times New Roman"
+    sansfont: "Open Sans"
+    mathfont: "Times New Roman"
+    #template: template.tex
+
+  #-----------------------------------------------
+  # docx:
+  #   toc: true
+  #   toc-depth: 2
+  #   section-numbers: true
+  #   hightlight-style: github
+  #   #reference-doc: template.docx
+

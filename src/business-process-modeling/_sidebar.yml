@@ -1,0 +1,43 @@
+website:
+  sidebar:
+    - id: "business-process-modeling"
+      #title: "Анализ и моделирование бизнес-процессов"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      pinned: true
+      contents:
+        - section: "Анализ и моделирование бизнес-процессов"
+          icon: file-bar-graph
+          href: business-process-modeling/index.qmd
+          contents:
+            - text: "Аннотация"
+              href: "business-process-modeling/annotation.qmd"
+
+            - section: "Тема 1. Основы структурного анализа. Основы процессного управления."
+              href: business-process-modeling/#
+            - section: "Тема 2. Методы анализа бизнес-процессов организации."
+              href: business-process-modeling/#
+            - section: "Тема 3. Моделирование деятельности организации."
+              href: business-process-modeling/#
+            - section: "Тема 4. Совершенствование бизнес-процессов организации. Операционные риски."
+              href: business-process-modeling/#
+            #   contents:
+            #     - text: "Конспект лекции"
+            #       href: business-process-modeling/01/lecture-01.qmd
+            #     - text: "Конспект практического занятия"
+            #       href: business-process-modeling/01/seminar-01.qmd
+            #     - text: "Задания для контрольной работы"
+            #       href: business-process-modeling/homework-01.qmd
+            #     - text: "Вопросы для самоподготовки"
+            #       href: business-process-modeling/questions-01.qmd
+            #     - text: "Тесты для самоподготовки"
+            #       href: business-process-modeling/test-01.qmd
+
+
+            - text: "Подготовка к ассесменту"
+              href: "business-process-modeling/assessment.qmd"
+            - text: "Зачет"
+              href: "business-process-modeling/credit.qmd"
+            - text: "Экзамен"
+              href: "business-process-modeling/exam.qmd"

@@ -492,3 +492,7 @@ book/_build/
 
 # Kate editor
 .virtual_documents/
+
+# Quarto
+src/.quarto/
+build/

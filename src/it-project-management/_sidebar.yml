@@ -1,0 +1,42 @@
+website:
+  sidebar:
+    - id: it-project-management
+      title: "Управление ИТ-проектами"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      pinned: true
+      contents:
+        - section: "Управление ИТ-проектами"
+          icon: dpad
+          href: it-project-management/index.qmd
+          contents:
+            - text: "Аннотация"
+              href: "it-project-management/annotation.qmd"
+
+            - section: "Тема 1. Основные положения и общая характеристика управления ИТ-проектами."
+              href: it-project-management/#
+            - section: "Тема 2. Организация управления IИ-проектом."
+              href: it-project-management/#
+            - section: "Тема 3. Методы и модели управления разработкой программных средств ИТ-проекта."
+              href: it-project-management/#
+            - section: "Тема 4. Команда разработки программного обеспечения. Роли и задачи команды."
+              href: it-project-management/#
+
+            #   contents:
+            #     - text: "Конспект лекции"
+            #       href: it-project-management/01/lecture-01.qmd
+            #     - text: "Конспект практического занятия"
+            #       href: it-project-management/01/seminar-01.qmd
+            #     - text: "Задания для контрольной работы"
+            #       href: it-project-management/homework-01.qmd
+            #     - text: "Вопросы для самоподготовки"
+            #       href: it-project-management/questions-01.qmd
+            #     - text: "Тесты для самоподготовки"
+            #       href: it-project-management/test-01.qmd
+
+
+            - text: "Подготовка к ассесменту"
+              href: "it-project-management/assessment.qmd"
+            - text: "Зачет"
+              href: "it-project-management/credit.qmd"

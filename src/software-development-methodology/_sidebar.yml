@@ -1,0 +1,41 @@
+website:
+  sidebar:
+    - id: software-development-methodology
+      title: "Методологии разработки программного обеспечения"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      pinned: true
+      contents:
+        - section: "Методологии разработки программного обеспечения"
+          icon: file-code
+          href: software-development-methodology/index.qmd
+          contents:
+            - text: "Аннотация"
+              href: "software-development-methodology/annotation.qmd"
+
+            - section: "Тема 1. Понятие о методологиях разработки. Отдельные виды разработки."
+              href: software-development-methodology/#
+            - section: "Тема 2. Выбор методологии для реального проекта."
+              href: software-development-methodology/#
+            - section: "Тема 3. Основы программирования: виды и типы языков программирования; виды и типы программ; цели и задачи создания ПО."
+              href: software-development-methodology/#
+            - section: "Тема 4. Понятие «функциональных требований» и «технического задания». Требования к написанию ФТ и ТЗ."
+              href: software-development-methodology/#
+
+            #   contents:
+            #     - text: "Конспект лекции"
+            #       href: software-development-methodology/01/lecture-01.qmd
+            #     - text: "Конспект практического занятия"
+            #       href: software-development-methodology/01/seminar-01.qmd
+            #     - text: "Задания для контрольной работы"
+            #       href: software-development-methodology/homework-01.qmd
+            #     - text: "Вопросы для самоподготовки"
+            #       href: software-development-methodology/questions-01.qmd
+            #     - text: "Тесты для самоподготовки"
+            #       href: software-development-methodology/test-01.qmd
+
+            - text: "Подготовка к ассесменту"
+              href: "software-development-methodology/assessment.qmd"
+            - text: "Зачет"
+              href: "software-development-methodology/credit.qmd"

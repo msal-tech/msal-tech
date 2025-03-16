@@ -1,0 +1,46 @@
+website:
+  sidebar:
+    - id: algorithmics
+      title: "Алгоритмика"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      pinned: true
+      contents:
+        - section: "Алгоритмика"
+          icon: diagram-2
+          href: algorithmics/index.qmd
+          contents:
+            - text: "Аннотация"
+              href: "algorithmics/annotation.qmd"
+
+            - section: "Тема 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов."
+              href: algorithmics/#
+            - section: "Тема 2. Управление исполнителем. Управляющие алгоритмические конструкции."
+              href: algorithmics/#
+            - section: "Тема 3. Основные управляющие алгоритмические конструкции. Разветвляющиеся и циклические алгоритмические конструкции."
+              href: algorithmics/#
+            - section: "Тема 4. Данные и величины. Свойства и характеристики величин."
+              href: algorithmics/#
+            - section: "Тема 5. Сложные алгоритмы. Понятие вспомогательного алгоритма. Рекурсия. Алгоритмы управления."
+              href: algorithmics/#
+
+            #   contents:
+            #     - text: "Конспект лекции"
+            #       href: algorithmics/01/lecture-01.qmd
+            #     - text: "Конспект практического занятия"
+            #       href: algorithmics/01/seminar-01.qmd
+            #     - text: "Задания для контрольной работы"
+            #       href: algorithmics/homework-01.qmd
+            #     - text: "Вопросы для самоподготовки"
+            #       href: algorithmics/questions-01.qmd
+            #     - text: "Тесты для самоподготовки"
+            #       href: algorithmics/test-01.qmd
+
+
+            - text: "Подготовка к ассесменту"
+              href: "algorithmics/assessment.qmd"
+            - text: "Зачет"
+              href: "algorithmics/credit.qmd"
+            - text: "Экзамен"
+              href: "algorithmics/exam.qmd"

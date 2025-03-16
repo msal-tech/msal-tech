@@ -1,0 +1,20 @@
+website:
+  sidebar:
+    - id: project
+      title: "Итоговый проект"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      pinned: true
+      contents:
+        - section: "Итоговый проект"
+          href: project/index.qmd
+          contents:
+            - text: "Аннотация"
+              href: "project/annotation.qmd"
+            - text: "Требования к отчету"
+              href: "project/report-requirements.qmd"
+            - text: "Структура отчета"
+              href: "project/report-structure.qmd"
+            - text: "Темы проектов"
+              href: "project/theme-options.qmd"

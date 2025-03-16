@@ -1,0 +1,76 @@
+url:
+  msal: "https://msal.ru"
+  ddmsal: "https://msal.ru/content/prioritet-2030/tsifrovaya-kafedra/"
+  innopolis: "https://innopolis.university/"
+
+link:
+  msal: "[**МГЮА**](https://msal.ru){.external target='_blank'}"
+  ddmsal: "[Цифровая кафедра МГЮА](https://msal.ru/content/prioritet-2030/tsifrovaya-kafedra/){.external target='_blank'}"
+  innopolis: "[Университет &laquo;Иннополис;raquo](https://innopolis.university/){.external target='_blank'}"
+
+# Заголовки для методических материалов
+titles:
+  annotation:
+    slug: annotation
+    long: "Аннотация учебной дисциплины"
+    short: "Аннотация"
+
+  lecture:
+    slug: lecture
+    long: "Конспект лекции"
+    short: "Конспект лекции"
+
+  lecture-slides:
+    slug: lecture-slides
+    long: "Презентация к лекции"
+    short: "Презентация к лекции"
+
+  seminar:
+    slug: seminar
+    long: "План-конспект практического занятия"
+    short: "Конспект практического занятия"
+
+  seminar-slides:
+    slug: seminar-slides
+    long: "Презентация к практическому занятию"
+    short: "Презентация к практическому занятию"
+
+  homework:
+    slug: homework
+    long: "Домашнее задания"
+    short: "Домашнее задания"
+
+  controlwork:
+    slug: controlwork
+    long: "Контрольная работа"
+    short: "Контрольная работа"
+
+  questions:
+    slug: questions
+    long: "Вопросы для самостоятельной подготовки"
+    short: "Вопросы для самоподготовки"
+
+  questions-control:
+    slug: questions-control
+    long: "Контрольные вопросы"
+    short: "Контрольные вопросы"
+
+  credit:
+    slug: credit
+    long: "Методические материалы для подготовки к зачету"
+    short: "Зачет"
+
+  exam:
+    slug: exam
+    long: "Методические материалы для подготовки к экзамену"
+    short: "Экзамен"
+
+  quiz:
+    slug: quiz
+    long: "Тест для самостоятельной подготовки"
+    short: "Тест для самоподготовки"
+
+  assessment:
+    slug: assessment
+    long: "Тест для подготовки к ассесменту"
+    short: "Тест для подготовки к ассесменту"

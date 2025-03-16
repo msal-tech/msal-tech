@@ -1,0 +1,17 @@
+---
+title: "{{< meta course.name >}}"
+format:
+  html
+---
+
+
+## Содержание учебного модуля
+
+- [**{{< var titles.annotation.long>}} **](annotation.qmd)
+- [**Тема 1. {{< meta course.topic.1 >}}**](01/)
+- [**Тема 2. {{< meta course.topic.2 >}}**](02/)
+- [**Тема 3. {{< meta course.topic.3 >}}**](03/)
+- [**Тема 4. {{< meta course.topic.4 >}}**](04/)
+- [**{{< var titles.credit.long >}}**](credit.qmd)
+- [**{{< var titles.exam.long >}}**](exam.qmd)
+- [**{{< var titles.assessment.long >}}**](assessment.qmd)
