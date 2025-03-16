@@ -1,0 +1,15 @@
+website:
+  sidebar:
+    - id: bibliography
+      title: "Литература"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      pinned: true
+      contents:
+        - section: "Литература"
+          icon: book
+          contents:
+            - bibliography/basic.qmd
+            - bibliography/additional.qmd
+            - bibliography/electronic.qmd

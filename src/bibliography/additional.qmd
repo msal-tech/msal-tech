@@ -1,0 +1,13 @@
+---
+title: Дополнительная литература
+#author:
+date: 2024-09-01
+date-modified: last-modified
+bibliography: additional.bib
+csl: gost-r-7-0-5-2008-numeric-alphabetical.csl
+nocite: |
+  @*
+---
+
+::: {#refs}
+:::
