@@ -17,6 +17,8 @@ metadata-files:
 
 
 website:
+  site-url: "https://msal.tech/"
+
   announcement:
     icon: info-circle
     dismissable: true
@@ -33,7 +35,11 @@ website:
   bread-crumbs: true
   reader-mode: true
 
+  # GitHub
   repo-url: https://github.com/msal-tech/msal-tech
+  repo-subdir: src/
+  issue-url: https://github.com/msal-tech/msal-tech/issues
+  repo-link-target: _blank
   repo-actions: [edit, source, issue]
 
   # ---------------------------------------------------------------------------
