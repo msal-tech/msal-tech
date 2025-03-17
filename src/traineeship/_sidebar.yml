@@ -2,7 +2,7 @@ website:
   sidebar:
     - id: traineeship
       title: "Стажировка"
-      style: "floating"
+      style: floating
       collapse-level: 2
       align: left
       pinned: true
@@ -11,6 +11,6 @@ website:
           href: traineeship/index.qmd
           contents:
             - text: "Аннотация"
-              href: "traineeship/annotation.qmd"
+              href: traineeship/annotation.qmd
             - text: "Отчет по стажировке"
-              href: "traineeship/credit.qmd"
+              href: traineeship/credit.qmd

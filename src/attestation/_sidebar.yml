@@ -2,7 +2,7 @@ website:
   sidebar:
     - id: attestation
       title: "Итоговая аттестация"
-      style: "floating"
+      style: floating
       collapse-level: 2
       align: left
       pinned: true
@@ -11,6 +11,6 @@ website:
           href: attestation/index.qmd
           contents:
             - text: "Аннотация"
-              href: "attestation/annotation.qmd"
+              href: attestation/annotation.qmd
             - text: "Примеры оценочных средств"
-              href: "attestation/exam.qmd"
+              href: attestation/exam.qmd

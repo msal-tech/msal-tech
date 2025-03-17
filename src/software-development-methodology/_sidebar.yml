@@ -2,7 +2,7 @@ website:
   sidebar:
     - id: software-development-methodology
       title: "Методологии разработки программного обеспечения"
-      style: "floating"
+      style: floating
       collapse-level: 2
       align: left
       pinned: true
@@ -12,7 +12,7 @@ website:
           href: software-development-methodology/index.qmd
           contents:
             - text: "Аннотация"
-              href: "software-development-methodology/annotation.qmd"
+              href: software-development-methodology/annotation.qmd
 
             - section: "Тема 1. Понятие о методологиях разработки. Отдельные виды разработки."
               href: software-development-methodology/#
@@ -36,6 +36,6 @@ website:
             #       href: software-development-methodology/test-01.qmd
 
             - text: "Подготовка к ассесменту"
-              href: "software-development-methodology/assessment.qmd"
+              href: software-development-methodology/assessment.qmd
             - text: "Зачет"
-              href: "software-development-methodology/credit.qmd"
+              href: software-development-methodology/credit.qmd

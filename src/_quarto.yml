@@ -2,7 +2,8 @@ project:
   type: website
   output-dir: ../build
   resources:
-    - "/_redirects"
+    - /_redirects
+
 
 metadata-files:
   - algorithmics/_sidebar.yml
@@ -17,7 +18,7 @@ metadata-files:
 
 
 website:
-  site-url: "https://msal.tech/"
+  site-url: https://msal.tech/
 
   announcement:
     icon: info-circle
@@ -27,7 +28,7 @@ website:
     position: above-navbar
 
   title: "Автоматизация юридических процессов"
-  image: "_static/images/logo.svg"
+  image: _static/images/logo.svg
   description: "Каталог учебных материалов по программе профессиональной переподготовки"
   open-graph:
     locale: ru_RU
@@ -42,6 +43,7 @@ website:
   repo-link-target: _blank
   repo-actions: [edit, source, issue]
 
+
   # ---------------------------------------------------------------------------
   navbar:
     title: false
@@ -54,31 +56,32 @@ website:
         href: index.qmd
       - text: "О программе"
         href: annotation.qmd
-      - text: Учебные модули
+      - text: "Учебные модули"
+        icon: briefcase
         menu:
           - text: "Алгоритмика"
-            icon: "diagram-2"
+            icon: diagram-2
             href: algorithmics/index.qmd
             #
           - text: "Анализ и моделирование бизнес-процессов"
-            icon: "file-bar-graph"
+            icon: file-bar-graph
             href: business-process-modeling/index.qmd
             #
           - text: "Управление ИТ-проектами"
-            icon: "dpad"
+            icon: dpad
             href: it-project-management/index.qmd
             #
           - text: "Методологии разработки программного обеспечения"
-            icon: "file-code"
+            icon: file-code
             href: software-development-methodology/index.qmd
             #
           - text: "Автоматизация юридической работы (Legaltech)"
-            icon: "file-earmark-richtext"
+            icon: file-earmark-richtext
             href: legaltech/index.qmd
       - traineeship/index.qmd
       - project/index.qmd
       - attestation/index.qmd
-      - text: Литература
+      - text: "Литература"
         icon: book
         menu:
           - bibliography/basic.qmd
@@ -103,33 +106,34 @@ website:
           href: annotation.qmd
         #- text: "---"
         - section: "Учебные модули"
-          href: subjects.qmd
+          icon: briefcase
+          # href: subjects.qmd
           contents:
             - text: "Алгоритмика"
-              icon: "diagram-2"
+              icon: diagram-2
               href: algorithmics/index.qmd
               #
             - text: "Анализ и моделирование бизнес-процессов"
-              icon: "file-bar-graph"
+              icon: file-bar-graph
               href: business-process-modeling/index.qmd
               #
             - text: "Управление ИТ-проектами"
-              icon: "dpad"
+              icon: dpad
               href: it-project-management/index.qmd
               #
             - text: "Методологии разработки программного обеспечения"
-              icon: "file-code"
+              icon: file-code
               href: software-development-methodology/index.qmd
               #
             - text: "Автоматизация юридической работы"
-              icon: "file-earmark-richtext"
+              icon: file-earmark-richtext
               href: legaltech/index.qmd
 
         - traineeship/index.qmd
         - project/index.qmd
         - attestation/index.qmd
 
-        - section: "Литература"
+        - section: Литература
           icon: book
           contents:
             - bibliography/basic.qmd
@@ -144,11 +148,13 @@ website:
         href: about.qmd
       - text: "Учебные  модули"
         href: subjects.qmd
+      - text: "Авторы"
+        href: authors.qmd
     right:
-      - icon: github
-        href: https://github.com/msal-tech/msal-tech
+      - href: https://github.com/msal-tech/msal-tech
+        icon: github
         target: _blank
-        aria-label: GitHub
+        aria-label: "GitHub"
 
 execute:
 
@@ -163,7 +169,9 @@ format:
     lang: ru
     toc: true
     theme:
-      light: [cosmo, theme.scss]
+      light:
+        - cosmo
+        - theme.scss
     code-copy: true
     code-overflow: wrap
     css: ./_static/styles/styles.css

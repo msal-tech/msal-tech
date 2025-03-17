@@ -1,8 +1,8 @@
 website:
   sidebar:
-    - id: "business-process-modeling"
-      #title: "Анализ и моделирование бизнес-процессов"
-      style: "floating"
+    - id: business-process-modeling
+      title: "Анализ и моделирование бизнес-процессов"
+      style: floating
       collapse-level: 2
       align: left
       pinned: true
@@ -12,7 +12,7 @@ website:
           href: business-process-modeling/index.qmd
           contents:
             - text: "Аннотация"
-              href: "business-process-modeling/annotation.qmd"
+              href: business-process-modeling/annotation.qmd
 
             - section: "Тема 1. Основы структурного анализа. Основы процессного управления."
               href: business-process-modeling/#
@@ -36,8 +36,8 @@ website:
 
 
             - text: "Подготовка к ассесменту"
-              href: "business-process-modeling/assessment.qmd"
+              href: business-process-modeling/assessment.qmd
             - text: "Зачет"
-              href: "business-process-modeling/credit.qmd"
+              href: business-process-modeling/credit.qmd
             - text: "Экзамен"
-              href: "business-process-modeling/exam.qmd"
+              href: business-process-modeling/exam.qmd

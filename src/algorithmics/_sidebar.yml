@@ -2,7 +2,7 @@ website:
   sidebar:
     - id: algorithmics
       title: "Алгоритмика"
-      style: "floating"
+      style: floating
       collapse-level: 2
       align: left
       pinned: true
@@ -12,7 +12,7 @@ website:
           href: algorithmics/index.qmd
           contents:
             - text: "Аннотация"
-              href: "algorithmics/annotation.qmd"
+              href: algorithmics/annotation.qmd
 
             - section: "Тема 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов."
               href: algorithmics/#
@@ -39,8 +39,8 @@ website:
 
 
             - text: "Подготовка к ассесменту"
-              href: "algorithmics/assessment.qmd"
+              href: algorithmics/assessment.qmd
             - text: "Зачет"
-              href: "algorithmics/credit.qmd"
+              href: algorithmics/credit.qmd
             - text: "Экзамен"
-              href: "algorithmics/exam.qmd"
+              href: algorithmics/exam.qmd

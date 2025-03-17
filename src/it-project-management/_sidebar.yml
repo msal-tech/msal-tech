@@ -2,7 +2,7 @@ website:
   sidebar:
     - id: it-project-management
       title: "Управление ИТ-проектами"
-      style: "floating"
+      style: floating
       collapse-level: 2
       align: left
       pinned: true
@@ -12,7 +12,7 @@ website:
           href: it-project-management/index.qmd
           contents:
             - text: "Аннотация"
-              href: "it-project-management/annotation.qmd"
+              href: it-project-management/annotation.qmd
 
             - section: "Тема 1. Основные положения и общая характеристика управления ИТ-проектами."
               href: it-project-management/#
@@ -37,6 +37,6 @@ website:
 
 
             - text: "Подготовка к ассесменту"
-              href: "it-project-management/assessment.qmd"
+              href: it-project-management/assessment.qmd
             - text: "Зачет"
-              href: "it-project-management/credit.qmd"
+              href: it-project-management/credit.qmd

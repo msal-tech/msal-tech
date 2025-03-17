@@ -2,7 +2,7 @@ website:
   sidebar:
     - id: legaltech
       title: "Автоматизация юридической работы (Legaltech)"
-      style: "floating"
+      style: floating
       collapse-level: 2
       align: left
       pinned: true
@@ -12,7 +12,7 @@ website:
           href: legaltech/index.qmd
           contents:
             - text: "Аннотация"
-              href: "legaltech/annotation.qmd"
+              href: legaltech/annotation.qmd
 
             - section: "Тема 1. Понятие Legaltech. Виды ПО, автоматизирующего юридические процессы. Понятие внутреннего продукта автоматизации и внешних сервисов автоматизации юридических процессов."
               href: legaltech/#
@@ -37,6 +37,6 @@ website:
 
 
             - text: "Подготовка к ассесменту"
-              href: "legaltech/assessment.qmd"
+              href: legaltech/assessment.qmd
             - text: "Зачет"
-              href: "legaltech/credit.qmd"
+              href: legaltech/credit.qmd
