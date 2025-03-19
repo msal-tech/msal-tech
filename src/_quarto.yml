@@ -19,6 +19,7 @@ metadata-files:
 
 website:
   site-url: https://msal.tech/
+  favicon: _static/images/favicon.png
 
   announcement:
     icon: info-circle
