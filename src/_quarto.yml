@@ -81,6 +81,8 @@ website:
       - traineeship/index.qmd
       - project/index.qmd
       - attestation/index.qmd
+      - text: "Тестирование"
+        href: assessment.qmd
       - text: "Литература"
         icon: book
         menu:
@@ -139,6 +141,9 @@ website:
             - bibliography/basic.qmd
             - bibliography/additional.qmd
             - bibliography/electronic.qmd
+
+        - assessment.qmd
+
   # ---------------------------------------------------------------------------
   page-footer:
     left: |

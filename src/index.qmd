@@ -33,7 +33,7 @@ format:
 
 ::: {.hero-buttons}
 [Учебные модули](/subjects.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
-[Тесты](/docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+[Подготовка к ассессменту](/assessment.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 :::
 :::
 
