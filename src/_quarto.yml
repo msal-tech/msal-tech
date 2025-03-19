@@ -196,7 +196,7 @@ format:
 
     link-external-newwindow: true
     link-external-icon: true
-    link-external-filter: ^(?:http:|https:)\/\/www\.msal\.tech\/custom
+    link-external-filter: ^(?:http:|https:)\/\/msal\.tech
 
   #----------------------------------------------
   pdf:
