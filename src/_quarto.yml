@@ -78,9 +78,12 @@ website:
           - text: "Автоматизация юридической работы (Legaltech)"
             icon: file-earmark-richtext
             href: legaltech/index.qmd
-      - traineeship/index.qmd
-      - project/index.qmd
-      - attestation/index.qmd
+      - text: "Стажировка"
+        href: traineeship/index.qmd
+      - text: "Проект"
+        href: project/index.qmd
+      - text: "Аттестация"
+        href: attestation/index.qmd
       - text: "Тестирование"
         href: assessment.qmd
       - text: "Литература"
@@ -131,9 +134,12 @@ website:
               icon: file-earmark-richtext
               href: legaltech/index.qmd
 
-        - traineeship/index.qmd
-        - project/index.qmd
-        - attestation/index.qmd
+        - text: "Стажировка"
+          href: traineeship/index.qmd
+        - text: "Итоговый проект"
+          href: project/index.qmd
+        - text: "Итоговая аттестация"
+          href: attestation/index.qmd
 
         - section: Литература
           icon: book
@@ -143,6 +149,7 @@ website:
             - bibliography/electronic.qmd
 
         - assessment.qmd
+
 
   # ---------------------------------------------------------------------------
   page-footer:
