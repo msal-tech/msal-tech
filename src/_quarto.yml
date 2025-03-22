@@ -187,7 +187,7 @@ format:
         - theme.scss
     code-copy: true
     code-overflow: wrap
-    css: ./_static/styles/styles.css
+    css: ./_static/styles/html.css
     #include-after-body: js.html
 
     grid:
@@ -217,7 +217,7 @@ format:
     slide-level: 4
     smaller: true
     center-title-slide: false
-    css: ./_static/styles/styles.css
+    css: ./_static/styles/revealjs.css
 
   #-----------------------------------------------
   # docx:
