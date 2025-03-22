@@ -17,6 +17,10 @@ a:active {
   text-decoration: none;
 }
 
+figcaption {
+  text-align: center !important;
+}
+
 /* Quarto */
 /*===========================================================================*/
 
