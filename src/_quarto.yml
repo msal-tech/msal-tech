@@ -50,7 +50,7 @@ website:
     title: false
     #logo: "_static/images/logo.png"
     #logo-alt: "LegalTech"
-    #collapse-below: lg
+    collapse-below: lg
 
     left:
       - text: "Главная"
@@ -211,6 +211,13 @@ format:
     sansfont: "Open Sans"
     mathfont: "Times New Roman"
     #template: template.tex
+
+  revealjs:
+    lang: ru
+    slide-level: 4
+    smaller: true
+    center-title-slide: false
+    css: ./_static/styles/styles.css
 
   #-----------------------------------------------
   # docx:
