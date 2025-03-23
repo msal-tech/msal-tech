@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.17">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Красников А.С.">
+
+<title>Лекция 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов. – Автоматизация юридических процессов</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../algorithmics/assessment.html" rel="next">
+<link href="../../algorithmics/annotation.html" rel="prev">
+<link href="../../_static/images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-da03d714c310c60cec1d83284c92da2c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ba96fab42cd757d9e38ecef8d33a8895.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Поиск не дал результатов",
+    "search-matching-documents-text": "Результаты поиска",
+    "search-copy-link-title": "Скопировать ссылку",
+    "search-hide-matches-text": "Скрыть дополнительные результаты",
+    "search-more-match-text": "дополнительный результат в этом документе",
+    "search-more-matches-text": "дополнительных результата(-ов) в этом документе",
+    "search-clear-button-title": "Очистить",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Отменить",
+    "search-submit-button-title": "Найти",
+    "search-label": "Поиск"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../_static/styles/html.css">
+<meta property="og:title" content="Лекция 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов. – Автоматизация юридических процессов">
+<meta property="og:description" content="Автоматизация юридических процессов. Алгоритмика.">
+<meta property="og:image" content="https://msal.tech/algorithmics/lecture-01/img/featured-image.png">
+<meta property="og:site_name" content="Автоматизация юридических процессов">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image:height" content="720">
+<meta property="og:image:width" content="1280">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <div id="quarto-announcement" data-announcement-id="2f8ac8e92bdcb78f37489d6d8d0eb92f" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>Контент находится в разработке</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Поиск"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Переключить навигацию" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Главная</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../annotation.html"> 
+<span class="menu-text">О программе</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-briefcase" role="img">
+</i> 
+ <span class="menu-text">Учебные модули</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-">    
+        <li>
+    <a class="dropdown-item" href="../../algorithmics/index.html"><i class="bi bi-diagram-2" role="img">
+</i> 
+ <span class="dropdown-text">Алгоритмика</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../business-process-modeling/index.html"><i class="bi bi-file-bar-graph" role="img">
+</i> 
+ <span class="dropdown-text">Анализ и моделирование бизнес-процессов</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../it-project-management/index.html"><i class="bi bi-dpad" role="img">
+</i> 
+ <span class="dropdown-text">Управление ИТ-проектами</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../software-development-methodology/index.html"><i class="bi bi-file-code" role="img">
+</i> 
+ <span class="dropdown-text">Методологии разработки программного обеспечения</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../legaltech/index.html"><i class="bi bi-file-earmark-richtext" role="img">
+</i> 
+ <span class="dropdown-text">Автоматизация юридической работы (Legaltech)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../traineeship/index.html"> 
+<span class="menu-text">Стажировка</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project/index.html"> 
+<span class="menu-text">Проект</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../attestation/index.html"> 
+<span class="menu-text">Аттестация</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../assessment.html"> 
+<span class="menu-text">Тестирование</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu--1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-book" role="img">
+</i> 
+ <span class="menu-text">Литература</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu--1">    
+        <li>
+    <a class="dropdown-item" href="../../bibliography/basic.html">
+ <span class="dropdown-text">Основная литература</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../bibliography/additional.html">
+ <span class="dropdown-text">Дополнительная литература</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../bibliography/electronic.html">
+ <span class="dropdown-text">Электронные ресурсы</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">О сайте</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../authors.html"> 
+<span class="menu-text">Авторы</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Переключить режим чтения">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Переключить боковую панель навигации" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../algorithmics/index.html">Алгоритмика</a></li><li class="breadcrumb-item"><a href="../../algorithmics/index.html">Тема 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов.</a></li><li class="breadcrumb-item"><a href="../../algorithmics/lecture-01/index.html">Лекция 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов.</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Переключить боковую панель навигации" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Поиск" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Поиск"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../algorithmics/index.html" class="sidebar-item-text sidebar-link"><i class="bi bi-diagram-2" role="img">
+</i> 
+ <span class="menu-text">Алгоритмика</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Переключить раздел">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../algorithmics/annotation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Аннотация</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../algorithmics/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Тема 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов.</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Переключить раздел">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../algorithmics/lecture-01/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Лекция 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов.</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Тема 2. Управление исполнителем. Управляющие алгоритмические конструкции.</span></span>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Тема 3. Основные управляющие алгоритмические конструкции. Разветвляющиеся и циклические алгоритмические конструкции.</span></span>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Тема 4. Данные и величины. Свойства и характеристики величин.</span></span>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Тема 5. Сложные алгоритмы. Понятие вспомогательного алгоритма. Рекурсия. Алгоритмы управления.</span></span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../algorithmics/assessment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Подготовка к ассесменту</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../algorithmics/credit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Зачет</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../algorithmics/exam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Экзамен</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Содержание</h2>
+   
+  <ul>
+  <li><a href="#понятие-алгоритма" id="toc-понятие-алгоритма" class="nav-link active" data-scroll-target="#понятие-алгоритма"><span class="header-section-number">1</span> Понятие алгоритма</a>
+  <ul class="collapse">
+  <li><a href="#пример-алгоритма-рассмотрения-жалобы-гражданина" id="toc-пример-алгоритма-рассмотрения-жалобы-гражданина" class="nav-link" data-scroll-target="#пример-алгоритма-рассмотрения-жалобы-гражданина"><span class="header-section-number">1.1</span> Пример алгоритма рассмотрения жалобы гражданина</a></li>
+  <li><a href="#структура-алгоритма" id="toc-структура-алгоритма" class="nav-link" data-scroll-target="#структура-алгоритма"><span class="header-section-number">1.2</span> Структура алгоритма</a></li>
+  </ul></li>
+  <li><a href="#история-понятия-алгоритма" id="toc-история-понятия-алгоритма" class="nav-link" data-scroll-target="#история-понятия-алгоритма"><span class="header-section-number">2</span> История понятия алгоритма</a>
+  <ul class="collapse">
+  <li><a href="#вавилонские-алгоритмы-18001600-до-н.э." id="toc-вавилонские-алгоритмы-18001600-до-н.э." class="nav-link" data-scroll-target="#вавилонские-алгоритмы-18001600-до-н.э."><span class="header-section-number">2.1</span> Вавилонские алгоритмы (1800–1600 до н.э.)</a></li>
+  <li><a href="#древняя-греция" id="toc-древняя-греция" class="nav-link" data-scroll-target="#древняя-греция"><span class="header-section-number">2.2</span> Древняя Греция</a></li>
+  <li><a href="#исламский-золотой-век" id="toc-исламский-золотой-век" class="nav-link" data-scroll-target="#исламский-золотой-век"><span class="header-section-number">2.3</span> Исламский Золотой век</a></li>
+  <li><a href="#средневековая-европа-xiixiii-века" id="toc-средневековая-европа-xiixiii-века" class="nav-link" data-scroll-target="#средневековая-европа-xiixiii-века"><span class="header-section-number">2.4</span> Средневековая Европа: XII–XIII века</a></li>
+  <li><a href="#новое-время-формализация-и-универсальность" id="toc-новое-время-формализация-и-универсальность" class="nav-link" data-scroll-target="#новое-время-формализация-и-универсальность"><span class="header-section-number">2.5</span> Новое время: формализация и универсальность</a></li>
+  <li><a href="#xx-век-математизация-и-компьютерная-революция" id="toc-xx-век-математизация-и-компьютерная-революция" class="nav-link" data-scroll-target="#xx-век-математизация-и-компьютерная-революция"><span class="header-section-number">2.6</span> XX век: математизация и компьютерная революция</a></li>
+  <li><a href="#xxi-век-алгоритмы-как-новая-реальность" id="toc-xxi-век-алгоритмы-как-новая-реальность" class="nav-link" data-scroll-target="#xxi-век-алгоритмы-как-новая-реальность"><span class="header-section-number">2.7</span> XXI век: алгоритмы как новая реальность</a></li>
+  </ul></li>
+  <li><a href="#числовые-и-логические-алгоритмы" id="toc-числовые-и-логические-алгоритмы" class="nav-link" data-scroll-target="#числовые-и-логические-алгоритмы"><span class="header-section-number">3</span> Числовые и логические алгоритмы</a>
+  <ul class="collapse">
+  <li><a href="#числовые-алгоритмы" id="toc-числовые-алгоритмы" class="nav-link" data-scroll-target="#числовые-алгоритмы"><span class="header-section-number">3.1</span> Числовые алгоритмы</a></li>
+  <li><a href="#логические-алгоритмы" id="toc-логические-алгоритмы" class="nav-link" data-scroll-target="#логические-алгоритмы"><span class="header-section-number">3.2</span> Логические алгоритмы</a></li>
+  <li><a href="#сравнение-числовых-и-логических-алгоритмов" id="toc-сравнение-числовых-и-логических-алгоритмов" class="nav-link" data-scroll-target="#сравнение-числовых-и-логических-алгоритмов"><span class="header-section-number">3.3</span> Сравнение числовых и логических алгоритмов</a></li>
+  </ul></li>
+  <li><a href="#алгоритмы-в-юридических-процессах-и-правовых-нормах" id="toc-алгоритмы-в-юридических-процессах-и-правовых-нормах" class="nav-link" data-scroll-target="#алгоритмы-в-юридических-процессах-и-правовых-нормах"><span class="header-section-number">4</span> Алгоритмы в юридических процессах и правовых нормах</a>
+  <ul class="collapse">
+  <li><a href="#автоматизация-рутинных-задач" id="toc-автоматизация-рутинных-задач" class="nav-link" data-scroll-target="#автоматизация-рутинных-задач"><span class="header-section-number">4.1</span> Автоматизация рутинных задач</a></li>
+  <li><a href="#анализ-данных" id="toc-анализ-данных" class="nav-link" data-scroll-target="#анализ-данных"><span class="header-section-number">4.2</span> Анализ данных</a></li>
+  <li><a href="#предсказание-исходов-дел" id="toc-предсказание-исходов-дел" class="nav-link" data-scroll-target="#предсказание-исходов-дел"><span class="header-section-number">4.3</span> Предсказание исходов дел</a></li>
+  <li><a href="#поддержка-принятия-решений" id="toc-поддержка-принятия-решений" class="nav-link" data-scroll-target="#поддержка-принятия-решений"><span class="header-section-number">4.4</span> Поддержка принятия решений</a></li>
+  <li><a href="#этика-и-правовые-нормы" id="toc-этика-и-правовые-нормы" class="nav-link" data-scroll-target="#этика-и-правовые-нормы"><span class="header-section-number">4.5</span> Этика и правовые нормы</a></li>
+  </ul></li>
+  <li><a href="#свойства-алгоритмов" id="toc-свойства-алгоритмов" class="nav-link" data-scroll-target="#свойства-алгоритмов"><span class="header-section-number">5</span> Свойства алгоритмов</a>
+  <ul class="collapse">
+  <li><a href="#дискретность" id="toc-дискретность" class="nav-link" data-scroll-target="#дискретность"><span class="header-section-number">5.1</span> Дискретность</a></li>
+  <li><a href="#детерминированность-определённость" id="toc-детерминированность-определённость" class="nav-link" data-scroll-target="#детерминированность-определённость"><span class="header-section-number">5.2</span> Детерминированность (определённость)</a></li>
+  <li><a href="#понятность" id="toc-понятность" class="nav-link" data-scroll-target="#понятность"><span class="header-section-number">5.3</span> Понятность</a></li>
+  <li><a href="#конечность" id="toc-конечность" class="nav-link" data-scroll-target="#конечность"><span class="header-section-number">5.4</span> Конечность</a></li>
+  <li><a href="#массовость-общность" id="toc-массовость-общность" class="nav-link" data-scroll-target="#массовость-общность"><span class="header-section-number">5.5</span> Массовость (общность)</a></li>
+  <li><a href="#результативность" id="toc-результативность" class="nav-link" data-scroll-target="#результативность"><span class="header-section-number">5.6</span> Результативность</a></li>
+  <li><a href="#эффективность" id="toc-эффективность" class="nav-link" data-scroll-target="#эффективность"><span class="header-section-number">5.7</span> Эффективность</a></li>
+  <li><a href="#проверяемость" id="toc-проверяемость" class="nav-link" data-scroll-target="#проверяемость"><span class="header-section-number">5.8</span> Проверяемость</a></li>
+  </ul></li>
+  <li><a href="#принципы-разработки-алгоритмов" id="toc-принципы-разработки-алгоритмов" class="nav-link" data-scroll-target="#принципы-разработки-алгоритмов"><span class="header-section-number">6</span> Принципы разработки алгоритмов</a>
+  <ul class="collapse">
+  <li><a href="#четкость-и-детерминированность" id="toc-четкость-и-детерминированность" class="nav-link" data-scroll-target="#четкость-и-детерминированность"><span class="header-section-number">6.1</span> Четкость и детерминированность</a></li>
+  <li><a href="#эффективность-1" id="toc-эффективность-1" class="nav-link" data-scroll-target="#эффективность-1"><span class="header-section-number">6.2</span> Эффективность</a></li>
+  <li><a href="#модульность" id="toc-модульность" class="nav-link" data-scroll-target="#модульность"><span class="header-section-number">6.3</span> Модульность</a></li>
+  <li><a href="#корректность" id="toc-корректность" class="nav-link" data-scroll-target="#корректность"><span class="header-section-number">6.4</span> Корректность</a></li>
+  <li><a href="#простота-и-читаемость" id="toc-простота-и-читаемость" class="nav-link" data-scroll-target="#простота-и-читаемость"><span class="header-section-number">6.5</span> Простота и читаемость</a></li>
+  <li><a href="#адаптивность" id="toc-адаптивность" class="nav-link" data-scroll-target="#адаптивность"><span class="header-section-number">6.6</span> Адаптивность</a></li>
+  <li><a href="#тестируемость" id="toc-тестируемость" class="nav-link" data-scroll-target="#тестируемость"><span class="header-section-number">6.7</span> Тестируемость</a></li>
+  <li><a href="#прозрачность-интерпретируемость-результатов" id="toc-прозрачность-интерпретируемость-результатов" class="nav-link" data-scroll-target="#прозрачность-интерпретируемость-результатов"><span class="header-section-number">6.8</span> Прозрачность (интерпретируемость результатов)</a></li>
+  </ul></li>
+  <li><a href="#методы-разработки-алгоритмов" id="toc-методы-разработки-алгоритмов" class="nav-link" data-scroll-target="#методы-разработки-алгоритмов"><span class="header-section-number">7</span> Методы разработки алгоритмов</a>
+  <ul class="collapse">
+  <li><a href="#метод-разделяй-и-властвуй" id="toc-метод-разделяй-и-властвуй" class="nav-link" data-scroll-target="#метод-разделяй-и-властвуй"><span class="header-section-number">7.1</span> Метод «разделяй и властвуй»</a></li>
+  <li><a href="#итеративный-метод" id="toc-итеративный-метод" class="nav-link" data-scroll-target="#итеративный-метод"><span class="header-section-number">7.2</span> Итеративный метод</a></li>
+  <li><a href="#рекурсивный-метод" id="toc-рекурсивный-метод" class="nav-link" data-scroll-target="#рекурсивный-метод"><span class="header-section-number">7.3</span> Рекурсивный метод</a></li>
+  <li><a href="#жадный-метод" id="toc-жадный-метод" class="nav-link" data-scroll-target="#жадный-метод"><span class="header-section-number">7.4</span> Жадный метод</a></li>
+  <li><a href="#динамическое-программирование" id="toc-динамическое-программирование" class="nav-link" data-scroll-target="#динамическое-программирование"><span class="header-section-number">7.5</span> Динамическое программирование</a></li>
+  <li><a href="#алгоритмы-перебора" id="toc-алгоритмы-перебора" class="nav-link" data-scroll-target="#алгоритмы-перебора"><span class="header-section-number">7.6</span> Алгоритмы перебора</a></li>
+  <li><a href="#метод-проб-и-ошибок" id="toc-метод-проб-и-ошибок" class="nav-link" data-scroll-target="#метод-проб-и-ошибок"><span class="header-section-number">7.7</span> Метод проб и ошибок</a></li>
+  </ul></li>
+  <li><a href="#основные-этапы-решения-задачи" id="toc-основные-этапы-решения-задачи" class="nav-link" data-scroll-target="#основные-этапы-решения-задачи"><span class="header-section-number">8</span> Основные этапы решения задачи</a>
+  <ul class="collapse">
+  <li><a href="#анализ-задачи" id="toc-анализ-задачи" class="nav-link" data-scroll-target="#анализ-задачи"><span class="header-section-number">8.1</span> Анализ задачи</a></li>
+  <li><a href="#определение-входных-и-выходных-данных" id="toc-определение-входных-и-выходных-данных" class="nav-link" data-scroll-target="#определение-входных-и-выходных-данных"><span class="header-section-number">8.2</span> Определение входных и выходных данных</a></li>
+  <li><a href="#разработка-алгоритма" id="toc-разработка-алгоритма" class="nav-link" data-scroll-target="#разработка-алгоритма"><span class="header-section-number">8.3</span> Разработка алгоритма</a></li>
+  <li><a href="#тестирование-и-отладка" id="toc-тестирование-и-отладка" class="nav-link" data-scroll-target="#тестирование-и-отладка"><span class="header-section-number">8.4</span> Тестирование и отладка</a></li>
+  <li><a href="#оценка-эффективности" id="toc-оценка-эффективности" class="nav-link" data-scroll-target="#оценка-эффективности"><span class="header-section-number">8.5</span> Оценка эффективности</a></li>
+  <li><a href="#документирование" id="toc-документирование" class="nav-link" data-scroll-target="#документирование"><span class="header-section-number">8.6</span> Документирование</a></li>
+  <li><a href="#поддержка-и-обновление" id="toc-поддержка-и-обновление" class="nav-link" data-scroll-target="#поддержка-и-обновление"><span class="header-section-number">8.7</span> Поддержка и обновление</a></li>
+  </ul></li>
+  <li><a href="#тестирование-алгоритма" id="toc-тестирование-алгоритма" class="nav-link" data-scroll-target="#тестирование-алгоритма"><span class="header-section-number">9</span> Тестирование алгоритма</a>
+  <ul class="collapse">
+  <li><a href="#цели-тестирования-алгоритмов" id="toc-цели-тестирования-алгоритмов" class="nav-link" data-scroll-target="#цели-тестирования-алгоритмов"><span class="header-section-number">9.1</span> Цели тестирования алгоритмов</a></li>
+  <li><a href="#подходы-к-тестированию" id="toc-подходы-к-тестированию" class="nav-link" data-scroll-target="#подходы-к-тестированию"><span class="header-section-number">9.2</span> Подходы к тестированию</a></li>
+  <li><a href="#тестовые-случаи" id="toc-тестовые-случаи" class="nav-link" data-scroll-target="#тестовые-случаи"><span class="header-section-number">9.3</span> Тестовые случаи</a></li>
+  <li><a href="#автоматизация-тестирования" id="toc-автоматизация-тестирования" class="nav-link" data-scroll-target="#автоматизация-тестирования"><span class="header-section-number">9.4</span> Автоматизация тестирования</a></li>
+  <li><a href="#оценка-производительности" id="toc-оценка-производительности" class="nav-link" data-scroll-target="#оценка-производительности"><span class="header-section-number">9.5</span> Оценка производительности</a></li>
+  <li><a href="#документация-результатов-тестирования" id="toc-документация-результатов-тестирования" class="nav-link" data-scroll-target="#документация-результатов-тестирования"><span class="header-section-number">9.6</span> Документация результатов тестирования</a></li>
+  </ul></li>
+  <li><a href="#способы-записи-алгоритмов" id="toc-способы-записи-алгоритмов" class="nav-link" data-scroll-target="#способы-записи-алгоритмов"><span class="header-section-number">10</span> Способы записи алгоритмов</a>
+  <ul class="collapse">
+  <li><a href="#псевдокод" id="toc-псевдокод" class="nav-link" data-scroll-target="#псевдокод"><span class="header-section-number">10.1</span> Псевдокод</a></li>
+  <li><a href="#блок-схемы" id="toc-блок-схемы" class="nav-link" data-scroll-target="#блок-схемы"><span class="header-section-number">10.2</span> Блок-схемы</a></li>
+  <li><a href="#язык-программирования" id="toc-язык-программирования" class="nav-link" data-scroll-target="#язык-программирования"><span class="header-section-number">10.3</span> Язык программирования</a></li>
+  <li><a href="#таблицы" id="toc-таблицы" class="nav-link" data-scroll-target="#таблицы"><span class="header-section-number">10.4</span> Таблицы</a></li>
+  <li><a href="#формальные-нотации" id="toc-формальные-нотации" class="nav-link" data-scroll-target="#формальные-нотации"><span class="header-section-number">10.5</span> Формальные нотации</a></li>
+  </ul></li>
+  <li><a href="#правила-оформления-схем-алгоритмов" id="toc-правила-оформления-схем-алгоритмов" class="nav-link" data-scroll-target="#правила-оформления-схем-алгоритмов"><span class="header-section-number">11</span> Правила оформления схем алгоритмов</a></li>
+  <li><a href="#основные-положения-гост-19.701-90" id="toc-основные-положения-гост-19.701-90" class="nav-link" data-scroll-target="#основные-положения-гост-19.701-90"><span class="header-section-number">12</span> Основные положения ГОСТ 19.701-90</a>
+  <ul class="collapse">
+  <li><a href="#цель-схемы-алгоритма" id="toc-цель-схемы-алгоритма" class="nav-link" data-scroll-target="#цель-схемы-алгоритма"><span class="header-section-number">12.1</span> Цель схемы алгоритма</a></li>
+  <li><a href="#общие-требования" id="toc-общие-требования" class="nav-link" data-scroll-target="#общие-требования"><span class="header-section-number">12.2</span> Общие требования</a></li>
+  <li><a href="#структура-алгоритмической-схемы" id="toc-структура-алгоритмической-схемы" class="nav-link" data-scroll-target="#структура-алгоритмической-схемы"><span class="header-section-number">12.3</span> Структура алгоритмической схемы</a></li>
+  <li><a href="#унификация-символов" id="toc-унификация-символов" class="nav-link" data-scroll-target="#унификация-символов"><span class="header-section-number">12.4</span> Унификация символов</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/msal-tech/msal-tech/edit/main/src/algorithmics/lecture-01/index.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>Редактировать страницу</a></li><li><a href="https://github.com/msal-tech/msal-tech/blob/main/src/algorithmics/lecture-01/index.qmd" target="_blank" class="toc-action"><i class="bi empty"></i>Показать код</a></li><li><a href="https://github.com/msal-tech/msal-tech/issues" target="_blank" class="toc-action"><i class="bi empty"></i>Сообщить о проблеме</a></li></ul></div><div class="quarto-alternate-formats"><h2>Другие форматы</h2><ul><li><a href="algorithmics-lecture-01.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="algorithmics-lecture-01.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../algorithmics/index.html">Алгоритмика</a></li><li class="breadcrumb-item"><a href="../../algorithmics/index.html">Тема 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов.</a></li><li class="breadcrumb-item"><a href="../../algorithmics/lecture-01/index.html">Лекция 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов.</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Лекция 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов.</h1>
+<p class="subtitle lead">Автоматизация юридических процессов. Алгоритмика.</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Автор</div>
+    <div class="quarto-title-meta-contents">
+             <p>Красников А.С. </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Дата публикации</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">1 сентября 2024 г.</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Файл изменен</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">23 марта 2025 г.</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/featured-image.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<section id="цели-и-задачи" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="цели-и-задачи">Цели и задачи</h2>
+<ul>
+<li>Раскрыть сущность основных понятий, связанных с алгоритмами, их свойствами и способами записи.</li>
+<li>Сформировать представление о способах анализа задачи и формулирования последовательности действий для их решения.</li>
+<li>Развить навыки аналитического мышления при разработке алгоритмов.</li>
+<li>Показать важность алгоритмов в различных областях науки, техники и повседневной жизни, а также продемонстрировать, как они могут быть представлены в разных формах.</li>
+<li>Воспитывать внимательность, точность и дисциплину при работе с алгоритмами.</li>
+</ul>
+</section>
+<section id="рассматриваемые-вопросы" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="рассматриваемые-вопросы">Рассматриваемые вопросы</h2>
+<ol type="1">
+<li>Понятие алгоритма.</li>
+<li>История понятия алгоритма.</li>
+<li>Числовые и логические алгоритмы.</li>
+<li>Алгоритмы в юридических процессах и правовых нормах.</li>
+<li>Свойства алгоритмов.</li>
+<li>Принципы разработки алгоритмов.</li>
+<li>Методы разработки алгоритмов.</li>
+<li>Основные этапы решения задачи.</li>
+<li>Тестирование алгоритма.</li>
+<li>Способы записи алгоритмов.</li>
+<li>Правила оформления схем алгоритмов.</li>
+<li>Единая система программной документации в соответствии с ГОСТ 19.701-90.</li>
+</ol>
+</section>
+<section id="понятие-алгоритма" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="понятие-алгоритма"><span class="header-section-number">1</span> Понятие алгоритма</h2>
+<p><strong>Алгоритм</strong> — это последовательность чётко определённых, конечных и логически упорядоченных шагов, направленных на решение конкретной задачи или достижение определённой цели.</p>
+<p>Алгоритмы лежат в основе математики, информатики, программирования и многих других дисциплин. Они позволяют формализовать процесс преобразования входных данных в выходные, гарантируя корректный результат при соблюдении условий.</p>
+<section id="пример-алгоритма-рассмотрения-жалобы-гражданина" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="пример-алгоритма-рассмотрения-жалобы-гражданина"><span class="header-section-number">1.1</span> Пример алгоритма рассмотрения жалобы гражданина</h3>
+<ul>
+<li>Шаг 1. Прием документа.</li>
+<li>Шаг 2. Проверка подведомственности.</li>
+<li>Шаг 3. Назначение ответственного лица.</li>
+<li>Шаг 4. Сроки рассмотрения (30 дней).</li>
+<li>Шаг 5. Формирование ответа.</li>
+</ul>
+</section>
+<section id="структура-алгоритма" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="структура-алгоритма"><span class="header-section-number">1.2</span> Структура алгоритма</h3>
+<ol type="1">
+<li><strong>Ввод данных:</strong> Получение исходной информации (например, числа, текст, сигналы).</li>
+<li><strong>Обработка данных:</strong> Выполнение операций: вычисления, сравнения, ветвления, циклы.</li>
+<li><strong>Вывод результата:</strong> Предоставление итоговых данных (например, отсортированный список, решение уравнения).</li>
+</ol>
+</section>
+</section>
+<section id="история-понятия-алгоритма" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="история-понятия-алгоритма"><span class="header-section-number">2</span> История понятия алгоритма</h2>
+<p>Понятие алгоритма имеет многовековую историю. От вавилонских глиняных табличек до квантовых компьютеров алгоритмы эволюционировали, отражая развитие человеческого мышления.</p>
+<p>От клинописных табличек до GPT-4 история алгоритмов — это история поиска порядка в хаосе. Сегодня алгоритмы управляют финансами, правосудием и даже творчеством, но их суть остаётся неизменной: <strong>четкая инструкция для достижения цели</strong>.</p>
+<p>Понимание их истории помогает не только создавать новые технологии, но и осознанно использовать их в правовом и социальном контексте.</p>
+<section id="вавилонские-алгоритмы-18001600-до-н.э." class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="вавилонские-алгоритмы-18001600-до-н.э."><span class="header-section-number">2.1</span> Вавилонские алгоритмы (1800–1600 до н.э.)</h3>
+<p>Вавилоняне использовали алгоритмы для решения многих практических задач.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/babel-table.png" class="img-fluid figure-img"></p>
+<figcaption>Вавилонские глиняные таблички</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><strong>Расчеты с процентами</strong> на глиняных табличках.</li>
+<li><strong>Алгоритм извлечения квадратного корня</strong> (метод Герона, позже описанный греками).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="древняя-греция" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="древняя-греция"><span class="header-section-number">2.2</span> Древняя Греция</h3>
+<section id="евклид-ок.-300-г.-до-н.э." class="level4" data-number="2.2.1">
+<h4 data-number="2.2.1" class="anchored" data-anchor-id="евклид-ок.-300-г.-до-н.э."><span class="header-section-number">2.2.1</span> Евклид (ок. 300 г. до н.э.)</h4>
+<p>Древнегреческий математик, геометр, автор первого из дошедших до нас теоретических трактатов по математике.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Евклид в «Началах» формализовал алгоритм нахождения НОД (наибольшего общего делителя):</p>
+<pre><code>алг НОД(a, b)
+нач
+  пока b &lt;&gt; 0
+    t := b
+    b := a mod b
+    a := t
+  кон
+  вывод a
+кон</code></pre>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/euclid.png" class="img-fluid figure-img"></p>
+<figcaption>Евклид</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="исламский-золотой-век" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="исламский-золотой-век"><span class="header-section-number">2.3</span> Исламский Золотой век</h3>
+<section id="мухаммада-ибн-муса-аль-хорезми-ок.-780850" class="level4" data-number="2.3.1">
+<h4 data-number="2.3.1" class="anchored" data-anchor-id="мухаммада-ибн-муса-аль-хорезми-ок.-780850"><span class="header-section-number">2.3.1</span> Мухаммада ибн Муса аль-Хорезми (ок. 780–850)</h4>
+<p>Персидский или среднеазиатский учёный IX века из Хорезма, математик, астроном, географ и историк.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/al-khorezmi.png" class="img-fluid figure-img"></p>
+<figcaption>Мухаммад ибн Муса аль-Хорезми</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>первым рассматривал алгебру как самостоятельную дисциплину и преподавал ее в элементарной форме;</li>
+<li>разработал подробные тригонометрические таблицы;</li>
+<li>в своих трудах детально описывал пошаговые методы решения уравнений;</li>
+<li>в Европе его имя (латинизированное «Algorithmi») стало основой термина <strong>«алгоритм»</strong>.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="средневековая-европа-xiixiii-века" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="средневековая-европа-xiixiii-века"><span class="header-section-number">2.4</span> Средневековая Европа: XII–XIII века</h3>
+<section id="фибоначчи-леонардо-пизанскийок.-11701240" class="level4" data-number="2.4.1">
+<h4 data-number="2.4.1" class="anchored" data-anchor-id="фибоначчи-леонардо-пизанскийок.-11701240"><span class="header-section-number">2.4.1</span> Фибоначчи (Леонардо Пизанский)(ок. 1170–1240)</h4>
+<p>Итальянский математик, стоявший у истоков европейской математической революции.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>познакомил Европу с <strong>арабскими цифрами</strong> (0–9), заменившими римские;</li>
+<li>разработал методы расчета прибыли, конвертации валют и решения практических задач для купцов;</li>
+<li>популяризировал алгоритмы для коммерческих расчетов;</li>
+<li>ввел в рассмотрение числовой ряд, где каждое число — сумма двух предыдущих: <strong>0, 1, 1, 2, 3, 5, 8, 13…</strong></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/fibonacci.png" class="img-fluid figure-img"></p>
+<figcaption>Леонардо Пизанский</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="раймонд-луллий-12351315" class="level4" data-number="2.4.2">
+<h4 data-number="2.4.2" class="anchored" data-anchor-id="раймонд-луллий-12351315"><span class="header-section-number">2.4.2</span> Раймонд Луллий (1235–1315)</h4>
+<p>Каталонский миссионер, поэт, философ и теолог, один из наиболее влиятельных и оригинальных мыслителей европейского высокого Средневековья.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/lulli.png" class="img-fluid figure-img"></p>
+<figcaption>Раймонд Луллий</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>считается одним из родоначальников европейской арабистики и комбинаторики;</li>
+<li>одним из первых применил диаграмму связей;</li>
+<li>создал механическое устройство для генерации логических комбинаций (прообраз алгоритмического мышления).</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="новое-время-формализация-и-универсальность" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="новое-время-формализация-и-универсальность"><span class="header-section-number">2.5</span> Новое время: формализация и универсальность</h3>
+<section id="готфрид-лейбниц-21.06.164614.11.1716" class="level4" data-number="2.5.1">
+<h4 data-number="2.5.1" class="anchored" data-anchor-id="готфрид-лейбниц-21.06.164614.11.1716"><span class="header-section-number">2.5.1</span> Готфрид Лейбниц (21.06.1646–14.11.1716)</h4>
+<p>Немецкий философ, логик, математик, механик, физик, юрист, историк, дипломат, изобретатель и языковед.</p>
+<p>Основатель и первый президент Берлинской академии наук, член Лондонского королевского общества (1673), иностранный член Французской академии наук.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>независимо от Ньютона создал математический анализ;</li>
+<li>создал комбинаторику как науку;</li>
+<li>заложил основы математической логики;</li>
+<li>описал двоичную систему счисления с цифрами 0 и 1.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/leibniz.png" class="img-fluid figure-img"></p>
+<figcaption>Готфрид Лейбниц</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="чарльз-бэббидж-26.12.179118.10.1871" class="level4" data-number="2.5.2">
+<h4 data-number="2.5.2" class="anchored" data-anchor-id="чарльз-бэббидж-26.12.179118.10.1871"><span class="header-section-number">2.5.2</span> Чарльз Бэббидж (26.12.1791–18.10.1871)</h4>
+<p>Английский математик, считающийся предвестником современных компьютеров.</p>
+<p>Иностранный член-корреспондент Императорской академии наук в Санкт-Петербурге (1832). Написал труды по теории функций, механизации счёта в экономике.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/babbage.png" class="img-fluid figure-img"></p>
+<figcaption>Чарльз Бэббидж</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>создал первый механический калькулятор для автоматизации расчётов математических таблиц;</li>
+<li>разработал первую в истории концепцию программируемого компьютера с арифметическим устройством, памятью и использованием перфокарт для ввода данных.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ада-лавлейс-10.12.181527.11.1852" class="level4" data-number="2.5.3">
+<h4 data-number="2.5.3" class="anchored" data-anchor-id="ада-лавлейс-10.12.181527.11.1852"><span class="header-section-number">2.5.3</span> Ада Лавлейс (10.12.1815–27.11.1852)</h4>
+<p>Английский математик, первая в истории программист. Дочь поэта Джорджа Байрона, но воспитывалась матерью, которая поощряла её интерес к науке. В 1833 году познакомилась с Чарльзом Бэббиджем, создателем концепции Аналитической машины — прообраза компьютера.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>написала первый алгоритм для вычисления чисел Бернулли — это считают первой компьютерной программой;</li>
+<li>разработала алгоритм для вычисления чисел Бернулли с помощью машины Бэббиджа, ставший первой в мире программой;</li>
+<li>предсказала, что вычислительные устройства смогут работать не только с числами, но и с символами, музыкой и искусством.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/lovelace.png" class="img-fluid figure-img"></p>
+<figcaption>Ада Лавлейс</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="xx-век-математизация-и-компьютерная-революция" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="xx-век-математизация-и-компьютерная-революция"><span class="header-section-number">2.6</span> XX век: математизация и компьютерная революция</h3>
+<section id="машина-тьюринга" class="level4" data-number="2.6.1">
+<h4 data-number="2.6.1" class="anchored" data-anchor-id="машина-тьюринга"><span class="header-section-number">2.6.1</span> Машина Тьюринга</h4>
+<p>Алан Тьюринг формализовал алгоритм как последовательность действий, выполняемых абстрактной машиной. Его работа заложила основы теории вычислений.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/turing-machine.png" class="img-fluid figure-img"></p>
+<figcaption>Машина Тьюринга</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Пример алгоритма для машины Тьюринга:</p>
+<pre><code>Задача: Инвертировать биты (0→1, 1→0).
+Правила:
+- Если состояние Q1 и символ 0: пиши 1, двигайся вправо, оставайся в Q1.
+- Если состояние Q1 и символ 1: пиши 0, двигайся вправо, оставайся в Q1.</code></pre>
+</div>
+</div>
+</section>
+<section id="е-языки-программирования" class="level4" data-number="2.6.2">
+<h4 data-number="2.6.2" class="anchored" data-anchor-id="е-языки-программирования"><span class="header-section-number">2.6.2</span> 1950-е: Языки программирования</h4>
+<ul>
+<li><strong>FORTRAN</strong> (1957) и <strong>ALGOL</strong> (1958) сделали алгоритмы доступными для массовой разработки.</li>
+<li>Алгоритмы сортировки (например, быстрая сортировка Хоара, 1960) стали классикой Computer Science.</li>
+</ul>
+</section>
+</section>
+<section id="xxi-век-алгоритмы-как-новая-реальность" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="xxi-век-алгоритмы-как-новая-реальность"><span class="header-section-number">2.7</span> XXI век: алгоритмы как новая реальность</h3>
+<section id="big-data-и-машинное-обучение" class="level4" data-number="2.7.1">
+<h4 data-number="2.7.1" class="anchored" data-anchor-id="big-data-и-машинное-обучение"><span class="header-section-number">2.7.1</span> Big Data и машинное обучение</h4>
+<ul>
+<li>Алгоритмы <strong>PageRank</strong> (Google) и <strong>нейросетей</strong> (DeepMind) изменили подход к обработке информации.</li>
+<li>Пример: алгоритм рекомендаций Netflix использует матричную факторизацию для предсказания предпочтений.</li>
+</ul>
+</section>
+<section id="этические-вызовы" class="level4" data-number="2.7.2">
+<h4 data-number="2.7.2" class="anchored" data-anchor-id="этические-вызовы"><span class="header-section-number">2.7.2</span> Этические вызовы</h4>
+<ul>
+<li><strong>Дискриминация алгоритмов</strong>: в 2016 г. система COMPAS (США) была обвинена в расизме при оценке риска рецидива.</li>
+<li><strong>GDPR в ЕС</strong> (2018) регулирует автоматизированное принятие решений, требующее «человеческого надзора».</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="числовые-и-логические-алгоритмы" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="числовые-и-логические-алгоритмы"><span class="header-section-number">3</span> Числовые и логические алгоритмы</h2>
+<p>Числовые и логические алгоритмы — это два основных типа алгоритмов, которые используются для решения различных задач в информатике и математике.</p>
+<p>Числовые и логические алгоритмы играют важную роль в различных областях науки и техники.</p>
+<p>Понимание их различий и сходств позволяет эффективно применять их в зависимости от конкретных задач и требований.</p>
+<section id="числовые-алгоритмы" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="числовые-алгоритмы"><span class="header-section-number">3.1</span> Числовые алгоритмы</h3>
+<p><strong>Числовые алгоритмы</strong> используются для выполнения расчетов, связанных с количественными данными. Такие алгоритмы могут включать в себя арифметические операции, вычисления, обработку числовых данных и т.д. Они помогают юристам и судам принимать решения на основе точных вычислений.</p>
+<section id="примеры" class="level4" data-number="3.1.1">
+<h4 data-number="3.1.1" class="anchored" data-anchor-id="примеры"><span class="header-section-number">3.1.1</span> Примеры:</h4>
+<ul>
+<li>Определение размера алиментов, которые родитель должен выплачивать на содержание ребенка.</li>
+<li>Определение суммы компенсации, которую работодатель должен выплатить за просрочку зарплаты.</li>
+<li>Определение суммы неустойки за нарушение условий договора (например, просрочка поставки товара).</li>
+<li>Определение суммы штрафа за конкретное нарушение ПДД.</li>
+<li>Определение суммы компенсации при ДТП.</li>
+</ul>
+</section>
+</section>
+<section id="логические-алгоритмы" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="логические-алгоритмы"><span class="header-section-number">3.2</span> Логические алгоритмы</h3>
+<p><strong>Логические алгоритмы</strong> основаны на последовательности логических операций (например, «если-то», «и», «или») и помогают систематизировать процесс рассуждений. В юриспруденции они используются для анализа условий, проверки соответствия нормам права и принятия решений на основе заданных правил.</p>
+<section id="примеры-1" class="level4" data-number="3.2.1">
+<h4 data-number="3.2.1" class="anchored" data-anchor-id="примеры-1"><span class="header-section-number">3.2.1</span> Примеры:</h4>
+<ul>
+<li>Определение статьи Уголовного кодекса РФ, по которой следует квалифицировать деяние.</li>
+<li>Определение, соответствует ли договор требованиям законодательства.</li>
+<li>Выбор суда, который должен рассматривать дело.</li>
+<li>Определение порядка разрешения трудового спора.</li>
+<li>Определение наличия оснований для освобождения от уголовной ответственности.</li>
+<li>Определение права на налоговый вычет.</li>
+</ul>
+</section>
+</section>
+<section id="сравнение-числовых-и-логических-алгоритмов" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="сравнение-числовых-и-логических-алгоритмов"><span class="header-section-number">3.3</span> Сравнение числовых и логических алгоритмов</h3>
+<section id="сходства" class="level4" data-number="3.3.1">
+<h4 data-number="3.3.1" class="anchored" data-anchor-id="сходства"><span class="header-section-number">3.3.1</span> Сходства</h4>
+<ul>
+<li>Оба типа алгоритмов могут быть реализованы в различных языках программирования.</li>
+<li>Оба могут использоваться для решения задач и оптимизации процессов.</li>
+<li>Оба типа алгоритмов могут быть комбинированы для решения более сложных задач.</li>
+</ul>
+</section>
+<section id="различия" class="level4" data-number="3.3.2">
+<h4 data-number="3.3.2" class="anchored" data-anchor-id="различия"><span class="header-section-number">3.3.2</span> Различия</h4>
+<ul>
+<li>Числовые алгоритмы фокусируются на числовых данных и их обработке, тогда как логические алгоритмы работают с логическими выражениями и условиями.</li>
+<li>Числовые алгоритмы часто требуют более сложных математических вычислений, в то время как логические алгоритмы больше ориентированы на принятие решений и управление потоком выполнения программы.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="алгоритмы-в-юридических-процессах-и-правовых-нормах" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="алгоритмы-в-юридических-процессах-и-правовых-нормах"><span class="header-section-number">4</span> Алгоритмы в юридических процессах и правовых нормах</h2>
+<p>Алгоритмы в юридических процессах и правовых нормах играют все более важную роль в современном правоприменении и правосудии. Они могут использоваться для автоматизации различных аспектов юридической работы, включая анализ документов, предсказание исходов дел, а также для поддержки принятия решений.</p>
+<p>Алгоритмы могут значительно улучшить эффективность юридических процессов, но их использование должно быть тщательно продумано и регулировано, чтобы обеспечить соблюдение правовых норм и защиту прав граждан.</p>
+<section id="автоматизация-рутинных-задач" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="автоматизация-рутинных-задач"><span class="header-section-number">4.1</span> Автоматизация рутинных задач</h3>
+<p>Алгоритмы могут помочь в автоматизации таких задач, как обработка юридических документов, составление контрактов и управление делами. Это позволяет юристам сосредоточиться на более сложных и творческих аспектах своей работы.</p>
+</section>
+<section id="анализ-данных" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="анализ-данных"><span class="header-section-number">4.2</span> Анализ данных</h3>
+<p>С помощью алгоритмов можно анализировать большие объемы юридических данных, выявлять закономерности и тенденции, что может быть полезно для подготовки к судебным разбирательствам или для разработки правовой стратегии.</p>
+</section>
+<section id="предсказание-исходов-дел" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="предсказание-исходов-дел"><span class="header-section-number">4.3</span> Предсказание исходов дел</h3>
+<p>Некоторые алгоритмы могут использоваться для предсказания вероятности успеха в судебных разбирательствах на основе анализа предыдущих дел и решений судов. Это может помочь юристам и их клиентам принимать более обоснованные решения.</p>
+</section>
+<section id="поддержка-принятия-решений" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="поддержка-принятия-решений"><span class="header-section-number">4.4</span> Поддержка принятия решений</h3>
+<p>Алгоритмы могут быть интегрированы в системы поддержки принятия решений, которые помогают судьям и адвокатам оценивать различные варианты действий и их последствия.</p>
+</section>
+<section id="этика-и-правовые-нормы" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="этика-и-правовые-нормы"><span class="header-section-number">4.5</span> Этика и правовые нормы</h3>
+<p>Внедрение алгоритмов в юридическую практику также поднимает важные этические и правовые вопросы. Необходимо учитывать, как алгоритмы могут влиять на справедливость, прозрачность и доступность правосудия. Важно, чтобы алгоритмы были разработаны с учетом правовых норм и принципов, чтобы избежать предвзятости и дискриминации.</p>
+</section>
+</section>
+<section id="свойства-алгоритмов" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="свойства-алгоритмов"><span class="header-section-number">5</span> Свойства алгоритмов</h2>
+<section id="дискретность" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="дискретность"><span class="header-section-number">5.1</span> Дискретность</h3>
+<p>Алгоритм должен представлять процесс решения задачи как упорядоченное выполнение некоторых простых шагов. При этом для выполнения каждого шага алгоритма требуется конечный отрезок времени, то есть преобразование исходных данных в результат осуществляется во времени дискретно.</p>
+</section>
+<section id="детерминированность-определённость" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="детерминированность-определённость"><span class="header-section-number">5.2</span> Детерминированность (определённость)</h3>
+<p>В каждый момент времени следующий шаг работы однозначно определяется состоянием системы. Таким образом, алгоритм выдаёт один и тот же результат (ответ) для одних и тех же исходных данных.</p>
+<p>Существуют вероятностные алгоритмы, в которых следующий шаг работы зависит от текущего состояния системы и генерируемого случайного числа. Однако при включении метода генерации случайных чисел в список «исходных данных» вероятностный алгоритм становится подвидом обычного.</p>
+</section>
+<section id="понятность" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="понятность"><span class="header-section-number">5.3</span> Понятность</h3>
+<p>Алгоритм должен включать только те команды, которые доступны исполнителю и входят в его систему команд.</p>
+</section>
+<section id="конечность" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="конечность"><span class="header-section-number">5.4</span> Конечность</h3>
+<p>Алгоритм должен завершаться за конечное количество шагов. Это означает, что он не должен зацикливаться и должен иметь четко определенные условия завершения.</p>
+</section>
+<section id="массовость-общность" class="level3" data-number="5.5">
+<h3 data-number="5.5" class="anchored" data-anchor-id="массовость-общность"><span class="header-section-number">5.5</span> Массовость (общность)</h3>
+<p>Алгоритм применим к множеству однотипных задач, а не к одной конкретной. Например, алгоритм сортировки работает для любого набора чисел.</p>
+</section>
+<section id="результативность" class="level3" data-number="5.6">
+<h3 data-number="5.6" class="anchored" data-anchor-id="результативность"><span class="header-section-number">5.6</span> Результативность</h3>
+<p>Алгоритм должен завершаться определенным результатом (или сообщением об отсутствии решения).</p>
+</section>
+<section id="эффективность" class="level3" data-number="5.7">
+<h3 data-number="5.7" class="anchored" data-anchor-id="эффективность"><span class="header-section-number">5.7</span> Эффективность</h3>
+<p>Алгоритм должен быть эффективным как по времени, так и по использованию ресурсов. Это означает минимизацию количества операций и использование оптимальных структур данных.</p>
+</section>
+<section id="проверяемость" class="level3" data-number="5.8">
+<h3 data-number="5.8" class="anchored" data-anchor-id="проверяемость"><span class="header-section-number">5.8</span> Проверяемость</h3>
+<p>Алгоритм должен быть проверяемым, что означает возможность тестирования его корректности и эффективности. Это может включать в себя создание тестовых случаев и использование методов верификации.</p>
+</section>
+</section>
+<section id="принципы-разработки-алгоритмов" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="принципы-разработки-алгоритмов"><span class="header-section-number">6</span> Принципы разработки алгоритмов</h2>
+<p>Современная юридическая практика всё чаще требует работы с алгоритмами — от анализа договоров до прогнозирования судебных решений.</p>
+<p>Принципы разработки алгоритмов являются основой для создания качественных и эффективных решений.</p>
+<p>Соблюдение этих принципов помогает разработчикам создавать алгоритмы, которые не только решают поставленные задачи, но и делают это оптимальным образом.</p>
+<p>Даже простые алгоритмы на школьном языке помогают юристам: - Избегать арифметических ошибок в расчетах. - Стандартизировать проверку документов. - Соблюдать процессуальные сроки.</p>
+<p><strong>Важно</strong>: Все алгоритмы должны сверяться с актуальными редакциями законов.</p>
+<section id="четкость-и-детерминированность" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="четкость-и-детерминированность"><span class="header-section-number">6.1</span> Четкость и детерминированность</h3>
+<p>Каждый шаг алгоритма должен быть <strong>однозначным</strong> и не допускать разночтений.</p>
+<p><strong>Пример:</strong> Алгоритм проверки дееспособности клиента:</p>
+<pre><code>алг ПроверкаДееспособности
+  нач
+    ввести Возраст, РешениеСуда
+    если Возраст &gt;= 18 и РешениеСудаоНеедеспособности = "отсутствует" то
+      вывод "Дееспособен"
+    иначе
+      вывод "Требуется опекун"
+    все
+кон</code></pre>
+</section>
+<section id="эффективность-1" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="эффективность-1"><span class="header-section-number">6.2</span> Эффективность</h3>
+<p>Алгоритм должен решать задачу за минимальное время и с разумными затратами ресурсов.</p>
+<p><strong>Пример:</strong> Поиск судебного прецедента по ключевым словам:</p>
+<pre><code>алг НайтиПрецедент
+нач
+  ввести КлючевыеСлова
+    для каждого дела в БазеДанных
+      если дело.Текст содержит КлючевыеСлова то
+        вывод дело.Номер
+      все
+    кон
+кон</code></pre>
+</section>
+<section id="модульность" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="модульность"><span class="header-section-number">6.3</span> Модульность</h3>
+<p>Разделяйте алгоритм на независимые блоки (модули). Это упрощает тестирование и повторное использование кода.</p>
+<p><strong>Пример:</strong> Проверка договора аренды на соответствие ФЗ № 123:</p>
+<pre><code>алг ПроверитьДоговорАренды
+нач
+  ПроверитьСтороны()
+  ПроверитьСрок()
+  ПроверитьОплату()
+кон</code></pre>
+<pre><code>алг ПроверитьСрок
+нач
+  ввести СрокДоговора
+    если СрокДоговора &gt; 5 лет то
+      вывод "Требуется регистрация в Росреестре"
+    все
+кон</code></pre>
+</section>
+<section id="корректность" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="корректность"><span class="header-section-number">6.4</span> Корректность</h3>
+<p>Алгоритм должен давать правильный результат для <strong>всех</strong> возможных входных данных, включая исключения из правил.</p>
+<p><strong>Пример:</strong> Расчет неустойки за просрочку платежа (ст. 395 ГК РФ).</p>
+<pre><code>алг РасчетНеустойки
+нач
+  ввести СуммаДолга, СтавкаЦБ, ДниПросрочки
+  если ДниПросрочки &gt; 0 то
+    Неустойка = СуммаДолга * (СтавкаЦБ / 100) * (ДниПросрочки / 365)
+    вывод "К уплате: ", Неустойка
+  иначе
+    вывод "Просрочки нет"
+  все
+кон</code></pre>
+</section>
+<section id="простота-и-читаемость" class="level3" data-number="6.5">
+<h3 data-number="6.5" class="anchored" data-anchor-id="простота-и-читаемость"><span class="header-section-number">6.5</span> Простота и читаемость</h3>
+<p>Избегайте избыточной сложности. Алгоритм должен быть понятен даже без комментариев даже новичкам. Используйте говорящие названия переменных и избегайте сложных конструкций.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Плохой пример</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Хороший пример</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<ul>
+<li>Непонятные названия переменных (<code>а</code>, <code>б</code>, <code>0</code> вместо логических значений).</li>
+<li>Нет пояснения, что проверяется.</li>
+</ul>
+<pre><code>алг ПР1
+нач
+  ввод а, б
+  если а &gt;= 18 и б = 0 то
+    вывод "ДА"
+  иначе
+    вывод "НЕТ"
+  все
+кон</code></pre>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Юридическая проверка дееспособности:</p>
+<ul>
+<li>Названия переменных прямо указывают на их смысл.</li>
+<li>Условие соответствует ст. 21 ГК РФ.</li>
+<li>Результат содержит юридически значимую формулировку.</li>
+</ul>
+<pre><code>алг ПроверкаДееспособности
+нач
+  ввести Возраст, СтатусНедееспособности // Статус: 0 — дееспособен, 1 — недееспособен
+  если Возраст &gt;= 18 и СтатусНедееспособности == 0 то
+    вывод "Лицо дееспособно: договор действителен"
+  иначе
+    вывод "Требуется согласие опекуна или суда"
+  все
+кон</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="адаптивность" class="level3" data-number="6.6">
+<h3 data-number="6.6" class="anchored" data-anchor-id="адаптивность"><span class="header-section-number">6.6</span> Адаптивность</h3>
+<p>Алгоритм должен легко модифицироваться при изменении условий.</p>
+<p><strong>Пример:</strong> После изменения НДС с 20% до 22%:</p>
+<pre><code>алг РасчетНДС
+нач
+  // Раньше: Ставка = 20
+  Ставка = 22
+  ввести Сумма
+  НДС = Сумма * Ставка / 100
+  вывод НДС
+кон</code></pre>
+</section>
+<section id="тестируемость" class="level3" data-number="6.7">
+<h3 data-number="6.7" class="anchored" data-anchor-id="тестируемость"><span class="header-section-number">6.7</span> Тестируемость</h3>
+<p>Разрабатывайте алгоритм так, чтобы каждый этап можно было проверить.</p>
+<p><strong>Пример:</strong> Тест для алгоритма раздела имущества (ст. 38 СК РФ)**:</p>
+<pre><code>алг РазделИмущества
+нач
+  ввести СтатусИмущества
+  если СтатусИмущества = "совместное" то
+    вывод "Раздел 50/50"
+  иначе
+    вывод "Имущество не делится"
+  все
+кон</code></pre>
+<p>Тест-кейсы:</p>
+<ol type="1">
+<li>Статус = “совместное”. Ожидаемый результат: “50/50”</li>
+<li>Статус = “наследство”. Ожидаемый результат: “не делится”</li>
+</ol>
+</section>
+<section id="прозрачность-интерпретируемость-результатов" class="level3" data-number="6.8">
+<h3 data-number="6.8" class="anchored" data-anchor-id="прозрачность-интерпретируемость-результатов"><span class="header-section-number">6.8</span> Прозрачность (интерпретируемость результатов)</h3>
+<p>Алгоритм должен позволять объяснить результат (важно для GDPR и ФЗ-152).</p>
+<p><strong>Пример</strong>: Отказ в кредите с указанием причины:</p>
+<pre><code>алг ПроверкаКредита
+нач
+  ввести КредитнаяИстория, Зарплата
+  если КредитнаяИстория = "плохая" то
+    вывод "Отказ: плохая кредитная история"
+  иначе если Зарплата &lt; 20000 то
+    вывод "Отказ: недостаточный доход"
+  иначе
+    вывод "Одобрено"
+  все
+кон</code></pre>
+</section>
+</section>
+<section id="методы-разработки-алгоритмов" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="методы-разработки-алгоритмов"><span class="header-section-number">7</span> Методы разработки алгоритмов</h2>
+<p>Методы разработки алгоритмов предоставляют разработчикам инструменты и техники для создания эффективных решений.</p>
+<p>Эти методы могут варьироваться в зависимости от сложности задачи, требований к производительности и других факторов. Рассмотрим основные методы разработки алгоритмов.</p>
+<p>Выбор подходящего метода зависит от конкретной задачи, требований к производительности и других факторов.</p>
+<p>Понимание различных методов разработки алгоритмов позволяет разработчикам более эффективно решать задачи и оптимизировать свои решения</p>
+<section id="метод-разделяй-и-властвуй" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="метод-разделяй-и-властвуй"><span class="header-section-number">7.1</span> Метод «разделяй и властвуй»</h3>
+<p>Метод «разделяй и властвуй» заключается в разбиении сложной задачи на более простые подзадачи, которые решаются независимо друг от друга. После решения подзадач результаты комбинируются для получения окончательного решения. Примеры алгоритмов, использующих этот метод, включают быструю сортировку и алгоритм Краскала для нахождения минимального остовного дерева.</p>
+</section>
+<section id="итеративный-метод" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="итеративный-метод"><span class="header-section-number">7.2</span> Итеративный метод</h3>
+<p>Итеративный метод основывается на повторении определенных шагов до достижения желаемого результата. Этот подход часто используется в численных методах, таких как метод Ньютона для нахождения корней уравнений. Итеративные алгоритмы могут быть более эффективными в некоторых случаях, чем рекурсивные.</p>
+</section>
+<section id="рекурсивный-метод" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="рекурсивный-метод"><span class="header-section-number">7.3</span> Рекурсивный метод</h3>
+<p>Рекурсия — это метод, при котором функция вызывает саму себя для решения подзадачи. Данный подход часто используется для решения задач, которые могут быть разбиты на более мелкие аналогичные задачи, таких как вычисление факториала или обход деревьев. Важно учитывать, что рекурсивные алгоритмы могут потребовать больше памяти из-за хранения контекста вызовов.</p>
+</section>
+<section id="жадный-метод" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="жадный-метод"><span class="header-section-number">7.4</span> Жадный метод</h3>
+<p>Жадные алгоритмы принимают локально оптимальные решения на каждом шаге с надеждой, что это приведет к глобально оптимальному решению. Этот метод часто используется в задачах оптимизации, таких как задача о рюкзаке или алгоритмы для нахождения минимального остовного дерева.</p>
+</section>
+<section id="динамическое-программирование" class="level3" data-number="7.5">
+<h3 data-number="7.5" class="anchored" data-anchor-id="динамическое-программирование"><span class="header-section-number">7.5</span> Динамическое программирование</h3>
+<p>Динамическое программирование — это метод, который используется для решения задач, которые могут быть разбиты на перекрывающиеся подзадачи. Он сохраняет результаты уже решенных подзадач, чтобы избежать повторных вычислений. Этот метод часто применяется в задачах, связанных с оптимизацией, таких как задача о наибольшей общей подпоследовательности.</p>
+</section>
+<section id="алгоритмы-перебора" class="level3" data-number="7.6">
+<h3 data-number="7.6" class="anchored" data-anchor-id="алгоритмы-перебора"><span class="header-section-number">7.6</span> Алгоритмы перебора</h3>
+<p>Алгоритмы перебора (или «грубой силы») исследуют все возможные варианты решения задачи. Хотя этот метод может быть неэффективным для больших наборов данных, он может быть полезен для небольших задач или в случаях, когда другие методы не применимы.</p>
+</section>
+<section id="метод-проб-и-ошибок" class="level3" data-number="7.7">
+<h3 data-number="7.7" class="anchored" data-anchor-id="метод-проб-и-ошибок"><span class="header-section-number">7.7</span> Метод проб и ошибок</h3>
+<p>Этот метод включает в себя экспериментирование с различными подходами и анализ результатов. Он может быть полезен в ситуациях, когда нет четкого понимания структуры задачи или когда требуется интуитивный подход к решению.</p>
+</section>
+</section>
+<section id="основные-этапы-решения-задачи" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="основные-этапы-решения-задачи"><span class="header-section-number">8</span> Основные этапы решения задачи</h2>
+<p>Разработка и реализация алгоритма для решения задачи включает в себя несколько ключевых этапов, которые помогают структурировать процесс и обеспечить эффективность конечного решения.</p>
+<p>Следование этим этапам помогает разработчикам структурировать процесс, минимизировать ошибки и оптимизировать конечный продукт.</p>
+<p>Понимание и применение этих этапов в практике разработки алгоритмов способствует улучшению качества и надежности программного обеспечения.</p>
+<p>Рассмотрим основные этапы решения задачи при разработке алгоритма.</p>
+<section id="анализ-задачи" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="анализ-задачи"><span class="header-section-number">8.1</span> Анализ задачи</h3>
+<p>На этом этапе необходимо тщательно изучить условия задачи, определить ее цели и требования. Важно понять, какие данные доступны, какие результаты ожидаются и какие ограничения могут существовать. Анализ задачи помогает сформулировать четкое представление о том, что необходимо достичь.</p>
+</section>
+<section id="определение-входных-и-выходных-данных" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="определение-входных-и-выходных-данных"><span class="header-section-number">8.2</span> Определение входных и выходных данных</h3>
+<p>После анализа задачи следует определить, какие данные будут входными (например, параметры, которые алгоритм будет принимать) и какие данные будут выходными (результаты, которые алгоритм должен возвращать). Четкое определение входных и выходных данных помогает избежать недоразумений и упрощает дальнейшую разработку.</p>
+</section>
+<section id="разработка-алгоритма" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="разработка-алгоритма"><span class="header-section-number">8.3</span> Разработка алгоритма</h3>
+<p>На этом этапе происходит непосредственное создание алгоритма. Разработчик выбирает подходящие методы и техники, основываясь на анализе задачи и определении данных. Алгоритм может быть представлен в виде псевдокода, блок-схемы или другого формата, который позволяет четко описать последовательность шагов.</p>
+</section>
+<section id="тестирование-и-отладка" class="level3" data-number="8.4">
+<h3 data-number="8.4" class="anchored" data-anchor-id="тестирование-и-отладка"><span class="header-section-number">8.4</span> Тестирование и отладка</h3>
+<p>После разработки алгоритма необходимо провести его тестирование. Это включает в себя проверку корректности работы алгоритма на различных входных данных, а также выявление и исправление возможных ошибок. Тестирование помогает убедиться, что алгоритм работает так, как задумано, и соответствует требованиям задачи.</p>
+</section>
+<section id="оценка-эффективности" class="level3" data-number="8.5">
+<h3 data-number="8.5" class="anchored" data-anchor-id="оценка-эффективности"><span class="header-section-number">8.5</span> Оценка эффективности</h3>
+<p>На этом этапе важно оценить эффективность алгоритма с точки зрения времени выполнения и использования ресурсов. Разработчик может провести анализ сложности алгоритма, чтобы понять, насколько он оптимален для решения поставленной задачи. Если алгоритм неэффективен, может потребоваться его доработка или выбор другого метода.</p>
+</section>
+<section id="документирование" class="level3" data-number="8.6">
+<h3 data-number="8.6" class="anchored" data-anchor-id="документирование"><span class="header-section-number">8.6</span> Документирование</h3>
+<p>Создание документации является важным этапом, который часто упускается из виду. Документация должна содержать описание алгоритма, его входных и выходных данных, а также примеры использования. Это поможет другим разработчикам понять алгоритм и использовать его в своих проектах.</p>
+</section>
+<section id="поддержка-и-обновление" class="level3" data-number="8.7">
+<h3 data-number="8.7" class="anchored" data-anchor-id="поддержка-и-обновление"><span class="header-section-number">8.7</span> Поддержка и обновление</h3>
+<p>После внедрения алгоритма в систему важно обеспечить его поддержку и обновление. Это может включать в себя исправление ошибок, улучшение производительности или адаптацию к изменяющимся требованиям. Поддержка алгоритма помогает сохранить его актуальность и эффективность на протяжении времени.</p>
+</section>
+</section>
+<section id="тестирование-алгоритма" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="тестирование-алгоритма"><span class="header-section-number">9</span> Тестирование алгоритма</h2>
+<p>Тестирование алгоритмов — это важный этап в процессе разработки, который позволяет убедиться в корректности и эффективности алгоритма.</p>
+<p>Оно включает в себя проверку работы алгоритма на различных входных данных, выявление ошибок и оценку его производительности.</p>
+<p>Следование систематическому подходу к тестированию, включая разработку тестовых случаев, автоматизацию и оценку производительности, позволяет разработчикам создавать надежные и высококачественные алгоритмы.</p>
+<p>Рассмотрим основные аспекты тестирования алгоритмов.</p>
+<section id="цели-тестирования-алгоритмов" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="цели-тестирования-алгоритмов"><span class="header-section-number">9.1</span> Цели тестирования алгоритмов</h3>
+<p>Основные цели тестирования алгоритмов включают: - <strong>Проверка корректности</strong>: Убедиться, что алгоритм возвращает правильные результаты для всех возможных входных данных. - <strong>Выявление ошибок</strong>: Найти и исправить ошибки, которые могут возникнуть в процессе выполнения алгоритма. - <strong>Оценка производительности</strong>: Измерить время выполнения и использование ресурсов, чтобы определить, насколько алгоритм эффективен.</p>
+</section>
+<section id="подходы-к-тестированию" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="подходы-к-тестированию"><span class="header-section-number">9.2</span> Подходы к тестированию</h3>
+<p>Существует несколько подходов к тестированию алгоритмов: - <strong>Модульное тестирование</strong>: Проверка отдельных компонентов алгоритма на корректность. Это позволяет изолировать ошибки и упростить процесс отладки. - <strong>Интеграционное тестирование</strong>: Проверка взаимодействия различных компонентов алгоритма. Это важно для выявления проблем, которые могут возникнуть при совместной работе нескольких частей. - <strong>Системное тестирование</strong>: Полное тестирование алгоритма в контексте всей системы, чтобы убедиться, что он работает корректно в реальных условиях.</p>
+</section>
+<section id="тестовые-случаи" class="level3" data-number="9.3">
+<h3 data-number="9.3" class="anchored" data-anchor-id="тестовые-случаи"><span class="header-section-number">9.3</span> Тестовые случаи</h3>
+<p>Для эффективного тестирования необходимо разработать тестовые случаи, которые охватывают различные сценарии использования алгоритма. Тестовые случаи могут включать: - <strong>Обычные случаи</strong>: Стандартные входные данные, для которых алгоритм должен работать корректно. - <strong>Граничные случаи</strong>: Входные данные, находящиеся на границах допустимых значений, чтобы проверить, как алгоритм справляется с крайними условиями. - <strong>Некорректные данные</strong>: Входные данные, которые не соответствуют ожидаемым требованиям, чтобы убедиться, что алгоритм обрабатывает ошибки корректно.</p>
+</section>
+<section id="автоматизация-тестирования" class="level3" data-number="9.4">
+<h3 data-number="9.4" class="anchored" data-anchor-id="автоматизация-тестирования"><span class="header-section-number">9.4</span> Автоматизация тестирования</h3>
+<p>Автоматизация тестирования может значительно упростить процесс и повысить его эффективность. С помощью автоматизированных тестов можно быстро проверять алгоритм на различных входных данных и выявлять ошибки. Это особенно полезно при внесении изменений в алгоритм, так как позволяет быстро убедиться, что новые изменения не нарушили его работу.</p>
+</section>
+<section id="оценка-производительности" class="level3" data-number="9.5">
+<h3 data-number="9.5" class="anchored" data-anchor-id="оценка-производительности"><span class="header-section-number">9.5</span> Оценка производительности</h3>
+<p>Помимо проверки корректности, важно также оценить производительность алгоритма. Это включает в себя: - <strong>Анализ временной сложности</strong>: Оценка времени выполнения алгоритма в зависимости от размера входных данных. - <strong>Анализ пространственной сложности</strong>: Оценка объема памяти, который использует алгоритм.</p>
+</section>
+<section id="документация-результатов-тестирования" class="level3" data-number="9.6">
+<h3 data-number="9.6" class="anchored" data-anchor-id="документация-результатов-тестирования"><span class="header-section-number">9.6</span> Документация результатов тестирования</h3>
+<p>Документация результатов тестирования является важным аспектом, который помогает команде разработчиков понять, какие тесты были проведены, какие ошибки были выявлены и как они были исправлены. Это также может быть полезно для будущих разработок и улучшений алгоритма.</p>
+</section>
+</section>
+<section id="способы-записи-алгоритмов" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="способы-записи-алгоритмов"><span class="header-section-number">10</span> Способы записи алгоритмов</h2>
+<p>Запись алгоритмов — это важный аспект разработки, который позволяет четко и однозначно представить последовательность действий для решения задачи.</p>
+<p>Выбор способа записи алгоритма зависит от целей разработки, аудитории и сложности задачи.</p>
+<p>Понимание различных способов записи алгоритмов помогает разработчикам эффективно коммуницировать свои идеи и создавать качественные решения.</p>
+<p>Существует несколько способов записи алгоритмов, каждый из которых имеет свои преимущества и недостатки.</p>
+<p>Рассмотрим основные способы записи алгоритмов.</p>
+<section id="псевдокод" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="псевдокод"><span class="header-section-number">10.1</span> Псевдокод</h3>
+<p>Псевдокод — это способ записи алгоритма с использованием простого и понятного языка, который не привязан к конкретному языку программирования. Он позволяет описать логику алгоритма в виде последовательности шагов, используя обычные слова и конструкции. Преимущества псевдокода включают: - <strong>Легкость понимания:</strong> Псевдокод понятен даже тем, кто не знаком с конкретным языком программирования. - <strong>Гибкость:</strong> Можно использовать любые конструкции, которые помогают лучше объяснить алгоритм.</p>
+</section>
+<section id="блок-схемы" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="блок-схемы"><span class="header-section-number">10.2</span> Блок-схемы</h3>
+<p>Блок-схемы — это графическое представление алгоритма, где каждый шаг представлен в виде блока, а связи между шагами — стрелками. Блок-схемы позволяют визуально отобразить логику алгоритма и его структуру. Преимущества блок-схем включают: - <strong>Наглядность:</strong> Легко увидеть общую структуру алгоритма и его последовательность. - <strong>Удобство для презентации:</strong> Блок-схемы хорошо подходят для демонстрации алгоритма другим людям.</p>
+</section>
+<section id="язык-программирования" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="язык-программирования"><span class="header-section-number">10.3</span> Язык программирования</h3>
+<p>Алгоритм можно записать непосредственно на языке программирования, который будет использоваться для его реализации. Это позволяет сразу увидеть, как алгоритм будет работать в коде. Преимущества записи на языке программирования: - <strong>Точность:</strong> Код на языке программирования является точным и может быть сразу выполнен. - <strong>Возможность тестирования:</strong> Можно сразу протестировать алгоритм на практике.</p>
+</section>
+<section id="таблицы" class="level3" data-number="10.4">
+<h3 data-number="10.4" class="anchored" data-anchor-id="таблицы"><span class="header-section-number">10.4</span> Таблицы</h3>
+<p>Таблицы могут использоваться для представления алгоритмов, особенно когда необходимо показать взаимосвязи между данными или состояниями. В таблицах можно описать входные данные, выходные данные и шаги алгоритма.</p>
+<p>Преимущества таблиц: - Удобство для представления больших объемов данных. - Легкость в сравнении различных вариантов алгоритма.</p>
+</section>
+<section id="формальные-нотации" class="level3" data-number="10.5">
+<h3 data-number="10.5" class="anchored" data-anchor-id="формальные-нотации"><span class="header-section-number">10.5</span> Формальные нотации</h3>
+<p>Существуют формальные нотации, такие как нотация Бэкуса-Наура (BNF) или другие математические формализмы, которые используются для описания алгоритмов и языков программирования.</p>
+<p>Преимущества формальных нотаций: - Точность: Формальные нотации обеспечивают строгую и однозначную запись. - Подходят для теоретических исследований и анализа.</p>
+</section>
+</section>
+<section id="правила-оформления-схем-алгоритмов" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="правила-оформления-схем-алгоритмов"><span class="header-section-number">11</span> Правила оформления схем алгоритмов</h2>
+<p>Оформление схем алгоритмов — это важный аспект документации в программировании, позволяющий четко и однозначно представить структуру и логику работы алгоритма.</p>
+<p>В России правила оформления документации для программного обеспечения и алгоритмов регламентированы стандартами, в частности, ГОСТ Р 19.701-90 «Единая система программной документации. Схемы алгоритмов».</p>
+<p>Соблюдение правил оформления схем алгоритмов в соответствии с ГОСТ 19.701-90 играет важную роль в создании программной документации.</p>
+<p>Оно обеспечивает универсальность, понятность и точность передачи информации о разработанных алгоритмах, что способствует эффективному взаимодействию между разработчиками, тестировщиками и другими заинтересованными сторонами.</p>
+<p>Рассмотрим основные положения и требования этого ГОСТа.</p>
+</section>
+<section id="основные-положения-гост-19.701-90" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="основные-положения-гост-19.701-90"><span class="header-section-number">12</span> Основные положения ГОСТ 19.701-90</h2>
+<section id="цель-схемы-алгоритма" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="цель-схемы-алгоритма"><span class="header-section-number">12.1</span> Цель схемы алгоритма</h3>
+<ul>
+<li>Схемы предназначены для визуального представления алгоритмов, применяемых в программных системах. Они помогают разработчикам и другим заинтересованным сторонам понять логику работы алгоритма.</li>
+</ul>
+</section>
+<section id="общие-требования" class="level3" data-number="12.2">
+<h3 data-number="12.2" class="anchored" data-anchor-id="общие-требования"><span class="header-section-number">12.2</span> Общие требования</h3>
+<ul>
+<li>Схемы должны быть четкими и легко читаемыми. Используемые символы и обозначения должны быть понятны и стандартны.</li>
+<li>Оформление схемы должно способствовать интуитивному пониманию алгоритма, избегая излишнего нагромождения элементов.</li>
+</ul>
+</section>
+<section id="структура-алгоритмической-схемы" class="level3" data-number="12.3">
+<h3 data-number="12.3" class="anchored" data-anchor-id="структура-алгоритмической-схемы"><span class="header-section-number">12.3</span> Структура алгоритмической схемы</h3>
+<ul>
+<li><strong>Начало и конец</strong>: Используются овалы для обозначения начала и конца алгоритма.</li>
+<li><strong>Действия и операции</strong>: Прямоугольники представляют собой операции (например, присваивание, вычисление и т.д.).</li>
+<li><strong>Случаи и условия</strong>: Ромб фиксирует условия и ветвления алгоритма, позволяя обозначить различные потоки выполнения в зависимости от условия.</li>
+<li><strong>Соединения</strong>: Стрелки направляют поток управления между блоками и показывают последовательность выполнения.</li>
+</ul>
+</section>
+<section id="унификация-символов" class="level3" data-number="12.4">
+<h3 data-number="12.4" class="anchored" data-anchor-id="унификация-символов"><span class="header-section-number">12.4</span> Унификация символов</h3>
+<ul>
+<li>В соответствии с ГОСТ, утверждена унифицированная система символов, которую необходимо использовать при оформлении схем. Это позволяет стандартизировать документацию, делая её более доступной для понимания.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Скопировано");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Скопировано");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("^(?:http:|https:)\/\/msal\.tech");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../algorithmics/annotation.html" class="pagination-link" aria-label="Аннотация">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Аннотация</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../algorithmics/assessment.html" class="pagination-link" aria-label="Подготовка к ассесменту">
+        <span class="nav-page-text">Подготовка к ассесменту</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="https://msal.ru/content/prioritet-2030/tsifrovaya-kafedra/" class="external" target="_blank">Цифровая кафедра МГЮА</a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+<p>Главная</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../subjects.html">
+<p>Учебные модули</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../authors.html">
+<p>Авторы</p>
+</a>
+  </li>  
+</ul>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/msal-tech/msal-tech/edit/main/src/algorithmics/lecture-01/index.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>Редактировать страницу</a></li><li><a href="https://github.com/msal-tech/msal-tech/blob/main/src/algorithmics/lecture-01/index.qmd" target="_blank" class="toc-action"><i class="bi empty"></i>Показать код</a></li><li><a href="https://github.com/msal-tech/msal-tech/issues" target="_blank" class="toc-action"><i class="bi empty"></i>Сообщить о проблеме</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/msal-tech/msal-tech" target="_blank">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
