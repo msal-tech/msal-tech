@@ -3,7 +3,7 @@ website:
     - id: algorithmics
       title: "Алгоритмика"
       style: floating
-      collapse-level: 2
+      collapse-level: 1
       align: left
       pinned: true
       contents:
@@ -21,7 +21,7 @@ website:
                   href: algorithmics/lecture-01/index.qmd
 
             - section: "Тема 2. Управление исполнителем. Управляющие алгоритмические конструкции."
-              href: algorithmics//index.qmd
+              href: algorithmics/index.qmd
             - section: "Тема 3. Основные управляющие алгоритмические конструкции. Разветвляющиеся и циклические алгоритмические конструкции."
               href: algorithmics/index.qmd
             - section: "Тема 4. Данные и величины. Свойства и характеристики величин."
