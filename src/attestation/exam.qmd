@@ -3,8 +3,11 @@ title: Примеры оценочных средств к промежуточ�
 #author:
 date: 2024-09-01
 date-modified: last-modified
+
 format:
-  html
+  html: default
+  pdf: default
+format-links: [pdf]
 ---
 
 ## Алгоритмика

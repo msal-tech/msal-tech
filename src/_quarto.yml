@@ -213,6 +213,7 @@ format:
     mathfont: "Times New Roman"
     #template: template.tex
 
+  #----------------------------------------------
   revealjs:
     lang: ru
     slide-level: 4

@@ -4,8 +4,11 @@ page-navigation: false
 #author:
 date: 2024-09-01
 date-modified: last-modified
+
 format:
-  html
+  html: default
+  pdf: default
+format-links: [pdf]
 ---
 
 Этот сайт --- ваш надежный ресурс для освоения ключевых компетенций в области Legaltech.

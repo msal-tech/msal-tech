@@ -4,6 +4,11 @@ author:
   - Голкина Г.Е.
 date: 2024-09-01
 date-modified: last-modified
+
+format:
+  html: default
+  pdf: default
+format-links: [pdf]
 ---
 
 ## Введение

@@ -4,6 +4,11 @@ page-navigation: false
 #author:
 date: 2024-09-01
 date-modified: last-modified
+
+format:
+  html: default
+  pdf: default
+format-links: [pdf]
 ---
 
 ## Цели реализации программы
@@ -142,5 +147,3 @@ date-modified: last-modified
 Используйте материалы, задавайте вопросы в обсуждениях и достигайте целей! Каждый модуль --- шаг к профессии юриста нового поколения.
 
 **Освойте Legaltech, станьте экспертом в автоматизации права и откройте новые карьерные возможности!**
-
-

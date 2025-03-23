@@ -10,8 +10,10 @@ description: |
     &laquo;Автоматизация юридических процессов&raquo;
 hide-description: true
 image: ./_static/images/logo.png
+
+
 format:
-  html
+  html: default
 ---
 
 <!-- ---------------------------------------------------------------------- -->

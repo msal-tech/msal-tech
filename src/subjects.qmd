@@ -1,8 +1,9 @@
 ---
 title: Модули (дисциплины) программы
 page-navigation: false
+
 format:
-   html
+  html: default
 ---
 
 1. [**Алгоритмика:**](algorithmics/ "Алгоритмика")

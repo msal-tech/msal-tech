@@ -1,7 +1,8 @@
 ---
 title: "{{< meta course.name >}}"
+
 format:
-  html
+  html: default
 ---
 
 

@@ -3,8 +3,9 @@ title: Подготовка к ассесменту
 #author:
 date: 2024-09-01
 date-modified: last-modified
+
 format:
-  html
+  html: default
 ---
 
 
