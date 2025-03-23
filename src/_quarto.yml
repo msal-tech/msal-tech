@@ -181,6 +181,7 @@ format:
   html:
     lang: ru
     toc: true
+    number-sections: true
     theme:
       light:
         - cosmo
