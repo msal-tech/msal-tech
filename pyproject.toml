@@ -14,22 +14,19 @@ dependencies = [
 ]
 
 
-[tool.poetry]
-
-
 [tool.poetry.group.dev.dependencies]
 jupyterlab = ">=4.3.5, <5.0.0"
-
-# A plugin for poetry that allows you to execute scripts defined
-# in your pyproject.toml
 poetry-exec-plugin = {git = "https://github.com/askras/poetry-exec-plugin.git"}
-
 pytest = "^8.3.5"
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+package-mode = false
 
 
 #==============================================================================
