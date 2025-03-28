@@ -19,7 +19,17 @@ metadata-files:
 
 website:
   site-url: https://msal.tech/
+  title: "Автоматизация юридических процессов"
+  description: "Каталог учебных материалов по программе профессиональной переподготовки"
+
+  image: _static/images/logo.svg
   favicon: _static/images/favicon.png
+  open-graph:
+    locale: ru_RU
+
+  page-navigation: true
+  bread-crumbs: true
+  reader-mode: true
 
   announcement:
     icon: info-circle
@@ -28,15 +38,6 @@ website:
     type: primary
     position: above-navbar
 
-  title: "Автоматизация юридических процессов"
-  image: _static/images/logo.svg
-  description: "Каталог учебных материалов по программе профессиональной переподготовки"
-  open-graph:
-    locale: ru_RU
-  page-navigation: true
-  bread-crumbs: true
-  reader-mode: true
-
   # GitHub
   repo-url: https://github.com/msal-tech/msal-tech
   repo-subdir: src/
@@ -44,7 +45,8 @@ website:
   repo-link-target: _blank
   repo-actions: [edit, source, issue]
 
-
+  # ---------------------------------------------------------------------------
+  # NAVBAR
   # ---------------------------------------------------------------------------
   navbar:
     title: false
@@ -63,19 +65,15 @@ website:
           - text: "Алгоритмика"
             icon: diagram-2
             href: algorithmics/index.qmd
-            #
           - text: "Анализ и моделирование бизнес-процессов"
             icon: file-bar-graph
             href: business-process-modeling/index.qmd
-            #
           - text: "Управление ИТ-проектами"
             icon: dpad
             href: it-project-management/index.qmd
-            #
           - text: "Методологии разработки программного обеспечения"
             icon: file-code
             href: software-development-methodology/index.qmd
-            #
           - text: "Автоматизация юридической работы (Legaltech)"
             icon: file-earmark-richtext
             href: legaltech/index.qmd
@@ -93,15 +91,19 @@ website:
           - bibliography/basic.qmd
           - bibliography/additional.qmd
           - bibliography/electronic.qmd
+
     right:
       - about.qmd
       - authors.qmd
     search: true
+  # ---------------------------------------------------------------------------
+
 
 
   # ---------------------------------------------------------------------------
+  # SIDEBAR
+  # ---------------------------------------------------------------------------
   sidebar:
-
     - style: "floating" # "docked" #
       collapse-level: 1
       align: left
@@ -118,40 +120,36 @@ website:
             - text: "Алгоритмика"
               icon: diagram-2
               href: algorithmics/index.qmd
-              #
             - text: "Анализ и моделирование бизнес-процессов"
               icon: file-bar-graph
               href: business-process-modeling/index.qmd
-              #
             - text: "Управление ИТ-проектами"
               icon: dpad
               href: it-project-management/index.qmd
-              #
             - text: "Методологии разработки программного обеспечения"
               icon: file-code
               href: software-development-methodology/index.qmd
-              #
             - text: "Автоматизация юридической работы"
               icon: file-earmark-richtext
               href: legaltech/index.qmd
-
         - text: "Стажировка"
           href: traineeship/index.qmd
         - text: "Итоговый проект"
           href: project/index.qmd
         - text: "Итоговая аттестация"
           href: attestation/index.qmd
-
         - section: Литература
           icon: book
           contents:
             - bibliography/basic.qmd
             - bibliography/additional.qmd
             - bibliography/electronic.qmd
-
         - assessment.qmd
+  # ---------------------------------------------------------------------------
 
 
+  # ---------------------------------------------------------------------------
+  # FOOTER
   # ---------------------------------------------------------------------------
   page-footer:
     left: |
@@ -168,28 +166,34 @@ website:
         icon: github
         target: _blank
         aria-label: "GitHub"
+  # ---------------------------------------------------------------------------
 
+
+# ---------------------------------------------------------------------------
+# EXECUTABLE
+# ---------------------------------------------------------------------------
 execute:
-
-    echo: false
-
+  echo: true
 jupyter: python3
 
 
 format:
-  #---------------------------------------------
+
+  #----------------------------------------------------------------------------
   html:
     lang: ru
     toc: true
     number-sections: false
+
+    code-copy: true
+    code-overflow: wrap
+
+
     theme:
       light:
         - cosmo
         - theme.scss
-    code-copy: true
-    code-overflow: wrap
     css: ./_static/styles/html.css
-    #include-after-body: js.html
 
     grid:
       sidebar-width: 250px
@@ -200,7 +204,7 @@ format:
     link-external-icon: true
     link-external-filter: ^(?:http:|https:)\/\/msal\.tech
 
-  #----------------------------------------------
+  #----------------------------------------------------------------------------
   pdf:
     lang: ru
     toc: true
@@ -213,7 +217,7 @@ format:
     mathfont: "Times New Roman"
     #template: template.tex
 
-  #----------------------------------------------
+  #----------------------------------------------------------------------------
   revealjs:
     lang: ru
     slide-level: 4
@@ -221,11 +225,10 @@ format:
     center-title-slide: false
     css: ./_static/styles/revealjs.css
 
-  #-----------------------------------------------
+  #----------------------------------------------------------------------------
   # docx:
   #   toc: true
   #   toc-depth: 2
   #   section-numbers: true
   #   hightlight-style: github
   #   #reference-doc: template.docx
-
