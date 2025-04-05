@@ -3,7 +3,7 @@ website:
     - id: algorithmics
       title: "Алгоритмика"
       style: floating
-      collapse-level: 1
+      collapse-level: 2
       align: left
       pinned: true
       contents:
@@ -15,7 +15,7 @@ website:
               href: algorithmics/annotation.qmd
 
             - section: "Тема 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов."
-              href: algorithmics/index.qmd
+              #href: algorithmics/index.qmd
               contents:
                 - text: "Лекция 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов."
                   href: algorithmics/lecture-01/index.qmd

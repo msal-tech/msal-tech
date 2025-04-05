@@ -10,8 +10,6 @@ nocite: |
 
 format:
   html: default
-  pdf: default
-format-links: [pdf]
 ---
 
 ::: {#refs}
