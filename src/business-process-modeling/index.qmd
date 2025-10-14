@@ -13,6 +13,5 @@ format:
 - [**Тема 2. {{< meta course.topic.2 >}}**](02/)
 - [**Тема 3. {{< meta course.topic.3 >}}**](03/)
 - [**Тема 4. {{< meta course.topic.4 >}}**](04/)
-- [**{{< var titles.credit.long >}}**](credit.qmd)
 - [**{{< var titles.exam.long >}}**](exam.qmd)
-- [**{{< var titles.assessment.long >}}**](assessment.qmd)
+<!-- - [**{{< var titles.assessment.long >}}**](assessment.qmd) -->

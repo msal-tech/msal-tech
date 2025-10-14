@@ -1,43 +1,60 @@
 website:
   sidebar:
     - id: business-process-modeling
-      title: "Анализ и моделирование бизнес-процессов"
+      title: "{{< meta course.name >}}"
       style: floating
       collapse-level: 2
       align: left
       pinned: true
       contents:
-        - section: "Анализ и моделирование бизнес-процессов"
+        - section: "{{< meta course.name >}}"
           icon: file-bar-graph
           href: business-process-modeling/index.qmd
           contents:
             - text: "Аннотация"
               href: business-process-modeling/annotation.qmd
 
-            - section: "Тема 1. Основы структурного анализа. Основы процессного управления."
-              href: business-process-modeling/#
-            - section: "Тема 2. Методы анализа бизнес-процессов организации."
-              href: business-process-modeling/#
-            - section: "Тема 3. Моделирование деятельности организации."
-              href: business-process-modeling/#
-            - section: "Тема 4. Совершенствование бизнес-процессов организации. Операционные риски."
-              href: business-process-modeling/#
-            #   contents:
-            #     - text: "Конспект лекции"
-            #       href: business-process-modeling/01/lecture-01.qmd
-            #     - text: "Конспект практического занятия"
-            #       href: business-process-modeling/01/seminar-01.qmd
-            #     - text: "Задания для контрольной работы"
-            #       href: business-process-modeling/homework-01.qmd
-            #     - text: "Вопросы для самоподготовки"
-            #       href: business-process-modeling/questions-01.qmd
-            #     - text: "Тесты для самоподготовки"
-            #       href: business-process-modeling/test-01.qmd
+            - section: "Тема 1. {{< meta course.topic.1 >}}"
+              href: business-process-modeling/topic-01/index.qmd
+              contents:
+                - text: "Лекция 1. {{< meta course.lecture.1 >}}"
+                  href: business-process-modeling/topic-01/lecture-01/index.qmd
+                - text: "Практическое занятие 1. {{< meta course.seminar.1 >}}"
+                  href: business-process-modeling/topic-01/seminar-01/index.qmd
 
+            - section: "Тема 2. {{< meta course.topic.2 >}}"
+              href: business-process-modeling/topic-02/index.qmd
+              contents:
+                - text: "Лекция 2. {{< meta course.lecture.2 >}}"
+                  href: business-process-modeling/topic-02/lecture-02/index.qmd
+                - text: "Практическое занятие 2. {{< meta course.seminar.2 >}}"
+                  href: business-process-modeling/topic-02/seminar-02/index.qmd
+                - text: "Практическое занятие 3. {{< meta course.seminar.3 >}}"
+                  href: business-process-modeling/topic-02/seminar-03/index.qmd
+
+            - section: "Тема 3. {{< meta course.topic.3 >}}"
+              href: business-process-modeling/topic-03/index.qmd
+              contents:
+                - text: "Лекция 3. {{< meta course.lecture.3 >}}"
+                  href: business-process-modeling/topic-03/lecture-03/index.qmd
+                - text: "Лекция 4. {{< meta course.lecture.4 >}}"
+                  href: business-process-modeling/topic-03/lecture-04/index.qmd
+                - text: "Практическое занятие 4. {{< meta course.seminar.4 >}}"
+                  href: business-process-modeling/topic-03/seminar-04/index.qmd
+                - text: "Практическое занятие 5. {{< meta course.seminar.5 >}}"
+                  href: business-process-modeling/topic-03/seminar-05/index.qmd
+
+            - section: "Тема 4. {{< meta course.topic.4 >}}"
+              href: business-process-modeling/topic-04/index.qmd
+              contents:
+                - text: "Лекция 5. {{< meta course.lecture.5 >}}"
+                  href: business-process-modeling/topic-04/lecture-05/index.qmd
+                - text: "Практическое занятие 6. {{< meta course.seminar.6 >}}"
+                  href: business-process-modeling/topic-04/seminar-06/index.qmd
+                - text: "Практическое занятие 7. {{< meta course.seminar.7 >}}"
+                  href: business-process-modeling/topic-04/seminar-07/index.qmd
 
             - text: "Подготовка к ассесменту"
               href: business-process-modeling/assessment.qmd
-            - text: "Зачет"
-              href: business-process-modeling/credit.qmd
             - text: "Экзамен"
               href: business-process-modeling/exam.qmd
