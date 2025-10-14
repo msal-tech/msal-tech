@@ -28,7 +28,7 @@ website:
     locale: ru_RU
 
   page-navigation: true
-  bread-crumbs: true
+  bread-crumbs: false
   reader-mode: true
 
   announcement:
@@ -115,10 +115,8 @@ website:
       contents:
         - text: "О программе"
           href: annotation.qmd
-        #- text: "---"
         - section: "Учебные модули"
           icon: briefcase
-          # href: subjects.qmd
           contents:
             - text: "Алгоритмика"
               icon: diagram-2
@@ -194,6 +192,9 @@ format:
 
     code-copy: true
     code-overflow: wrap
+
+    grid:
+      sidebar-width: 330px
 
     theme:
       light:
