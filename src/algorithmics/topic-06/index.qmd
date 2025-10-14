@@ -1,0 +1,13 @@
+---
+title: Тема 6.<br>{{< meta course.topic.6 >}}
+subtitle: "Алгоритмика"
+
+format:
+  html: default
+---
+
+- [**Лекция 6. {{< meta course.lecture.6 >}}**](lecture-06/index.qmd)
+- [**Практическое занятие 14. {{< meta course.seminar.14 >}}**](seminar-14/index.qmd)
+- [**Практическое занятие 15. {{< meta course.seminar.15 >}}**](seminar-15/index.qmd)
+- [**Практическое занятие 16. {{< meta course.seminar.16 >}}**](seminar-16/index.qmd)
+- [**Практическое занятие 17. {{< meta course.seminar.17 >}}**](seminar-17/index.qmd)

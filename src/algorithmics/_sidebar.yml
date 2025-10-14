@@ -14,37 +14,77 @@ website:
             - text: "Аннотация"
               href: algorithmics/annotation.qmd
 
-            - section: "Тема 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов."
-              #href: algorithmics/index.qmd
+            - section: "Тема 1. {{< meta course.topic.1 >}}"
+              href: algorithmics/topic-01/index.qmd
               contents:
-                - text: "Лекция 1. Понятие алгоритма. Свойства алгоритмов. Способы записи алгоритмов."
-                  href: algorithmics/lecture-01/index.qmd
+                - text: "Лекция 1. {{< meta course.lecture.1 >}}"
+                  href: algorithmics/topic-01/lecture-01/index.qmd
+                - text: "Практическое занятие 1. {{< meta course.seminar.1 >}}"
+                  href: algorithmics/topic-01/seminar-01/index.qmd
+                - text: "Практическое занятие 2. {{< meta course.seminar.2 >}}"
+                  href: algorithmics/topic-01/seminar-02/index.qmd
 
-            - section: "Тема 2. Управление исполнителем. Управляющие алгоритмические конструкции."
-              href: algorithmics/index.qmd
-            - section: "Тема 3. Основные управляющие алгоритмические конструкции. Разветвляющиеся и циклические алгоритмические конструкции."
-              href: algorithmics/index.qmd
-            - section: "Тема 4. Данные и величины. Свойства и характеристики величин."
-              href: algorithmics/index.qmd
-            - section: "Тема 5. Сложные алгоритмы. Понятие вспомогательного алгоритма. Рекурсия. Алгоритмы управления."
-              href: algorithmics/index.qmd
+            - section: "Тема 2. {{< meta course.topic.2 >}}"
+              href: algorithmics/topic-02/index.qmd
+              contents:
+                - text: "Лекция 2. {{< meta course.lecture.2 >}}"
+                  href: algorithmics/topic-02/lecture-02/index.qmd
+                - text: "Практическое занятие 3. {{< meta course.seminar.3 >}}"
+                  href: algorithmics/topic-02/seminar-03/index.qmd
+                - text: "Практическое занятие 4. {{< meta course.seminar.4 >}}"
+                  href: algorithmics/topic-02/seminar-04/index.qmd
+                - text: "Практическое занятие 5. {{< meta course.seminar.5 >}}"
+                  href: algorithmics/topic-02/seminar-05/index.qmd
 
-            #   contents:
-            #     - text: "Конспект лекции"
-            #       href: algorithmics/01/lecture-01.qmd
-            #     - text: "Конспект практического занятия"
-            #       href: algorithmics/01/seminar-01.qmd
-            #     - text: "Задания для контрольной работы"
-            #       href: algorithmics/homework-01.qmd
-            #     - text: "Вопросы для самоподготовки"
-            #       href: algorithmics/questions-01.qmd
-            #     - text: "Тесты для самоподготовки"
-            #       href: algorithmics/test-01.qmd
+            - section: "Тема 3. {{< meta course.topic.3 >}}"
+              href: algorithmics/topic-03/index.qmd
+              contents:
+                - text: "Лекция 3. {{< meta course.lecture.3 >}}"
+                  href: algorithmics/topic-03/lecture-03/index.qmd
+                - text: "Практическое занятие 6. {{< meta course.seminar.6 >}}"
+                  href: algorithmics/topic-03/seminar-06/index.qmd
+                - text: "Практическое занятие 7. {{< meta course.seminar.7 >}}"
+                  href: algorithmics/topic-03/seminar-07/index.qmd
+                - text: "Практическое занятие 8. {{< meta course.seminar.8 >}}"
+                  href: algorithmics/topic-03/seminar-08/index.qmd
+                - text: "Практическое занятие 9. {{< meta course.seminar.9 >}}"
+                  href: algorithmics/topic-03/seminar-09/index.qmd
 
+            - section: "Тема 4. {{< meta course.topic.4 >}}"
+              href: algorithmics/topic-04/index.qmd
+              contents:
+                - text: "Лекция 4. {{< meta course.lecture.4 >}}"
+                  href: algorithmics/topic-04/lecture-04/index.qmd
+                - text: "Практическое занятие 10. {{< meta course.seminar.10 >}}"
+                  href: algorithmics/topic-04/seminar-10/index.qmd
+                - text: "Практическое занятие 11. {{< meta course.seminar.11 >}}"
+                  href: algorithmics/topic-04/seminar-11/index.qmd
+
+            - section: "Тема 5. {{< meta course.topic.5 >}}"
+              href: algorithmics/topic-05/index.qmd
+              contents:
+                - text: "Лекция 5. {{< meta course.lecture.5 >}}"
+                  href: algorithmics/topic-05/lecture-05/index.qmd
+                - text: "Практическое занятие 12. {{< meta course.seminar.12 >}}"
+                  href: algorithmics/topic-05/seminar-12/index.qmd
+                - text: "Практическое занятие 13. {{< meta course.seminar.13 >}}"
+                  href: algorithmics/topic-05/seminar-13/index.qmd
+
+            - section: "Тема 6. {{< meta course.topic.6 >}}"
+              href: algorithmics/topic-06/index.qmd
+              contents:
+                - text: "Лекция 6. {{< meta course.lecture.6 >}}"
+                  href: algorithmics/topic-06/lecture-06/index.qmd
+                - text: "Практическое занятие 14. {{< meta course.seminar.14 >}}"
+                  href: algorithmics/topic-06/seminar-14/index.qmd
+                - text: "Практическое занятие 15. {{< meta course.seminar.15 >}}"
+                  href: algorithmics/topic-06/seminar-15/index.qmd
+                - text: "Практическое занятие 16. {{< meta course.seminar.16 >}}"
+                  href: algorithmics/topic-06/seminar-16/index.qmd
+                - text: "Практическое занятие 17. {{< meta course.seminar.17 >}}"
+                  href: algorithmics/topic-06/seminar-17/index.qmd
 
             - text: "Подготовка к ассесменту"
               href: algorithmics/assessment.qmd
-            - text: "Зачет"
-              href: algorithmics/credit.qmd
             - text: "Экзамен"
               href: algorithmics/exam.qmd

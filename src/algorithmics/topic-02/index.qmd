@@ -1,0 +1,12 @@
+---
+title: Тема 2.<br>{{< meta course.topic.2 >}}
+subtitle: "Алгоритмика"
+
+format:
+  html: default
+---
+
+- [**Лекция 2. {{< meta course.lecture.2 >}}**](lecture-02/index.qmd)
+- [**Практическое занятие 3. {{< meta course.seminar.3 >}}**](seminar-03/index.qmd)
+- [**Практическое занятие 4. {{< meta course.seminar.4 >}}**](seminar-04/index.qmd)
+- [**Практическое занятие 5. {{< meta course.seminar.5 >}}**](seminar-05/index.qmd)

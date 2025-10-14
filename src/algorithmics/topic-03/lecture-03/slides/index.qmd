@@ -1,0 +1,14 @@
+---
+title: "Лекция 3.<br>{{< meta course.lecture.3 >}}"
+subtitle: "Алгоритмика"
+author: Красников А.С.
+date: 2024-09-01
+date-modified: last-modified
+
+format:
+  revealjs: default
+
+filters:
+  - pyodide
+---
+

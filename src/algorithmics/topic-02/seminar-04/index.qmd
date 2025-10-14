@@ -1,0 +1,15 @@
+---
+title: "Практическое занятие 4.<br>{{< meta course.seminar.4 >}}"
+subtitle: "Алгоритмика"
+author: Красников А.С.
+date: 2024-09-01
+date-modified: last-modified
+
+format:
+  html: default
+
+filters:
+  - pyodide
+---
+
+![](./img/_lead.png){fig-align="center"}

@@ -1,0 +1,19 @@
+---
+title: "Лекция 2.<br>{{< meta course.lecture.2 >}}"
+subtitle: "Алгоритмика"
+author: Красников А.С.
+date: 2024-09-01
+date-modified: last-modified
+
+format:
+  html:
+    other-links:
+      - text: Презентация
+        href: slides/index.html
+        target: _blank
+
+filters:
+  - pyodide
+---
+
+![](./img/_lead.png){fig-align="center"}
