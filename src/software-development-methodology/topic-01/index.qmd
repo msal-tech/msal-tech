@@ -1,0 +1,9 @@
+---
+title: Тема 1.<br>{{< meta course.topic.1 >}}
+subtitle: "{{< meta course.name >}}"
+
+format:
+  html: default
+---
+
+- [**Лекция 1. {{< meta course.lecture.1 >}}**](lecture-01/index.qmd)

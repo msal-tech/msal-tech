@@ -14,4 +14,4 @@ format:
 - [**Тема 3. {{< meta course.topic.3 >}}**](03/)
 - [**Тема 4. {{< meta course.topic.4 >}}**](04/)
 - [**Темы для подготовки к зачету**](credit.qmd)
-- [**Тесты для подготовки к ассесменту**](assessment.qmd)
+<!-- - [**{{< var titles.assessment.long >}}**](assessment.qmd) -->
