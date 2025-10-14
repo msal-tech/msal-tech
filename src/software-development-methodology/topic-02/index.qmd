@@ -6,6 +6,6 @@ format:
   html: default
 ---
 
+- [**Лекция 2. {{< meta course.lecture.2 >}}**](lecture-02/index.qmd)
 - [**Лекция 3. {{< meta course.lecture.3 >}}**](lecture-03/index.qmd)
-- [**Лекция 4. {{< meta course.lecture.4 >}}**](lecture-04/index.qmd)
 - [**Практическое занятие 1. {{< meta course.seminar.1 >}}**](seminar-01/index.qmd)

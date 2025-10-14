@@ -15,43 +15,43 @@ website:
               href: software-development-methodology/annotation.qmd
 
             - section: "Тема 1. {{< meta course.topic.1 >}}"
-              href: algorithmics/topic-01/index.qmd
+              href: software-development-methodology/topic-01/index.qmd
               contents:
                 - text: "Лекция 1. {{< meta course.lecture.1 >}}"
-                  href: algorithmics/topic-01/lecture-01/index.qmd
+                  href: software-development-methodology/topic-01/lecture-01/index.qmd
 
             - section: "Тема 2. {{< meta course.topic.2 >}}"
-              href: algorithmics/topic-02/index.qmd
+              href: software-development-methodology/topic-02/index.qmd
               contents:
                 - text: "Лекция 2. {{< meta course.lecture.2 >}}"
-                  href: algorithmics/topic-02/lecture-02/index.qmd
+                  href: software-development-methodology/topic-02/lecture-02/index.qmd
                 - text: "Лекция 3. {{< meta course.lecture.3 >}}"
-                  href: algorithmics/topic-02/lecture-03/index.qmd
+                  href: software-development-methodology/topic-02/lecture-03/index.qmd
                 - text: "Практическое занятие 1. {{< meta course.seminar.1 >}}"
-                  href: algorithmics/topic-02/seminar-01/index.qmd
+                  href: software-development-methodology/topic-02/seminar-01/index.qmd
 
 
             - section: "Тема 3. {{< meta course.topic.3 >}}"
-              href: algorithmics/topic-03/index.qmd
+              href: software-development-methodology/topic-03/index.qmd
               contents:
                 - text: "Лекция 4. {{< meta course.lecture.3 >}}"
-                  href: algorithmics/topic-03/lecture-04/index.qmd
+                  href: software-development-methodology/topic-03/lecture-04/index.qmd
                 - text: "Лекция 5. {{< meta course.lecture.3 >}}"
-                  href: algorithmics/topic-03/lecture-05/index.qmd
+                  href: software-development-methodology/topic-03/lecture-05/index.qmd
                 - text: "Практическое занятие 2. {{< meta course.seminar.2 >}}"
-                  href: algorithmics/topic-03/seminar-02/index.qmd
+                  href: software-development-methodology/topic-03/seminar-02/index.qmd
 
             - section: "Тема 4. {{< meta course.topic.4 >}}"
-              href: algorithmics/topic-04/index.qmd
+              href: software-development-methodology/topic-04/index.qmd
               contents:
                 - text: "Лекция 6. {{< meta course.lecture.6 >}}"
-                  href: algorithmics/topic-04/lecture-06/index.qmd
+                  href: software-development-methodology/topic-04/lecture-06/index.qmd
                 - text: "Лекция 7. {{< meta course.lecture.7 >}}"
-                  href: algorithmics/topic-04/lecture-06/index.qmd
+                  href: software-development-methodology/topic-04/lecture-06/index.qmd
                 - text: "Практическое занятие 3. {{< meta course.seminar.3 >}}"
-                  href: algorithmics/topic-04/seminar-03/index.qmd
+                  href: software-development-methodology/topic-04/seminar-03/index.qmd
                 - text: "Практическое занятие 4. {{< meta course.seminar.4 >}}"
-                  href: algorithmics/topic-04/seminar-04/index.qmd
+                  href: software-development-methodology/topic-04/seminar-04/index.qmd
 
             - text: "Подготовка к ассесменту"
               href: software-development-methodology/assessment.qmd

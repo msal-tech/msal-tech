@@ -8,5 +8,5 @@ format:
 
 - [**Лекция 6. {{< meta course.lecture.6 >}}**](lecture-06/index.qmd)
 - [**Лекция 7. {{< meta course.lecture.7 >}}**](lecture-07/index.qmd)
-- [**Практическое занятие 3. {{< meta course.seminar.3 >}}**](seminar-3/index.qmd)
-- [**Практическое занятие 4. {{< meta course.seminar.4 >}}**](seminar-4/index.qmd)
+- [**Практическое занятие 3. {{< meta course.seminar.3 >}}**](seminar-03/index.qmd)
+- [**Практическое занятие 4. {{< meta course.seminar.4 >}}**](seminar-04/index.qmd)
