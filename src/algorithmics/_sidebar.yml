@@ -1,13 +1,13 @@
 website:
   sidebar:
     - id: algorithmics
-      title: "Алгоритмика"
+      title: "{{< meta course.name >}}"
       style: floating
       collapse-level: 2
       align: left
       pinned: true
       contents:
-        - section: "Алгоритмика"
+        - section: "{{< meta course.name >}}"
           icon: diagram-2
           href: algorithmics/index.qmd
           contents:

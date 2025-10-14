@@ -1,6 +1,6 @@
 ---
 title: Тема 2.<br>{{< meta course.topic.2 >}}
-subtitle: "Алгоритмика"
+subtitle: "{{< meta course.name >}}"
 
 format:
   html: default

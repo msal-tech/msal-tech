@@ -1,6 +1,6 @@
 ---
 title: "Практическое занятие 12.<br>{{< meta course.seminar.12 >}}"
-subtitle: "Алгоритмика"
+subtitle: "{{< meta course.name >}}"
 author: Красников А.С.
 date: 2024-09-01
 date-modified: last-modified

@@ -1,6 +1,6 @@
 ---
 title: "Лекция 5.<br>{{< meta course.lecture.5 >}}"
-subtitle: "Алгоритмика"
+subtitle: "{{< meta course.name >}}"
 author: Красников А.С.
 date: 2024-09-01
 date-modified: last-modified
