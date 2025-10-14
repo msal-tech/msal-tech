@@ -96,6 +96,9 @@ website:
     right:
       - about.qmd
       - authors.qmd
+      - text: Подать заявку
+        href: https://msal.ru/content/prioritet-2030/tsifrovaya-kafedra/?clear_cache=Y#SUCCESS_24
+        target: _blank
     search: true
   # ---------------------------------------------------------------------------
 
