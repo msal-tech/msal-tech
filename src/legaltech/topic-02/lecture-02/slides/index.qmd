@@ -1,0 +1,14 @@
+---
+title: "Лекция 2.<br>{{< meta course.lecture.2 >}}"
+subtitle: "{{< meta course.name >}}"
+author: Красников А.С.
+date: 2024-09-01
+date-modified: last-modified
+
+format:
+  revealjs: default
+
+filters:
+  - pyodide
+---
+
