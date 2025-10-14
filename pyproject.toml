@@ -1,6 +1,6 @@
 [project]
 name = "msal-tech"
-version = "2025.03.10"
+version = "2025.10.14"
 description = "Материалы учебного курса: Автоматизация юридических процессов"
 authors = [
     {name = "askras",email = "askrasnikov@gmail.com"}
@@ -9,15 +9,13 @@ license = {text = "CC BY-NC 4.0"}
 readme = "README.md"
 requires-python = ">=3.10,<4.0.0"
 dependencies = [
-    "jupyterlab-quarto (>=0.3.5,<0.4.0)",
-    "flowchart-magic (>=0.1.6,<0.2.0)",
 ]
 
 
 [tool.poetry.group.dev.dependencies]
-jupyterlab = ">=4.3.5, <5.0.0"
-poetry-exec-plugin = {git = "https://github.com/askras/poetry-exec-plugin.git"}
-pytest = "^8.3.5"
+jupyterlab-quarto = ">=0.3.5,<0.4.0"
+flowchart-magic = ">=0.1.6,<0.2.0"
+jupyterlab = ">=4.4.9, <5.0.0"
 
 
 [build-system]
@@ -37,11 +35,23 @@ package-mode = false
 
 jupyter = """
 echo 'Start Jupyter Lab without token'
-export JUPYTERLAB_SETTINGS_DIR=./.jupyterlab_config/user-settings
-export JUPYTERLAB_WORKSPACES_DIR=./.jupyterlab_config/workspaces
 python -m jupyter lab \
     --allow-root \
     --NotebookApp.token='' \
     --NotebookApp.password='' \
         --no-browser
+"""
+
+freeze = """
+poetry export \
+    --format requirements.txt \
+    --output requirements.txt \
+    --all-groups \
+    --without-hashes
+"""
+
+quarto = """
+# cd ./src
+quarto add parmsam/quarto-quiz
+quarto add coatless-quarto/pyodide
 """

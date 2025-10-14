@@ -14,17 +14,20 @@
 
 Установите или обновите до актуальных версий все не обязательные зависимости:
 1. [**Poetry**](https://python-poetry.org/docs/#installation)
+  - [**poetry-plugin-exec**](https://pypi.org/project/poetry-plugin-exec/) 
+  - [**poetry-plugin-export**](https://pypi.org/project/poetry-plugin-export/)
+  - [**poetry-plugin-shell**](https://pypi.org/project/poetry-plugin-shell/)
 
 ## 2. Клонирование репозитория
-1. Создайте [форк](https://github.com/studybag/legaltech/fork) данного
+1. Создайте [форк](https://github.com/msal-tech/msal-tech/fork) данного
 репозитория.
 2. Получите локальную версию репозитория:
 ```bash
-git clone https://github.com/ваш-username/legaltech.git
+git clone https://github.com/ваш-username/msal-tech.git
 ```
 3. Перейдите в папку проекта
 ```bash
-cd legaltech
+cd msal-tech
 ```
 
 ## 3. Создание виртуального окружения
@@ -42,6 +45,10 @@ python -m venv путь/до/желаемого/расположения/venv
 В папке проекта выполните:
 ```bash
 $eval (poetry env activate)
+```
+или (при установленном [**poetry-plugin-shell**](https://pypi.org/project/poetry-plugin-shell/))
+```
+poetry shell
 ```
 
 ## 4. Установка необходимых пакетов python
@@ -89,4 +96,4 @@ git commit -m 'Описание сути изменений'
 ```bash
 git push origin
 ```
-5. Откройте Pull Request для добавления ваших изменений в основной репозиторий.
+5. Создайте **Pull Request** для добавления ваших изменений в основной репозиторий.
