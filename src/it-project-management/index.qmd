@@ -8,10 +8,11 @@ format:
 
 ## Содержание учебного модуля
 
-- [**Аннотация учебной дисциплины**](annotation.qmd)
-- [**Тема 1. {{< meta course.topic.1 >}}**](01/)
-- [**Тема 2. {{< meta course.topic.2 >}}**](02/)
-- [**Тема 3. {{< meta course.topic.3 >}}**](03/)
-- [**Тема 4. {{< meta course.topic.4 >}}**](04/)
-- [**Темы для подготовки к зачету**](credit.qmd)
-- [**Тесты для подготовки к ассесменту**](assessment.qmd)
+- [**{{< var titles.annotation.long>}} **](annotation.qmd)
+- [**Тема 1. {{< meta course.topic.1 >}}**](topic-01/index.qmd)
+- [**Тема 2. {{< meta course.topic.2 >}}**](topic-02/index.qmd)
+- [**Тема 3. {{< meta course.topic.3 >}}**](topic-03/index.qmd)
+- [**Тема 4. {{< meta course.topic.4 >}}**](topic-04/index.qmd)
+- [**Тема 5. {{< meta course.topic.5 >}}**](topic-05/index.qmd)
+- [**{{< var titles.credit.long >}}**](credit.qmd)
+<!-- - [**{{< var titles.assessment.long >}}**](assessment.qmd) -->

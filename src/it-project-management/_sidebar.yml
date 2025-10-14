@@ -1,40 +1,64 @@
 website:
   sidebar:
     - id: it-project-management
-      title: "Управление ИТ-проектами"
+      title: "{{< meta course.name >}}"
       style: floating
       collapse-level: 2
       align: left
       pinned: true
       contents:
-        - section: "Управление ИТ-проектами"
+        - section: "{{< meta course.name >}}"
           icon: dpad
           href: it-project-management/index.qmd
           contents:
             - text: "Аннотация"
               href: it-project-management/annotation.qmd
 
-            - section: "Тема 1. Основные положения и общая характеристика управления ИТ-проектами."
-              href: it-project-management/#
-            - section: "Тема 2. Организация управления IИ-проектом."
-              href: it-project-management/#
-            - section: "Тема 3. Методы и модели управления разработкой программных средств ИТ-проекта."
-              href: it-project-management/#
-            - section: "Тема 4. Команда разработки программного обеспечения. Роли и задачи команды."
-              href: it-project-management/#
+            - section: "Тема 1. {{< meta course.topic.1 >}}"
+              href: it-project-management/topic-01/index.qmd
+              contents:
+                - text: "Лекция 1. {{< meta course.lecture.1 >}}"
+                  href: it-project-management/topic-01/lecture-01/index.qmd
+                - text: "Практическое занятие 1. {{< meta course.seminar.1 >}}"
+                  href: it-project-management/topic-01/seminar-01/index.qmd
+                - text: "Практическое занятие 2. {{< meta course.seminar.2 >}}"
+                  href: it-project-management/topic-01/seminar-02/index.qmd
 
-            #   contents:
-            #     - text: "Конспект лекции"
-            #       href: it-project-management/01/lecture-01.qmd
-            #     - text: "Конспект практического занятия"
-            #       href: it-project-management/01/seminar-01.qmd
-            #     - text: "Задания для контрольной работы"
-            #       href: it-project-management/homework-01.qmd
-            #     - text: "Вопросы для самоподготовки"
-            #       href: it-project-management/questions-01.qmd
-            #     - text: "Тесты для самоподготовки"
-            #       href: it-project-management/test-01.qmd
+            - section: "Тема 2. {{< meta course.topic.2 >}}"
+              href: it-project-management/topic-02/index.qmd
+              contents:
+                - text: "Лекция 2. {{< meta course.lecture.2 >}}"
+                  href: it-project-management/topic-02/lecture-02/index.qmd
+                - text: "Практическое занятие 3. {{< meta course.seminar.3 >}}"
+                  href: it-project-management/topic-02/seminar-03/index.qmd
+                - text: "Практическое занятие 4. {{< meta course.seminar.4 >}}"
+                  href: it-project-management/topic-02/seminar-04/index.qmd
 
+            - section: "Тема 3. {{< meta course.topic.3 >}}"
+              href: it-project-management/topic-03/index.qmd
+              contents:
+                - text: "Лекция 3. {{< meta course.lecture.3 >}}"
+                  href: it-project-management/topic-03/lecture-03/index.qmd
+                - text: "Практическое занятие 5. {{< meta course.seminar.5 >}}"
+                  href: it-project-management/topic-03/seminar-05/index.qmd
+                - text: "Практическое занятие 6. {{< meta course.seminar.6 >}}"
+                  href: it-project-management/topic-03/seminar-06/index.qmd
+
+            - section: "Тема 4. {{< meta course.topic.4 >}}"
+              href: it-project-management/topic-04/index.qmd
+              contents:
+                - text: "Лекция 4. {{< meta course.lecture.4 >}}"
+                  href: it-project-management/topic-04/lecture-04/index.qmd
+                - text: "Практическое занятие 7. {{< meta course.seminar.7 >}}"
+                  href: it-project-management/topic-04/seminar-07/index.qmd
+
+            - section: "Тема 5. {{< meta course.topic.5 >}}"
+              href: it-project-management/topic-05/index.qmd
+              contents:
+                - text: "Лекция 5. {{< meta course.lecture.5 >}}"
+                  href: it-project-management/topic-05/lecture-05/index.qmd
+                - text: "Практическое занятие 8. {{< meta course.seminar.8 >}}"
+                  href: it-project-management/topic-05/seminar-08/index.qmd
 
             - text: "Подготовка к ассесменту"
               href: it-project-management/assessment.qmd

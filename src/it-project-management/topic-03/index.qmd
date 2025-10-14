@@ -1,0 +1,11 @@
+---
+title: Тема 3.<br>{{< meta course.topic.3 >}}
+subtitle: "{{< meta course.name >}}"
+
+format:
+  html: default
+---
+
+- [**Лекция 3. {{< meta course.lecture.3 >}}**](lecture-03/index.qmd)
+- [**Практическое занятие 5. {{< meta course.seminar.5 >}}**](seminar-05/index.qmd)
+- [**Практическое занятие 6. {{< meta course.seminar.6 >}}**](seminar-06/index.qmd)
