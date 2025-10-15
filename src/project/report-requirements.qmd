@@ -2,7 +2,7 @@
 title: Требования к отчету по проекту
 author:
   - Голкина Г.Е.
-date: 2024-09-01
+date: 2025-09-01
 date-modified: last-modified
 
 format:

@@ -2,7 +2,7 @@
 title: О сайте
 page-navigation: false
 #author:
-date: 2024-09-01
+date: 2025-09-01
 date-modified: last-modified
 
 format:
