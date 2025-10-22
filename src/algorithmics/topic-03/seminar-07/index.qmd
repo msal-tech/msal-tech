@@ -6,10 +6,19 @@ date: 2025-09-01
 date-modified: last-modified
 
 format:
-  html: default
+  html:
+    toc: true
+    number-sections: true
+    number-depth: 3
 
 filters:
   - pyodide
 ---
 
 ![](./img/_lead.png){fig-align="center"}
+
+
+{{< include _01.qmd >}}
+{{< include _02.qmd >}}
+
+{{< include _self_task.qmd >}}

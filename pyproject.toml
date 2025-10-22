@@ -1,6 +1,6 @@
 [project]
 name = "msal-tech"
-version = "2025.10.14"
+version = "2025.10.22"
 description = "Материалы учебного курса: Автоматизация юридических процессов"
 authors = [
     {name = "askras",email = "askrasnikov@gmail.com"}
